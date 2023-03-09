@@ -48,13 +48,14 @@ def generateGraphWithDistance(bus_routes):
             distance = calculateDistance(current_stop_coords[0], current_stop_coords[1], next_stop_coords[0], next_stop_coords[1])
             if bus_stop not in graph:
                 graph[bus_stop] = {}
-            graph[bus_stop][next_bus_stop] = distance
+            graph[bus_stop][next_bus_stop] = {"Distance": distance}, {"Bus Service": bus_service_index}
     return graph
 
+
 ## Commands to generate a json file with distance to adjacent bus stops
-# graph_with_distance_json = json.dumps(generateGraphWithDistance(bus_routes), indent = 4)
-# with open("graph_with_distance_cleaned.json", "w") as outfile:
-#     outfile.write(graph_with_distance_json)
+graph_with_distance_json = json.dumps(generateGraphWithDistance(bus_routes), indent = 4)
+with open("graph_with_distance_and_transfer_cleaned.json", "w") as outfile:
+    outfile.write(graph_with_distance_json)
 
 # Maps out a dictionary which consists of the list of Bus Services which the Bus Stop has
 # E.g. 'aft Lorong Betik': ['P211-01', 'P411-01']
@@ -84,32 +85,6 @@ def bfs(graph, start, end):
             new_path = list(path)
             new_path.append(adjacent)
             queue.put(new_path)
-
-def dijkstras(graph, start, end):
-    import heapq
-    seen = set()
-
-    # Maintain a Queue of Paths
-    queue = []
-    # Push the first path into the Queue
-    heapq.heappush(queue, (0, [start]))
-    while queue:
-        # Get the first path from the Queue
-        (current_distance, path) = heapq.heappop(queue)
-
-        # Get the last node from the path
-        node = path[-1]
-        if node == end:
-            return new_path, current_distance
-        if node in seen:
-            continue
-        seen.add(node)
-        for adjacent, distance in graph.get(node, {}).items():
-            print(adjacent, distance)
-            new_path = list(path)
-            new_path.append(adjacent)
-            heapq.heappush(queue, (distance, new_path))
-
 
 ## Reference Page:
 ## https://algodaily.com/lessons/an-illustrated-guide-to-dijkstras-algorithm/python
@@ -169,6 +144,6 @@ def printRoute(service_routes_map, path):
 # path = bfs(generateGraph, "Hospital Sultanah Aminah", "Opp Jalan Cermai")
 # pprint.pprint(generateGraph())
 
-graph = json.loads(open('graph_with_distance_cleaned.json').read())
-path = dijkstra(graph, "Hospital Sultanah Aminah", "Opp Jalan Cermai")
+# graph = json.loads(open('graph_with_distance_cleaned.json').read())
+# path = dijkstra(graph, "Hospital Sultanah Aminah", "Opp Jalan Cermai")
 # printRoute(generateBusStopstoBusServices(), path)
