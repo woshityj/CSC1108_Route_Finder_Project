@@ -76,9 +76,12 @@ class MyApp(QWidget):
                 coordinates.append(coordinate)
             print(coordinates)
 
-            folium_map = folium.Map(location = coordinates[0], tiles = 'cartodbpositron', zoom_start = 14)
             for i in range(len(coordinates)):
                 folium.Marker([coordinates[i][0], coordinates[i][1]]).add_to(folium_map)
+            
+            # Add the User's start position and end position to the front and end of the list respectively
+            coordinates.insert(0, [fromLat, fromLon])
+            coordinates.insert(len(coordinates), [toLat, toLon])
             
             folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
 
