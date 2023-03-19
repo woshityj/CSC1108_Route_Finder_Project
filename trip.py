@@ -9,7 +9,7 @@ import math
 # stop = {}
 # bus_routes = json.loads(open('bus_stops.json').read())
 
-bus_routes = json.loads(open('bus_stops_cleaned.json').read())
+# bus_routes = json.loads(open('bus_stops_cleaned.json').read())
 
 # Maps out a dictionary which consists of the list of Bus Stops that are adjacent to the current Bus Stop
 def generateGraph(bus_routes):
@@ -53,13 +53,13 @@ def generateGraphWithDistance(bus_routes):
 
 
 ## Commands to generate a json file with distance to adjacent bus stops
-graph_with_distance_json = json.dumps(generateGraphWithDistance(bus_routes), indent = 4)
-with open("graph_with_distance_and_transfer_cleaned.json", "w") as outfile:
-    outfile.write(graph_with_distance_json)
+# graph_with_distance_json = json.dumps(generateGraphWithDistance(bus_routes), indent = 4)
+# with open("graph_with_distance_and_transfer_cleaned.json", "w") as outfile:
+#     outfile.write(graph_with_distance_json)
 
 # Maps out a dictionary which consists of the list of Bus Services which the Bus Stop has
 # E.g. 'aft Lorong Betik': ['P211-01', 'P411-01']
-def generateBusStopstoBusServices():
+def generateBusStopstoBusServices(bus_routes):
     service_routes_map = {}
     for bus_service in bus_routes.keys():
         for bus_stop in bus_routes[bus_service]["Bus stop"].values():
