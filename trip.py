@@ -13,6 +13,20 @@ import math
 
 # Maps out a dictionary which consists of the list of Bus Stops that are adjacent to the current Bus Stop
 def generateGraph(bus_routes):
+    """Generate a Dictionary which consists of a list of Bus Stops that are adjacent to the specified Bus Stop.
+       This Dictionary is used for the breadth first search algorithm.
+
+    Parameters
+    ----------
+    bus_routes : dict
+        A Dictionary version of the bus_stops.xlsx file generated from bus_stops.py
+
+    Returns
+    -------
+    dictionary
+        A list of Bus Stops that are adjacent to the specified Bus Stop
+    """
+
     graph = {}
     for bus_service_index in bus_routes.keys():
         number_of_bus_stops = len(bus_routes[bus_service_index]["Bus stop"].keys())
@@ -26,6 +40,26 @@ def generateGraph(bus_routes):
     return graph
 
 def calculateDistance(start_lat, start_lon, end_lat, end_lon):
+    """Get the road distance between the starting Bus Stop and the ending Bus Stop.
+       The road distance is calculated via the OpenRouteService API.
+
+    Parameters
+    ----------
+    start_lat : float
+        The lat of the starting position
+    start_lon : float
+        The lon of the starting position
+    end_lat : float
+        The lat of the ending position
+    end_lon : float
+        The lon of the ending position
+
+    Returns
+    -------
+    float
+        The road distance between the starting Bus Stop and its ending adjacent Bus Stop
+    """
+
     client = ors.Client(key = '5b3ce3597851110001cf62483b2035bb64ee4d0080a2aeb8bd28d07e')
     coords = [[start_lon, start_lat], [end_lon, end_lat]]
     route = client.directions(coords, profile = 'driving-car', format = 'geojson')
@@ -33,6 +67,20 @@ def calculateDistance(start_lat, start_lon, end_lat, end_lon):
     return distance
 
 def generateGraphWithDistance(bus_routes):
+    """Generate a Dictionary which consists of a list of Bus Stops that are adjacent to the specified Bus Stop with its distance
+       This Dictionary is used for Dijkstra's Algorithm
+
+    Parameters
+    ----------
+    bus_routes : dict
+        A Dictionary version of the bus_stops.xlsx file generated from bus_stops.py
+
+    Returns
+    -------
+    dictionary
+        A list of Bus Stops that are adjacent to the specified Bus Stop with the distance between them
+    """
+
     graph = {}
     for bus_service_index in bus_routes.keys():
         number_of_bus_stops = len(bus_routes[bus_service_index]['Bus stop'].keys())
@@ -60,6 +108,23 @@ def generateGraphWithDistance(bus_routes):
 # Maps out a dictionary which consists of the list of Bus Services which the Bus Stop has
 # E.g. 'aft Lorong Betik': ['P211-01', 'P411-01']
 def generateBusStopstoBusServices(bus_routes):
+    """Generate a Dictionary which consists of a list of Bus Services that can reach a specified Bus Stop
+       This Dictionary is used to map out the Bus Service the User should take to travel from starting Bus Stop to the ending
+       Bus Stop
+
+    Parameters
+    ----------
+    bus_routes : dict
+        A Dictionary version of the bus_stops.xlsx file generated from bus_stops.py
+
+    Returns
+    -------
+    dictionary
+        A list of Bus Services that stops at a specified Bus Stop
+        Example:
+        aft Lorong Betik': ['P211-01', 'P411-01']
+    """
+
     service_routes_map = {}
     for bus_service in bus_routes.keys():
         for bus_stop in bus_routes[bus_service]["Bus stop"].values():
