@@ -1,7 +1,7 @@
 import heapq
 import json
 
-graph = json.loads(open('graph.json').read())
+graph = json.loads(open('gpt_generated_graph.json').read())
 
 def dijkstra(graph, start, end, transfer_penalty):
     distances = {node: float('inf') for node in graph}
