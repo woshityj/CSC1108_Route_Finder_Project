@@ -82,5 +82,5 @@ def generate_adjacent_stops(input_json):
 input_json = json.loads(open('bus_stops_cleaned.json').read())
 output_json = generate_adjacent_stops(input_json)
 
-with open("output2.json", "w") as outfile:     
+with open("graph.json", "w") as outfile:     
     json.dump(output_json, outfile, indent=4)
