@@ -133,6 +133,11 @@ def generateBusStopstoBusServices(bus_routes):
             service_routes_map[bus_stop] += [bus_service]
     return service_routes_map
 
+# bus_stops = generateBusStopstoBusServices(bus_routes)
+# bus_stop_json = json.dumps(bus_stops, indent = 8)
+# with open('bus_service_routes_map.json', 'w') as outfile:
+#     outfile.write(bus_stop_json)
+
 def bfs(graph, start, end):
     seen = set()
     queue = Queue()

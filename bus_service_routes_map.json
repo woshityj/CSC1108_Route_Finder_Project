@@ -1,0 +1,580 @@
+{
+        "Larkin Terminal": [
+                "P101-loop",
+                "P101-loop",
+                "P211-01",
+                "P211-02",
+                "P411-01",
+                "P411-02"
+        ],
+        "Pejabat Daerah Tanah Johor Bahru": [
+                "P101-loop",
+                "P211-02",
+                "P411-02"
+        ],
+        "RTM Jabatan Penyiaran Negeri Johor": [
+                "P101-loop"
+        ],
+        "Opp Masjid Kolam Ayer": [
+                "P101-loop"
+        ],
+        "Opp Jabatan Pendidikan Johor": [
+                "P101-loop"
+        ],
+        "Maktab Sultan Abu Bakar (English College": [
+                "P101-loop"
+        ],
+        "Hospital Sultanah Aminah": [
+                "P101-loop"
+        ],
+        "Johor Islamic Complex": [
+                "P101-loop"
+        ],
+        "Bangunan Sultan Ibrahim": [
+                "P101-loop"
+        ],
+        "Wisma Persekutuan": [
+                "P101-loop"
+        ],
+        "Majlis Bandaraya Johor Bahru": [
+                "P101-loop",
+                "P102-01",
+                "P102-02"
+        ],
+        "JB Sentral Terminal": [
+                "P101-loop",
+                "P102-02"
+        ],
+        "Menara MSC Cyberport": [
+                "P101-loop",
+                "P102-02"
+        ],
+        "Opp Sekolah Kebangsaan Perempuan Jalan Yahya Awal": [
+                "P101-loop"
+        ],
+        "Petronas Kiosk @ Jalan Yahya Awal": [
+                "P101-loop"
+        ],
+        "Opp SJK (T) Jalan Yahya Awal": [
+                "P101-loop"
+        ],
+        "aft Jalan Tasek Utara": [
+                "P101-loop"
+        ],
+        "Opp Yayasan Bandaraya Johor Bahru": [
+                "P101-loop"
+        ],
+        "Hub PPR Sri Stulang": [
+                "P102-01",
+                "P102-02",
+                "P106-loop",
+                "P106-loop"
+        ],
+        "bef Jalan Sultanah Aminah": [
+                "P102-01"
+        ],
+        "Shell Kiosk @ Jalan Pasir Pelangi": [
+                "P102-01"
+        ],
+        "Stulang Walk": [
+                "P102-01"
+        ],
+        "Block 18": [
+                "P102-01"
+        ],
+        "Opp De' Stulang": [
+                "P102-01"
+        ],
+        "Opp Sekolah Menengah Foon Yew": [
+                "P102-01"
+        ],
+        "R&F Mall": [
+                "P102-01"
+        ],
+        "Sekolah Menengah Foon Yew": [
+                "P102-02"
+        ],
+        "De' Stulang": [
+                "P102-02"
+        ],
+        "Opp Istana Pasir Pelangi": [
+                "P102-02"
+        ],
+        "The Mall, Mid Valley Southkey": [
+                "P102-02"
+        ],
+        "aft Jalan Pasir Pelangi": [
+                "P102-02",
+                "P106-loop"
+        ],
+        "Petronas Kiosk @ Taman Bayu Puteri": [
+                "P102-02",
+                "P106-loop"
+        ],
+        "Opp Petronas Kiosk @ Taman Bayu Puteri": [
+                "P102-02",
+                "P106-loop"
+        ],
+        "PPR Sri Stulang": [
+                "P102-02",
+                "P106-loop"
+        ],
+        "BHPetrol Kiosk @ Permas Jaya": [
+                "P106-loop"
+        ],
+        "AEON Permas Jaya": [
+                "P106-loop"
+        ],
+        "Dewan Serbaguna Permas Jaya": [
+                "P106-loop"
+        ],
+        "Mon Glori Apartment": [
+                "P106-loop"
+        ],
+        "Opp Best Ku Motor": [
+                "P106-loop"
+        ],
+        "Opp Kia Motors": [
+                "P106-loop"
+        ],
+        "bef Jalan Masai Baru": [
+                "P106-loop"
+        ],
+        "Lotus Plentong (Tesco Extra)": [
+                "P106-loop"
+        ],
+        "aft Jalan Masai Baru": [
+                "P106-loop"
+        ],
+        "Giant Plentong": [
+                "P106-loop"
+        ],
+        "Hse No. 1 Jalan Seroja 22": [
+                "P106-loop"
+        ],
+        "Opp Jalan Keembong 43": [
+                "P106-loop"
+        ],
+        "Jalan Seroja 54": [
+                "P106-loop"
+        ],
+        "Jalan Bakawali 86": [
+                "P106-loop"
+        ],
+        "Opp Pasar Awam Johor Jaya": [
+                "P106-loop"
+        ],
+        "AEON Tebrau City": [
+                "P106-loop"
+        ],
+        "Hospital Sultan Ismail": [
+                "P106-loop"
+        ],
+        "Hospital Sultan Ismail 2": [
+                "P106-loop"
+        ],
+        "Opp Suntoyo Enterprise": [
+                "P106-loop"
+        ],
+        "Kia Motors": [
+                "P106-loop"
+        ],
+        "Best Ku Motor": [
+                "P106-loop"
+        ],
+        "House No. 63 Jalan Permas 1/1": [
+                "P106-loop"
+        ],
+        "Jalan Permas 5/6": [
+                "P106-loop"
+        ],
+        "Sekolah Kebangsaan Taman Permas Jaya 3": [
+                "P106-loop"
+        ],
+        "Pan Vista": [
+                "P106-loop"
+        ],
+        "aft Jalan Permas 8/14": [
+                "P106-loop"
+        ],
+        "Opp BHPetrol Kiosk @ Permas Jaya": [
+                "P106-loop"
+        ],
+        "bef Shell Kiosk @ Permas Jaya": [
+                "P106-loop"
+        ],
+        "Taman Universiti Terminal": [
+                "P202-loop",
+                "P202-loop",
+                "P211-01",
+                "P211-02"
+        ],
+        "opp Sekolah Kebangsaan Taman Universiti 4": [
+                "P202-loop"
+        ],
+        "Surau As Syakirin": [
+                "P202-loop"
+        ],
+        "Opp SMK Taman Mutiara Rini": [
+                "P202-loop"
+        ],
+        "Opp Jalan Utama 34": [
+                "P202-loop"
+        ],
+        "Opp Hutan Bandar MBIP": [
+                "P202-loop"
+        ],
+        "Shop No. 81 Jalan Seri Orkid 17": [
+                "P202-loop"
+        ],
+        "Opp Bahagian Teknologi Pendidikan Negeri Johor": [
+                "P202-loop"
+        ],
+        "Union Inn": [
+                "P202-loop"
+        ],
+        "Shophouses @ Jalan Nakhoda 2": [
+                "P202-loop"
+        ],
+        "bef Terminal TUTA": [
+                "P202-loop"
+        ],
+        "Polilkinik Yap": [
+                "P202-loop"
+        ],
+        "bef Jalan Tun Teja": [
+                "P202-loop"
+        ],
+        "Shophouses @ Jalan Perwira 9": [
+                "P202-loop"
+        ],
+        "Sin Kok Soon Motor (JB) Sdn Bhd": [
+                "P202-loop"
+        ],
+        "aft Jalan Patin": [
+                "P202-loop",
+                "P211-02",
+                "P411-02",
+                "P403-loop"
+        ],
+        "SJK(C) Pu Sze": [
+                "P202-loop",
+                "P211-02",
+                "P411-02",
+                "P403-loop"
+        ],
+        "aft Shell Kiosk - Skudai": [
+                "P202-loop",
+                "P211-02",
+                "P411-02",
+                "P403-loop"
+        ],
+        "Shell Kiosk @ Taman Sri Putri": [
+                "P202-loop",
+                "P211-02",
+                "P411-02",
+                "P403-loop"
+        ],
+        "Masjid Abidin": [
+                "P202-loop"
+        ],
+        "Shophouses along Jalan Tembaga Kuning 4": [
+                "P202-loop"
+        ],
+        "Shophouses @ Jalan Suasa 1": [
+                "P202-loop",
+                "P211-02"
+        ],
+        "bef Jalan Hamoni 14": [
+                "P202-loop"
+        ],
+        "Opp Apartment Pasti Asli": [
+                "P202-loop"
+        ],
+        "Opp Surau As Syakirin": [
+                "P202-loop"
+        ],
+        "Sekolah Kebangsaan Taman Universiti 4": [
+                "P202-loop"
+        ],
+        "Jalan Kebudayaan 27 / 24 Intersection": [
+                "P202-loop"
+        ],
+        "Aeon Taman Universiti": [
+                "P211-01"
+        ],
+        "UTM Fakulti Alam Bina": [
+                "P211-01",
+                "P211-02"
+        ],
+        "Opp Block D10": [
+                "P211-01",
+                "P211-02"
+        ],
+        "Opp C.I.C.T.": [
+                "P211-01",
+                "P211-02"
+        ],
+        "Block P07 - Fakulti Kejuruteraan Elektrik": [
+                "P211-01",
+                "P211-02"
+        ],
+        "aft Block P19A - Fakulti Kejuruteraan Elektrik": [
+                "P211-01",
+                "P211-02"
+        ],
+        "UTM Equine Park": [
+                "P211-01"
+        ],
+        "UTM Rumah Alumni": [
+                "P211-01"
+        ],
+        "Opp Shell Kiosk @ Taman Sri Putri": [
+                "P211-01",
+                "P411-01",
+                "P403-loop"
+        ],
+        "Skudai Parade": [
+                "P211-01",
+                "P411-01",
+                "P403-loop"
+        ],
+        "Opp SJK (C) Kuo Kuang": [
+                "P211-01",
+                "P411-01"
+        ],
+        "bef Paradigm Mall": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Paradigm Mall": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Opp Saksama Otomobil": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Opp Petron Kiosk @ Taman Tampoi Indah": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Kompleks Pekan Rabu Johor Bahru": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Giant Tampoi": [
+                "P211-01",
+                "P411-01"
+        ],
+        "aft Lorong Betik": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Batu 5 Johor Street Market": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Plaza Angsana": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Klinik Utama @ Jalan Padi 1": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Opp Amitabha Centre": [
+                "P211-01",
+                "P411-01"
+        ],
+        "Opp Shell Kiosk @ Jalan Tun Abdul Razak": [
+                "P211-01",
+                "P411-01"
+        ],
+        "aft Shell Kiosk @ Jalan Tun Abdul Razak": [
+                "P211-02",
+                "P411-02"
+        ],
+        "Amitabha Centre": [
+                "P211-02",
+                "P411-02"
+        ],
+        "CIMB Bank": [
+                "P211-02",
+                "P411-02"
+        ],
+        "Klinik Kesihatan Tampoi": [
+                "P211-02",
+                "P411-02"
+        ],
+        "bef Shell Kiosk @ Kampung Pasir": [
+                "P211-02",
+                "P411-02"
+        ],
+        "SK Kampung Pasir": [
+                "P211-02",
+                "P411-02"
+        ],
+        "Opp Pulai View Condo": [
+                "P211-02",
+                "P411-02"
+        ],
+        "bef KIP Mart": [
+                "P211-02",
+                "P411-02"
+        ],
+        "Opp Paradigm Mall": [
+                "P211-02",
+                "P411-02"
+        ],
+        "bef McDonald's": [
+                "P211-02",
+                "P411-02"
+        ],
+        "SJK (C) Kuo Kuang": [
+                "P211-02",
+                "P411-02"
+        ],
+        "aft Jalan Sri Skudai": [
+                "P211-02"
+        ],
+        "bef UTM Main Gate": [
+                "P211-02"
+        ],
+        "UTM Main Gate (Exit)": [
+                "P211-02"
+        ],
+        "Opp AEON Taman Universiti": [
+                "P211-02"
+        ],
+        "Kulai Terminal": [
+                "P411-01",
+                "P411-02"
+        ],
+        "Kulai Centre Point": [
+                "P411-01"
+        ],
+        "Opp SBS Enterprises (M) Sdn Bhd": [
+                "P411-01"
+        ],
+        "Opp Public Bank @ Jalan Susur Kulai 2": [
+                "P411-01"
+        ],
+        "Opp Pertubuhan Peladang Kawasan Kulai": [
+                "P411-01"
+        ],
+        "Opp Hospital Temenggong Seri Maharaja Tun Ibrahim Kulaijaya": [
+                "P411-01"
+        ],
+        "Opp Jalan Cermai": [
+                "P411-01"
+        ],
+        "Opp Stor JKR (D) Kulaijaya": [
+                "P411-01"
+        ],
+        "Opp Wang Loo Motor Sdn Bhd": [
+                "P411-01"
+        ],
+        "Opp Pejabat Lembaga Lebuhraya Malaysia": [
+                "P411-01"
+        ],
+        "Medan Selera Senai": [
+                "P411-01",
+                "P403-loop"
+        ],
+        "Opp Sekolah Kebangsaan Senai": [
+                "P411-01",
+                "P403-loop"
+        ],
+        "Opp BHPetrol Kiosk @ Taman Aman": [
+                "P411-01",
+                "P403-loop"
+        ],
+        "aft Lebuhraya Utara-Selatan": [
+                "P411-01",
+                "P403-loop"
+        ],
+        "aft Tenaga Nasional Bhd Substation": [
+                "P411-02",
+                "P403-loop"
+        ],
+        "bef BHPetrol Kiosk @ Taman Aman": [
+                "P411-02",
+                "P403-loop"
+        ],
+        "bef Sekolah Kebangsaan Senai": [
+                "P411-02",
+                "P403-loop"
+        ],
+        "Opp Medan Selera Senai": [
+                "P411-02",
+                "P403-loop"
+        ],
+        "Masjid Jamek Pekan Senai": [
+                "P411-02"
+        ],
+        "Opp Deway Motor Trading": [
+                "P411-02"
+        ],
+        "Pejabat Lembaga Lebuhraya Malaysia": [
+                "P411-02"
+        ],
+        "aft Jalan Kelah": [
+                "P411-02"
+        ],
+        "Stor JKR (D) Kulaijaya": [
+                "P411-02"
+        ],
+        "TJ Mart": [
+                "P411-02"
+        ],
+        "aft Jalan Cermai 7": [
+                "P411-02"
+        ],
+        "bef Hospital Temenggong Seri Maharaja Tun Ibrahim Kulaijaya": [
+                "P411-02"
+        ],
+        "SMK Kulai Besar": [
+                "P411-02"
+        ],
+        "aft Persiaran Indahpura 4": [
+                "P411-02"
+        ],
+        "Persatuan Hokkien Kulai": [
+                "P411-02"
+        ],
+        "SBS Enterprises (M) Sdn Bhd": [
+                "P411-02"
+        ],
+        "Opp Arked Kulai": [
+                "P411-02"
+        ],
+        "Econsave Senai": [
+                "P403-loop",
+                "P403-loop"
+        ],
+        "Opp Pusat Hemodialisis Rotary Kulai": [
+                "P403-loop"
+        ],
+        "Opp Taman Bintang": [
+                "P403-loop"
+        ],
+        "Kawasan Perindustrian Senai 3": [
+                "P403-loop"
+        ],
+        "Senai Airport Terminal": [
+                "P403-loop"
+        ],
+        "NSTP Senai": [
+                "P403-loop"
+        ],
+        "Taman Bintang": [
+                "P403-loop"
+        ],
+        "Taman Mewah": [
+                "P403-loop"
+        ],
+        "bef Econsave @ Senai": [
+                "P403-loop"
+        ]
+}
