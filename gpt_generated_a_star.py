@@ -39,12 +39,13 @@ def euclidean_distance(start, end):
 
 def heuristic(node, goal, current_bus_service):
     min_cost = float('inf')
-    for edge in graph[node]:
-        for i in graph[node][edge]:
-            cost = i['Weight']
-            if current_bus_service is not None and i['Bus Service'] != current_bus_service:
-                penalty = 10
-                cost += penalty
+    ## Euclidean Distance
+    distance = euclidean_distance(node, goal)
+    cost = distance
+    for bus_service in bus_service_routes[node]:
+        if current_bus_service is not "Walking" and bus_service != current_bus_service:
+            penalty = 10
+            cost += penalty
         min_cost = min(min_cost, cost)
     return min_cost
 
@@ -56,20 +57,40 @@ def a_star(graph, start, goal):
 
     while open_set:
         _, current, path, current_bus_service = heapq.heappop(open_set)
-
         if current == goal:
-            return path + [current]
+            return path + [(current, current_bus_service)]
 
         if current not in closed_set:
             closed_set.add(current)
             for neighbor, edges in graph[current].items():
                 for edge in edges:
-                    g_cost = edge["Weight"]
+                    g_cost = edge["Distance"]
                     h_cost = heuristic(neighbor, goal, edge["Bus Service"])
                     f_cost = g_cost + h_cost
-                    heapq.heappush(open_set, (f_cost, neighbor, path + [current], edge["Bus Service"]))
+                    new_path = path + [(current, current_bus_service)]
+                    heapq.heappush(open_set, (f_cost, neighbor, new_path, edge["Bus Service"]))
 
     return None
+
+# def get_bus_services(graph, bus_stop):
+#     bus_services = []
+#     for neighbor, edges in graph[bus_stop].items():
+#         for edge in edges:
+#             bus_services.append(edge['Bus Service'])
+#     return bus_services
+
+# def find_service(i, graph, path):
+#     min_index = 0
+#     bus_services = get_bus_services(graph, path[i])
+#     next_bus_services = get_bus_services(graph, path[i + 1])
+#     for j in range(len(bus_services)):
+#         if bus_services[j] in next_bus_services:
+#             return(bus_services[j], path[i], path[i + 1])
+
+# def printRoute(graph, path):
+#     for i in range(len(path) - 1):
+#         print(find_service(i, graph, path))
+#     print(len(path), "stops")
 
 start = "Kulai Terminal"
 goal = "Senai Airport Terminal"
@@ -77,16 +98,11 @@ path = a_star(graph, start, goal)
 pprint.pprint(path)
 print(len(path))
 
-def find_service(i, service_routes_map, path):
-    bus_services = service_routes_map[path[i]]
-    next_bus_services = service_routes_map[path[i + 1]]
-    for j in range(len(bus_services)):
-        if bus_services[j] in next_bus_services:
-            return(bus_services[j], path[i], path[i + 1])
-
-def printRoute(service_routes_map, path):
-    for i in range(len(path) - 1):
-        print(find_service(i, service_routes_map, path))
-    print(len(path), "stops")
-
-printRoute(bus_service_routes, path)
+print("Path with bus services:")
+for idx, (location, bus_service) in enumerate(path):
+    if idx == 0:
+        print(f"{location} (Start)")
+    elif idx == len(path) - 1:
+        print(f"{location} (Goal)")
+    else:
+        print(f"{location} (Bus Service: {bus_service})")

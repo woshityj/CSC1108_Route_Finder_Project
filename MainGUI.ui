@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1177</width>
+    <width>1224</width>
     <height>734</height>
    </rect>
   </property>
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>10</y>
+     <y>40</y>
      <width>201</width>
      <height>271</height>
     </rect>
@@ -27,7 +27,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>290</y>
+     <y>310</y>
      <width>113</width>
      <height>32</height>
     </rect>
@@ -51,9 +51,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>370</y>
+     <y>400</y>
      <width>201</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
@@ -61,9 +61,9 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>450</y>
+     <y>480</y>
      <width>113</width>
-     <height>32</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
@@ -74,9 +74,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>350</y>
+     <y>380</y>
      <width>60</width>
-     <height>16</height>
+     <height>15</height>
     </rect>
    </property>
    <property name="text">
@@ -87,9 +87,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>400</y>
+     <y>430</y>
      <width>60</width>
-     <height>16</height>
+     <height>15</height>
     </rect>
    </property>
    <property name="text">
@@ -100,10 +100,36 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>420</y>
+     <y>450</y>
      <width>201</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>10</y>
+     <width>100</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>View Bus Routes</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>350</y>
+     <width>71</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Find Route</string>
    </property>
   </widget>
  </widget>

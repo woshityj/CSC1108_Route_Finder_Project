@@ -9,8 +9,6 @@ import math
 # stop = {}
 # bus_routes = json.loads(open('bus_stops.json').read())
 
-# bus_routes = json.loads(open('bus_stops_cleaned.json').read())
-
 # Maps out a dictionary which consists of the list of Bus Stops that are adjacent to the current Bus Stop
 def generateGraph(bus_routes):
     """Generate a Dictionary which consists of a list of Bus Stops that are adjacent to the specified Bus Stop.
@@ -94,11 +92,20 @@ def generateGraphWithDistance(bus_routes):
             next_stop_coords = next_stop_coords.split(", ")
             next_bus_stop = bus_routes[bus_service_index]["Bus stop"][str(i + 1)]
             distance = calculateDistance(current_stop_coords[0], current_stop_coords[1], next_stop_coords[0], next_stop_coords[1])
+            
             if bus_stop not in graph:
                 graph[bus_stop] = {}
-            graph[bus_stop][next_bus_stop] = {"Distance": distance}, {"Bus Service": bus_service_index}
+            if graph[bus_stop].get(next_bus_stop) is None:
+                graph[bus_stop][next_bus_stop] = {"Distance": distance, "Bus Service": [bus_service_index]}
+            else:
+                graph[bus_stop][next_bus_stop]["Bus Service"].append(bus_service_index)
     return graph
 
+bus_routes = json.loads(open('bus_stops_cleaned.json').read())
+graph = generateGraphWithDistance(bus_routes)
+graph_json = json.dumps(graph, indent = 4)
+with open("graph.json", "w") as outfile:
+    outfile.write(graph_json)
 
 ## Commands to generate a json file with distance to adjacent bus stops
 # graph_with_distance_json = json.dumps(generateGraphWithDistance(bus_routes), indent = 4)
@@ -214,8 +221,8 @@ def printRoute(service_routes_map, path):
 # path = bfs(generateGraph, "Hospital Sultanah Aminah", "Opp Jalan Cermai")
 # pprint.pprint(generateGraph())
 
-graph = json.loads(open('graph_with_distance_cleaned.json').read())
-path = dijkstra(graph, "Kulai Terminal", "Senai Airport Terminal")
-pprint.pprint(path)
-print(len(path))
+# graph = json.loads(open('graph_with_distance_cleaned.json').read())
+# path = dijkstra(graph, "Kulai Terminal", "Senai Airport Terminal")
+# pprint.pprint(path)
+# print(len(path))
 # printRoute(generateBusStopstoBusServices(), path)
