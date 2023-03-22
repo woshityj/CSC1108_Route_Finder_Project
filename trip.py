@@ -214,6 +214,8 @@ def printRoute(service_routes_map, path):
 # path = bfs(generateGraph, "Hospital Sultanah Aminah", "Opp Jalan Cermai")
 # pprint.pprint(generateGraph())
 
-# graph = json.loads(open('graph_with_distance_cleaned.json').read())
-# path = dijkstra(graph, "Hospital Sultanah Aminah", "Opp Jalan Cermai")
+graph = json.loads(open('graph_with_distance_cleaned.json').read())
+path = dijkstra(graph, "Kulai Terminal", "Senai Airport Terminal")
+pprint.pprint(path)
+print(len(path))
 # printRoute(generateBusStopstoBusServices(), path)

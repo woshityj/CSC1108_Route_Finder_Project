@@ -38,13 +38,13 @@ def euclidean_distance(start, end):
 
 
 def heuristic(node, goal, current_bus_service):
-    # Example: Use the shortest distance as heuristic
     min_cost = float('inf')
-    for edge in bus_service_routes[goal]:
-        cost = euclidean_distance(node, goal)
-        if current_bus_service is not None and edge != current_bus_service:
-            penalty = 10
-            cost += penalty
+    for edge in graph[node]:
+        for i in graph[node][edge]:
+            cost = i['Weight']
+            if current_bus_service is not None and i['Bus Service'] != current_bus_service:
+                penalty = 10
+                cost += penalty
         min_cost = min(min_cost, cost)
     return min_cost
 
@@ -73,5 +73,20 @@ def a_star(graph, start, goal):
 
 start = "Kulai Terminal"
 goal = "Senai Airport Terminal"
-result = a_star(graph, start, goal)
-pprint.pprint(result)
+path = a_star(graph, start, goal)
+pprint.pprint(path)
+print(len(path))
+
+def find_service(i, service_routes_map, path):
+    bus_services = service_routes_map[path[i]]
+    next_bus_services = service_routes_map[path[i + 1]]
+    for j in range(len(bus_services)):
+        if bus_services[j] in next_bus_services:
+            return(bus_services[j], path[i], path[i + 1])
+
+def printRoute(service_routes_map, path):
+    for i in range(len(path) - 1):
+        print(find_service(i, service_routes_map, path))
+    print(len(path), "stops")
+
+printRoute(bus_service_routes, path)
