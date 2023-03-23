@@ -56,8 +56,10 @@ def generate_adjacent_stops(input_json):
             # Calculate the weight based on bus travel
             weight = distance * 1000 / 20
 
+            time = (distance / 17) * 60
+
             # Create a connection dictionary and add it to the adjacency list
-            connection = {"Distance": distance, "Weight": round(weight, 1), "Bus Service": route_key}
+            connection = {"Distance": distance, "Weight": round(weight, 1), "Bus Service": route_key, "Time": time}
             if next_stop_name not in adjacent_stops:
                 adjacent_stops[next_stop_name] = [connection]
             else:
@@ -71,7 +73,8 @@ def generate_adjacent_stops(input_json):
                 walk_distance = distance_between_coordinates(stop_gps, walk_stop_gps)
                 if walk_distance <= 0.5:  # Limit to 500m
                     walk_weight = walk_distance * 1000 / 5  # Walking speed: 5 km/h
-                    walk_connection = {"Distance": walk_distance, "Weight": round(walk_weight, 1), "Bus Service": "Walking"}
+                    time = (distance / 4.4) * 60
+                    walk_connection = {"Distance": walk_distance, "Weight": round(walk_weight, 1), "Bus Service": "Walking", "Time": time}
                     existing_walk_connections = [conn for conn in adjacent_stops.get(walk_stop_name, []) if conn["Bus Service"] == "Walking"]
                     if not existing_walk_connections:
                         if walk_stop_name not in adjacent_stops:
@@ -84,5 +87,5 @@ def generate_adjacent_stops(input_json):
 input_json = json.loads(open('bus_stops_cleaned.json').read())
 output_json = generate_adjacent_stops(input_json)
 
-with open("new_gpt_generated_graph.json", "w") as outfile:     
+with open("new_gpt_generated_graph_with_time.json", "w") as outfile:     
     json.dump(output_json, outfile, indent=4)

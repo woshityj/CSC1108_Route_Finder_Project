@@ -14,7 +14,7 @@ from PyQt6 import QtWidgets, uic
 from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 
-import Test.trip as trip
+import gpt_generated_a_star
 
 client = ors.Client(key = '5b3ce3597851110001cf62483b2035bb64ee4d0080a2aeb8bd28d07e')
 
@@ -53,44 +53,50 @@ class MyApp(QWidget):
             The name of the ending location that the user has entered via the User Interface
         """
 
-        try:
-            geolocator = Nominatim(user_agent = 'MyApp')
-            from_location = geolocator.geocode(from_location + " Malaysia")
-            fromLat, fromLon = from_location.latitude, from_location.longitude
-            to_location = geolocator.geocode(to_location + " Malaysia")
-            toLat, toLon = to_location.latitude, to_location.longitude
+        # try:
+        geolocator = Nominatim(user_agent = 'MyApp')
+        from_location = geolocator.geocode(from_location + " Malaysia")
+        fromLat, fromLon = from_location.latitude, from_location.longitude
+        to_location = geolocator.geocode(to_location + " Malaysia")
+        toLat, toLon = to_location.latitude, to_location.longitude
 
-            folium_map = folium.Map(location = [fromLat, fromLon], tiles = 'cartodbpositron', zoom_start = 14)
-            folium.Marker([fromLat, fromLon]).add_to(folium_map)
-            folium.Marker([toLat, toLon]).add_to(folium_map)
+        folium_map = folium.Map(location = [fromLat, fromLon], tiles = 'cartodbpositron', zoom_start = 14)
+        folium.Marker([fromLat, fromLon]).add_to(folium_map)
+        folium.Marker([toLat, toLon]).add_to(folium_map)
 
-            # Gets the nearest bus stop from the starting point and ending point of where the user indicated
-            startingBusStop = self.getNearestBusStopFromUser(fromLat, fromLon)
-            endingBusStop = self.getNearestBusStopFromUser(toLat, toLon)
-            path = self.getUserRoute(startingBusStop, endingBusStop)
-            
-            coordinates = []
-            for i in range(len(path)):
-                bus_stop = path[i]
-                coordinate = self.getCoordinates(bus_stop)
-                coordinates.append(coordinate)
-            print(coordinates)
+        # Gets the nearest bus stop from the starting point and ending point of where the user indicated
+        startingBusStop = self.getNearestBusStopFromUser(fromLat, fromLon)
+        endingBusStop = self.getNearestBusStopFromUser(toLat, toLon)
+        path = self.getUserRoute(startingBusStop, endingBusStop)
+        
+        coordinates = []
+        for id, (bus_stop, bus_service) in enumerate(path):
+            coordinate = self.getCoordinates(bus_stop)
+            coordinates.append(coordinate)
+        print(coordinates)
 
-            for i in range(len(coordinates)):
-                folium.Marker([coordinates[i][0], coordinates[i][1]]).add_to(folium_map)
-            
-            # Add the User's start position and end position to the front and end of the list respectively
-            coordinates.insert(0, [fromLat, fromLon])
-            coordinates.insert(len(coordinates), [toLat, toLon])
-            
-            folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
+        # coordinates = []
+        # for i in range(len(path)):
+        #     bus_stop = path[i]
+        #     coordinate = self.getCoordinates(bus_stop)
+        #     coordinates.append(coordinate)
+        # print(coordinates)
+
+        for i in range(len(coordinates)):
+            folium.Marker([coordinates[i][0], coordinates[i][1]]).add_to(folium_map)
+        
+        # Add the User's start position and end position to the front and end of the list respectively
+        coordinates.insert(0, [fromLat, fromLon])
+        coordinates.insert(len(coordinates), [toLat, toLon])
+        
+        folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
 
 
-            data = io.BytesIO()
-            folium_map.save(data, close_file = False)
-            self.map.setHtml(data.getvalue().decode())
-        except:
-            print("No such location")
+        data = io.BytesIO()
+        folium_map.save(data, close_file = False)
+        self.map.setHtml(data.getvalue().decode())
+        # except:
+        #     print("No such location")
     
     #Function to find the nearest bus stop based on the ending position of the user
     def getNearestBusStopFromUser(self, location_lat, location_lon):
@@ -140,8 +146,8 @@ class MyApp(QWidget):
             A list of the names of Bus Stops the user should travel via to reach to his destination
         """
 
-        graph = json.loads(open('graph_with_distance_cleaned.json').read())
-        path = trip.dijkstra(graph, start_bus_stop, end_bus_stop)
+        graph = json.loads(open('gpt_generated_graph.json').read())
+        path = gpt_generated_a_star.a_star(graph, start_bus_stop, end_bus_stop)
         return path
 
     def getCoordinates(self, bus_stop):

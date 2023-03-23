@@ -42,6 +42,15 @@ def heuristic(node, goal, current_bus_service):
     ## Euclidean Distance
     distance = euclidean_distance(node, goal)
     cost = distance
+
+    if current_bus_service is not None:
+        current_time = current_bus_service["arrival time"]
+    else:
+        current_time = 0
+
+    for bus_service in bus_service_routes[node]:
+        if current_bus_service is not None:
+    
     for bus_service in bus_service_routes[node]:
         if current_bus_service is not "Walking" and bus_service != current_bus_service:
             penalty = 10
@@ -49,14 +58,37 @@ def heuristic(node, goal, current_bus_service):
         min_cost = min(min_cost, cost)
     return min_cost
 
+# def a_star(graph, start, goal):
+#     open_set = []
+#     heapq.heappush(open_set, (0, start, [], None))
+
+#     closed_set = set()
+
+#     while open_set:
+#         _, current, path, current_bus_service = heapq.heappop(open_set)
+#         if current == goal:
+#             return path + [(current, current_bus_service)]
+
+#         if current not in closed_set:
+#             closed_set.add(current)
+#             for neighbor, edges in graph[current].items():
+#                 for edge in edges:
+#                     g_cost = edge["Distance"]
+#                     h_cost = heuristic(neighbor, goal, edge["Bus Service"])
+#                     f_cost = g_cost + h_cost
+#                     new_path = path + [(current, current_bus_service)]
+#                     heapq.heappush(open_set, (f_cost, neighbor, new_path, edge["Bus Service"]))
+
+#     return None
+
 def a_star(graph, start, goal):
-    open_set = []
-    heapq.heappush(open_set, (0, start, [], None))
+    open_set = [(0, start, [], None)]
 
     closed_set = set()
 
     while open_set:
-        _, current, path, current_bus_service = heapq.heappop(open_set)
+        open_set.sort(key=lambda x: x[0])
+        _, current, path, current_bus_service = open_set.pop(0)
         if current == goal:
             return path + [(current, current_bus_service)]
 
@@ -68,7 +100,7 @@ def a_star(graph, start, goal):
                     h_cost = heuristic(neighbor, goal, edge["Bus Service"])
                     f_cost = g_cost + h_cost
                     new_path = path + [(current, current_bus_service)]
-                    heapq.heappush(open_set, (f_cost, neighbor, new_path, edge["Bus Service"]))
+                    open_set.append((f_cost, neighbor, new_path, edge["Bus Service"]))
 
     return None
 
@@ -98,11 +130,14 @@ path = a_star(graph, start, goal)
 pprint.pprint(path)
 print(len(path))
 
+for i, (location, bus_service) in enumerate(path):
+    print(location)
+
 print("Path with bus services:")
-for idx, (location, bus_service) in enumerate(path):
-    if idx == 0:
-        print(f"{location} (Start)")
-    elif idx == len(path) - 1:
-        print(f"{location} (Goal)")
-    else:
-        print(f"{location} (Bus Service: {bus_service})")
+# for idx, (location, bus_service) in enumerate(path):
+#     if idx == 0:
+#         print(f"{location} (Start)")
+#     elif idx == len(path) - 1:
+#         print(f"{location} (Goal)")
+#     else:
+#         print(f"{location} (Bus Service: {bus_service})")
