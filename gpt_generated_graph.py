@@ -72,15 +72,17 @@ def generate_adjacent_stops(input_json):
                 if walk_distance <= 0.5:  # Limit to 500m
                     walk_weight = walk_distance * 1000 / 5  # Walking speed: 5 km/h
                     walk_connection = {"Distance": walk_distance, "Weight": round(walk_weight, 1), "Bus Service": "Walking"}
-                    if walk_stop_name not in adjacent_stops:
-                        adjacent_stops[walk_stop_name] = [walk_connection]
-                    else:
-                        adjacent_stops[walk_stop_name].append(walk_connection)
+                    existing_walk_connections = [conn for conn in adjacent_stops.get(walk_stop_name, []) if conn["Bus Service"] == "Walking"]
+                    if not existing_walk_connections:
+                        if walk_stop_name not in adjacent_stops:
+                            adjacent_stops[walk_stop_name] = [walk_connection]
+                        else:
+                            adjacent_stops[walk_stop_name].append(walk_connection)
 
     return output
 
 input_json = json.loads(open('bus_stops_cleaned.json').read())
 output_json = generate_adjacent_stops(input_json)
 
-with open("gpt_generated_graph.json", "w") as outfile:     
+with open("new_gpt_generated_graph.json", "w") as outfile:     
     json.dump(output_json, outfile, indent=4)
