@@ -1,4 +1,5 @@
 import heapq
+import openrouteservice as ors
 import json
 from math import radians, sin, cos, sqrt, atan2
 
@@ -13,14 +14,28 @@ def haversine(lat1, lon1, lat2, lon2):
 
     return distance
 
+def calculateDistance_api(start_lat, start_lon, end_lat, end_lon):
+
+    client = ors.Client(key = '5b3ce3597851110001cf62483b2035bb64ee4d0080a2aeb8bd28d07e')
+    coords = [[start_lon, start_lat], [end_lon, end_lat]]
+    route = client.directions(coords, profile = 'driving-car', format = 'geojson')
+    distance = route['features'][0]['properties']['segments'][0]['distance']
+    return distance
+
 def generate_adjacent_stops(input_json):
     output = {}
     
-    # Helper function to calculate distance between two GPS coordinates
+    # Helper function to calculate euclidean distance between two GPS coordinates
     def distance_between_coordinates(coord1, coord2):
         lat1, lon1 = map(float, coord1.split(','))
         lat2, lon2 = map(float, coord2.split(','))
         return haversine(lat1, lon1, lat2, lon2)
+    
+    # Helper function to calculate road travel distance between two GPS coordinates
+    def distance_between_coordinates_api(coord1, coord2):
+        lat1, lon1 = map(float, coord1.split(','))
+        lat2, lon2 = map(float, coord2.split(','))
+        return calculateDistance_api(lat1, lon1, lat2, lon2)
 
     # First, create a list of all unique bus stops with their GPS coordinates
     bus_stops_list = {}
@@ -51,7 +66,8 @@ def generate_adjacent_stops(input_json):
             next_stop_gps = gps_locations[str(i + 1)]
 
             # Calculate the distance between the current and the next bus stops
-            distance = distance_between_coordinates(stop_gps, next_stop_gps)
+            print("API CALL")
+            distance = distance_between_coordinates_api(stop_gps, next_stop_gps)/1000
 
             # Calculate the weight based on bus travel
             weight = distance * 1000 / 20
@@ -76,7 +92,7 @@ def generate_adjacent_stops(input_json):
                     time = (distance / 4.4) * 60
                     walk_connection = {"Distance": walk_distance, "Weight": round(walk_weight, 1), "Bus Service": "Walking", "Time": time}
                     existing_walk_connections = [conn for conn in adjacent_stops.get(walk_stop_name, []) if conn["Bus Service"] == "Walking"]
-                    if not existing_walk_connections:
+                    if not existing_walk_connections: #Check if there's existing connections to the same bus stop to avoid duplicate records
                         if walk_stop_name not in adjacent_stops:
                             adjacent_stops[walk_stop_name] = [walk_connection]
                         else:
