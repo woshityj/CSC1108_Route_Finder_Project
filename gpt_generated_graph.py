@@ -66,7 +66,7 @@ def generate_adjacent_stops(input_json):
             next_stop_gps = gps_locations[str(i + 1)]
 
             # Calculate the distance between the current and the next bus stops
-            print("API CALL")
+            print("API CALL ROAD")
             distance = distance_between_coordinates_api(stop_gps, next_stop_gps)/1000
 
             # Calculate the weight based on bus travel
@@ -88,15 +88,18 @@ def generate_adjacent_stops(input_json):
                 
                 walk_distance = distance_between_coordinates(stop_gps, walk_stop_gps)
                 if walk_distance <= 0.5:  # Limit to 500m
-                    walk_weight = walk_distance * 1000 / 5  # Walking speed: 5 km/h
-                    time = (distance / 4.4) * 60
-                    walk_connection = {"Distance": walk_distance, "Weight": round(walk_weight, 1), "Bus Service": "Walking", "Time": time}
-                    existing_walk_connections = [conn for conn in adjacent_stops.get(walk_stop_name, []) if conn["Bus Service"] == "Walking"]
-                    if not existing_walk_connections: #Check if there's existing connections to the same bus stop to avoid duplicate records
-                        if walk_stop_name not in adjacent_stops:
-                            adjacent_stops[walk_stop_name] = [walk_connection]
-                        else:
-                            adjacent_stops[walk_stop_name].append(walk_connection)
+                    print("API CALL WALK")
+                    walk_road_distance = distance_between_coordinates_api(stop_gps, walk_stop_gps)/1000
+                    if walk_road_distance <= 0.5:
+                        walk_weight = walk_road_distance * 1000 / 5  # Walking speed: 5 km/h
+                        walk_time = (walk_road_distance / 4.4) * 60
+                        walk_connection = {"Distance": walk_road_distance, "Weight": round(walk_weight, 1), "Bus Service": "Walking", "Time": walk_time}
+                        existing_walk_connections = [conn for conn in adjacent_stops.get(walk_stop_name, []) if conn["Bus Service"] == "Walking"]
+                        if not existing_walk_connections: #Check if there's existing connections to the same bus stop to avoid duplicate records
+                            if walk_stop_name not in adjacent_stops:
+                                adjacent_stops[walk_stop_name] = [walk_connection]
+                            else:
+                                adjacent_stops[walk_stop_name].append(walk_connection)
 
     return output
 

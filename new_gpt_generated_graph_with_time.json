@@ -64,8 +64,8 @@
                 "Time": 0.5664705882352942
             },
             {
-                "Distance": 0.16124101251860912,
-                "Weight": 32.2,
+                "Distance": 0.1605,
+                "Weight": 32.1,
                 "Bus Service": "Walking",
                 "Time": 2.1886363636363635
             }
@@ -78,14 +78,6 @@
                 "Weight": 35.2,
                 "Bus Service": "P101-loop",
                 "Time": 2.484
-            }
-        ],
-        "Opp Masjid Kolam Ayer": [
-            {
-                "Distance": 0.16124101251860912,
-                "Weight": 32.2,
-                "Bus Service": "Walking",
-                "Time": 9.597272727272726
             }
         ]
     },
@@ -106,12 +98,6 @@
                 "Weight": 37.5,
                 "Bus Service": "P101-loop",
                 "Time": 2.6495294117647057
-            },
-            {
-                "Distance": 0.31151505784185146,
-                "Weight": 62.3,
-                "Bus Service": "Walking",
-                "Time": 10.236818181818181
             }
         ]
     },
@@ -123,14 +109,6 @@
                 "Bus Service": "P101-loop",
                 "Time": 7.87694117647059
             }
-        ],
-        "Hospital Sultanah Aminah": [
-            {
-                "Distance": 0.31151505784185146,
-                "Weight": 62.3,
-                "Bus Service": "Walking",
-                "Time": 30.433636363636364
-            }
         ]
     },
     "Bangunan Sultan Ibrahim": {
@@ -140,20 +118,6 @@
                 "Weight": 51.0,
                 "Bus Service": "P101-loop",
                 "Time": 3.598588235294118
-            },
-            {
-                "Distance": 0.4980034148723259,
-                "Weight": 99.6,
-                "Bus Service": "Walking",
-                "Time": 13.903636363636364
-            }
-        ],
-        "Majlis Bandaraya Johor Bahru": [
-            {
-                "Distance": 0.47293063482424436,
-                "Weight": 94.6,
-                "Bus Service": "Walking",
-                "Time": 13.903636363636364
             }
         ]
     },
@@ -164,14 +128,6 @@
                 "Weight": 53.7,
                 "Bus Service": "P101-loop",
                 "Time": 3.788823529411764
-            }
-        ],
-        "Bangunan Sultan Ibrahim": [
-            {
-                "Distance": 0.4980034148723259,
-                "Weight": 99.6,
-                "Bus Service": "Walking",
-                "Time": 14.63863636363636
             }
         ]
     },
@@ -188,14 +144,6 @@
                 "Weight": 67.0,
                 "Bus Service": "P102-02",
                 "Time": 4.730117647058823
-            }
-        ],
-        "Bangunan Sultan Ibrahim": [
-            {
-                "Distance": 0.47293063482424436,
-                "Weight": 94.6,
-                "Bus Service": "Walking",
-                "Time": 18.275454545454544
             }
         ]
     },
@@ -224,14 +172,6 @@
                 "Time": 13.348588235294116
             }
         ],
-        "R&F Mall": [
-            {
-                "Distance": 0.35223184313446865,
-                "Weight": 70.4,
-                "Bus Service": "Walking",
-                "Time": 51.574090909090906
-            }
-        ],
         "Sekolah Menengah Foon Yew": [
             {
                 "Distance": 1.1144,
@@ -250,8 +190,8 @@
                 "Time": 1.0503529411764707
             },
             {
-                "Distance": 0.2965250897025601,
-                "Weight": 59.3,
+                "Distance": 0.29760000000000003,
+                "Weight": 59.5,
                 "Bus Service": "Walking",
                 "Time": 4.058181818181818
             }
@@ -264,20 +204,14 @@
                 "Weight": 38.6,
                 "Bus Service": "P101-loop",
                 "Time": 2.7243529411764706
-            },
-            {
-                "Distance": 0.3767260956491265,
-                "Weight": 75.3,
-                "Bus Service": "Walking",
-                "Time": 10.52590909090909
             }
         ],
         "Opp Sekolah Kebangsaan Perempuan Jalan Yahya Awal": [
             {
-                "Distance": 0.2965250897025601,
-                "Weight": 59.3,
+                "Distance": 0.29760000000000003,
+                "Weight": 59.5,
                 "Bus Service": "Walking",
-                "Time": 10.52590909090909
+                "Time": 4.058181818181818
             }
         ]
     },
@@ -288,20 +222,6 @@
                 "Weight": 29.7,
                 "Bus Service": "P101-loop",
                 "Time": 2.0982352941176474
-            },
-            {
-                "Distance": 0.25618591273387203,
-                "Weight": 51.2,
-                "Bus Service": "Walking",
-                "Time": 8.10681818181818
-            }
-        ],
-        "Petronas Kiosk @ Jalan Yahya Awal": [
-            {
-                "Distance": 0.3767260956491265,
-                "Weight": 75.3,
-                "Bus Service": "Walking",
-                "Time": 8.10681818181818
             }
         ]
     },
@@ -314,16 +234,8 @@
                 "Time": 1.641529411764706
             },
             {
-                "Distance": 0.4228796437418619,
-                "Weight": 84.6,
-                "Bus Service": "Walking",
-                "Time": 6.342272727272727
-            }
-        ],
-        "Opp SJK (T) Jalan Yahya Awal": [
-            {
-                "Distance": 0.25618591273387203,
-                "Weight": 51.2,
+                "Distance": 0.4651,
+                "Weight": 93.0,
                 "Bus Service": "Walking",
                 "Time": 6.342272727272727
             }
@@ -337,14 +249,6 @@
                 "Bus Service": "P101-loop",
                 "Time": 9.867882352941177
             }
-        ],
-        "aft Jalan Tasek Utara": [
-            {
-                "Distance": 0.4228796437418619,
-                "Weight": 84.6,
-                "Bus Service": "Walking",
-                "Time": 38.12590909090909
-            }
         ]
     },
     "Hub PPR Sri Stulang": {
@@ -354,50 +258,14 @@
                 "Weight": 35.5,
                 "Bus Service": "P102-01",
                 "Time": 2.503411764705882
-            },
-            {
-                "Distance": 0.4482316401856818,
-                "Weight": 89.6,
-                "Bus Service": "Walking",
-                "Time": 9.672272727272727
             }
         ],
         "aft Jalan Pasir Pelangi": [
-            {
-                "Distance": 0.4039305452425486,
-                "Weight": 80.8,
-                "Bus Service": "Walking",
-                "Time": 9.672272727272727
-            },
             {
                 "Distance": 4.6789,
                 "Weight": 233.9,
                 "Bus Service": "P106-loop",
                 "Time": 16.513764705882352
-            }
-        ],
-        "Petronas Kiosk @ Taman Bayu Puteri": [
-            {
-                "Distance": 0.31696771201793167,
-                "Weight": 63.4,
-                "Bus Service": "Walking",
-                "Time": 9.672272727272727
-            }
-        ],
-        "Opp Petronas Kiosk @ Taman Bayu Puteri": [
-            {
-                "Distance": 0.2845711267979211,
-                "Weight": 56.9,
-                "Bus Service": "Walking",
-                "Time": 9.672272727272727
-            }
-        ],
-        "PPR Sri Stulang": [
-            {
-                "Distance": 0.1828267499497714,
-                "Weight": 36.6,
-                "Bus Service": "Walking",
-                "Time": 9.672272727272727
             }
         ]
     },
@@ -410,24 +278,8 @@
                 "Time": 0.5541176470588235
             },
             {
-                "Distance": 0.15098899288495987,
-                "Weight": 30.2,
-                "Bus Service": "Walking",
-                "Time": 2.1409090909090907
-            }
-        ],
-        "Hub PPR Sri Stulang": [
-            {
-                "Distance": 0.4482316401856818,
-                "Weight": 89.6,
-                "Bus Service": "Walking",
-                "Time": 2.1409090909090907
-            }
-        ],
-        "aft Jalan Pasir Pelangi": [
-            {
-                "Distance": 0.4962909213597342,
-                "Weight": 99.3,
+                "Distance": 0.157,
+                "Weight": 31.4,
                 "Bus Service": "Walking",
                 "Time": 2.1409090909090907
             }
@@ -441,14 +293,6 @@
                 "Bus Service": "P102-01",
                 "Time": 8.15258823529412
             }
-        ],
-        "bef Jalan Sultanah Aminah": [
-            {
-                "Distance": 0.15098899288495987,
-                "Weight": 30.2,
-                "Bus Service": "Walking",
-                "Time": 31.49863636363637
-            }
         ]
     },
     "Stulang Walk": {
@@ -460,24 +304,8 @@
                 "Time": 1.1068235294117648
             },
             {
-                "Distance": 0.2627878202786713,
-                "Weight": 52.6,
-                "Bus Service": "Walking",
-                "Time": 4.276363636363636
-            }
-        ],
-        "Opp De' Stulang": [
-            {
-                "Distance": 0.46044605361402924,
-                "Weight": 92.1,
-                "Bus Service": "Walking",
-                "Time": 4.276363636363636
-            }
-        ],
-        "De' Stulang": [
-            {
-                "Distance": 0.4536925936873956,
-                "Weight": 90.7,
+                "Distance": 0.31360000000000005,
+                "Weight": 62.7,
                 "Bus Service": "Walking",
                 "Time": 4.276363636363636
             }
@@ -492,34 +320,26 @@
                 "Time": 0.9642352941176471
             },
             {
-                "Distance": 0.20507168493333683,
-                "Weight": 41.0,
+                "Distance": 0.2732,
+                "Weight": 54.6,
                 "Bus Service": "Walking",
                 "Time": 3.725454545454545
             }
         ],
         "Stulang Walk": [
             {
-                "Distance": 0.2627878202786713,
-                "Weight": 52.6,
+                "Distance": 0.31360000000000005,
+                "Weight": 62.7,
                 "Bus Service": "Walking",
-                "Time": 3.725454545454545
-            }
-        ],
-        "Sekolah Menengah Foon Yew": [
-            {
-                "Distance": 0.4564972790107329,
-                "Weight": 91.3,
-                "Bus Service": "Walking",
-                "Time": 3.725454545454545
+                "Time": 4.276363636363636
             }
         ],
         "De' Stulang": [
             {
-                "Distance": 0.19738794405038437,
-                "Weight": 39.5,
+                "Distance": 0.3376,
+                "Weight": 67.5,
                 "Bus Service": "Walking",
-                "Time": 3.725454545454545
+                "Time": 4.6036363636363635
             }
         ]
     },
@@ -532,42 +352,34 @@
                 "Time": 1.4272941176470586
             },
             {
-                "Distance": 0.4039888352959713,
-                "Weight": 80.8,
-                "Bus Service": "Walking",
-                "Time": 5.514545454545454
-            }
-        ],
-        "Stulang Walk": [
-            {
-                "Distance": 0.46044605361402924,
-                "Weight": 92.1,
+                "Distance": 0.4044,
+                "Weight": 80.9,
                 "Bus Service": "Walking",
                 "Time": 5.514545454545454
             }
         ],
         "Block 18": [
             {
-                "Distance": 0.20507168493333683,
-                "Weight": 41.0,
+                "Distance": 0.2732,
+                "Weight": 54.6,
                 "Bus Service": "Walking",
-                "Time": 5.514545454545454
+                "Time": 3.725454545454545
             }
         ],
         "Sekolah Menengah Foon Yew": [
             {
-                "Distance": 0.32992314820552693,
-                "Weight": 66.0,
+                "Distance": 0.3507,
+                "Weight": 70.1,
                 "Bus Service": "Walking",
-                "Time": 5.514545454545454
+                "Time": 4.782272727272726
             }
         ],
         "De' Stulang": [
             {
-                "Distance": 0.008644763207377629,
-                "Weight": 1.7,
+                "Distance": 0.0644,
+                "Weight": 12.9,
                 "Bus Service": "Walking",
-                "Time": 5.514545454545454
+                "Time": 0.8781818181818181
             }
         ]
     },
@@ -582,26 +394,26 @@
         ],
         "Opp De' Stulang": [
             {
-                "Distance": 0.4039888352959713,
-                "Weight": 80.8,
+                "Distance": 0.4044,
+                "Weight": 80.9,
                 "Bus Service": "Walking",
-                "Time": 18.043636363636363
+                "Time": 5.514545454545454
             }
         ],
         "Sekolah Menengah Foon Yew": [
             {
-                "Distance": 0.07649732159042227,
-                "Weight": 15.3,
+                "Distance": 0.1448,
+                "Weight": 29.0,
                 "Bus Service": "Walking",
-                "Time": 18.043636363636363
+                "Time": 1.9745454545454546
             }
         ],
         "De' Stulang": [
             {
-                "Distance": 0.41108798130119834,
-                "Weight": 82.2,
+                "Distance": 0.4285,
+                "Weight": 85.7,
                 "Bus Service": "Walking",
-                "Time": 18.043636363636363
+                "Time": 5.843181818181818
             }
         ]
     },
@@ -612,14 +424,6 @@
                 "Weight": 82.2,
                 "Bus Service": "P102-01",
                 "Time": 5.8020000000000005
-            }
-        ],
-        "Menara MSC Cyberport": [
-            {
-                "Distance": 0.35223184313446865,
-                "Weight": 70.4,
-                "Bus Service": "Walking",
-                "Time": 22.416818181818183
             }
         ]
     },
@@ -632,34 +436,26 @@
                 "Time": 1.3228235294117647
             },
             {
-                "Distance": 0.33676409592141626,
-                "Weight": 67.4,
-                "Bus Service": "Walking",
-                "Time": 5.11090909090909
-            }
-        ],
-        "Block 18": [
-            {
-                "Distance": 0.4564972790107329,
-                "Weight": 91.3,
+                "Distance": 0.3748,
+                "Weight": 75.0,
                 "Bus Service": "Walking",
                 "Time": 5.11090909090909
             }
         ],
         "Opp De' Stulang": [
             {
-                "Distance": 0.32992314820552693,
-                "Weight": 66.0,
+                "Distance": 0.3507,
+                "Weight": 70.1,
                 "Bus Service": "Walking",
-                "Time": 5.11090909090909
+                "Time": 4.782272727272726
             }
         ],
         "Opp Sekolah Menengah Foon Yew": [
             {
-                "Distance": 0.07649732159042227,
-                "Weight": 15.3,
+                "Distance": 0.1448,
+                "Weight": 29.0,
                 "Bus Service": "Walking",
-                "Time": 5.11090909090909
+                "Time": 1.9745454545454546
             }
         ]
     },
@@ -672,44 +468,36 @@
                 "Time": 4.51764705882353
             }
         ],
-        "Stulang Walk": [
-            {
-                "Distance": 0.4536925936873956,
-                "Weight": 90.7,
-                "Bus Service": "Walking",
-                "Time": 17.454545454545453
-            }
-        ],
         "Block 18": [
             {
-                "Distance": 0.19738794405038437,
-                "Weight": 39.5,
+                "Distance": 0.2834,
+                "Weight": 56.7,
                 "Bus Service": "Walking",
-                "Time": 17.454545454545453
+                "Time": 3.8645454545454543
             }
         ],
         "Opp De' Stulang": [
             {
-                "Distance": 0.008644763207377629,
-                "Weight": 1.7,
+                "Distance": 0.0598,
+                "Weight": 12.0,
                 "Bus Service": "Walking",
-                "Time": 17.454545454545453
+                "Time": 0.8154545454545453
             }
         ],
         "Opp Sekolah Menengah Foon Yew": [
             {
-                "Distance": 0.41108798130119834,
-                "Weight": 82.2,
+                "Distance": 0.4643,
+                "Weight": 92.9,
                 "Bus Service": "Walking",
-                "Time": 17.454545454545453
+                "Time": 6.331363636363636
             }
         ],
         "Sekolah Menengah Foon Yew": [
             {
-                "Distance": 0.33676409592141626,
-                "Weight": 67.4,
+                "Distance": 0.4105,
+                "Weight": 82.1,
                 "Bus Service": "Walking",
-                "Time": 17.454545454545453
+                "Time": 5.597727272727272
             }
         ]
     },
@@ -747,22 +535,6 @@
                 "Bus Service": "P106-loop",
                 "Time": 2.5245882352941176
             }
-        ],
-        "Hub PPR Sri Stulang": [
-            {
-                "Distance": 0.4039305452425486,
-                "Weight": 80.8,
-                "Bus Service": "Walking",
-                "Time": 9.754090909090907
-            }
-        ],
-        "bef Jalan Sultanah Aminah": [
-            {
-                "Distance": 0.4962909213597342,
-                "Weight": 99.3,
-                "Bus Service": "Walking",
-                "Time": 9.754090909090907
-            }
         ]
     },
     "Petronas Kiosk @ Taman Bayu Puteri": {
@@ -772,28 +544,6 @@
                 "Weight": 78.1,
                 "Bus Service": "P102-02",
                 "Time": 5.511529411764705
-            },
-            {
-                "Distance": 0.03579821561939074,
-                "Weight": 7.2,
-                "Bus Service": "Walking",
-                "Time": 21.29454545454545
-            }
-        ],
-        "Hub PPR Sri Stulang": [
-            {
-                "Distance": 0.31696771201793167,
-                "Weight": 63.4,
-                "Bus Service": "Walking",
-                "Time": 21.29454545454545
-            }
-        ],
-        "PPR Sri Stulang": [
-            {
-                "Distance": 0.22147165970369645,
-                "Weight": 44.3,
-                "Bus Service": "Walking",
-                "Time": 21.29454545454545
             }
         ],
         "BHPetrol Kiosk @ Permas Jaya": [
@@ -814,32 +564,10 @@
                 "Time": 2.5835294117647054
             },
             {
-                "Distance": 0.18638098057061625,
-                "Weight": 37.3,
-                "Bus Service": "Walking",
-                "Time": 9.98181818181818
-            },
-            {
                 "Distance": 0.732,
                 "Weight": 36.6,
                 "Bus Service": "P106-loop",
                 "Time": 2.5835294117647054
-            }
-        ],
-        "Hub PPR Sri Stulang": [
-            {
-                "Distance": 0.2845711267979211,
-                "Weight": 56.9,
-                "Bus Service": "Walking",
-                "Time": 9.98181818181818
-            }
-        ],
-        "Petronas Kiosk @ Taman Bayu Puteri": [
-            {
-                "Distance": 0.03579821561939074,
-                "Weight": 7.2,
-                "Bus Service": "Walking",
-                "Time": 9.98181818181818
             }
         ]
     },
@@ -852,32 +580,10 @@
                 "Time": 7.053176470588236
             },
             {
-                "Distance": 0.1828267499497714,
-                "Weight": 36.6,
-                "Bus Service": "Walking",
-                "Time": 27.25090909090909
-            },
-            {
                 "Distance": 1.9984000000000002,
                 "Weight": 99.9,
                 "Bus Service": "P106-loop",
                 "Time": 7.053176470588236
-            }
-        ],
-        "Petronas Kiosk @ Taman Bayu Puteri": [
-            {
-                "Distance": 0.22147165970369645,
-                "Weight": 44.3,
-                "Bus Service": "Walking",
-                "Time": 27.25090909090909
-            }
-        ],
-        "Opp Petronas Kiosk @ Taman Bayu Puteri": [
-            {
-                "Distance": 0.18638098057061625,
-                "Weight": 37.3,
-                "Bus Service": "Walking",
-                "Time": 27.25090909090909
             }
         ]
     },
@@ -889,14 +595,6 @@
                 "Bus Service": "P106-loop",
                 "Time": 3.5378823529411765
             }
-        ],
-        "Opp BHPetrol Kiosk @ Permas Jaya": [
-            {
-                "Distance": 0.04074299908248202,
-                "Weight": 8.1,
-                "Bus Service": "Walking",
-                "Time": 13.669090909090906
-            }
         ]
     },
     "AEON Permas Jaya": {
@@ -907,14 +605,6 @@
                 "Bus Service": "P106-loop",
                 "Time": 2.3308235294117643
             }
-        ],
-        "Sekolah Kebangsaan Taman Permas Jaya 3": [
-            {
-                "Distance": 0.46407685110776214,
-                "Weight": 92.8,
-                "Bus Service": "Walking",
-                "Time": 9.005454545454544
-            }
         ]
     },
     "Dewan Serbaguna Permas Jaya": {
@@ -924,36 +614,6 @@
                 "Weight": 29.5,
                 "Bus Service": "P106-loop",
                 "Time": 2.0795294117647063
-            },
-            {
-                "Distance": 0.3454039944206485,
-                "Weight": 69.1,
-                "Bus Service": "Walking",
-                "Time": 8.034545454545455
-            }
-        ],
-        "Sekolah Kebangsaan Taman Permas Jaya 3": [
-            {
-                "Distance": 0.4927658207384146,
-                "Weight": 98.6,
-                "Bus Service": "Walking",
-                "Time": 8.034545454545455
-            }
-        ],
-        "Pan Vista": [
-            {
-                "Distance": 0.34517710961965115,
-                "Weight": 69.0,
-                "Bus Service": "Walking",
-                "Time": 8.034545454545455
-            }
-        ],
-        "aft Jalan Permas 8/14": [
-            {
-                "Distance": 0.3319153340037746,
-                "Weight": 66.4,
-                "Bus Service": "Walking",
-                "Time": 8.034545454545455
             }
         ]
     },
@@ -966,36 +626,20 @@
                 "Time": 11.511176470588236
             }
         ],
-        "Dewan Serbaguna Permas Jaya": [
-            {
-                "Distance": 0.3454039944206485,
-                "Weight": 69.1,
-                "Bus Service": "Walking",
-                "Time": 44.474999999999994
-            }
-        ],
         "Sekolah Kebangsaan Taman Permas Jaya 3": [
             {
-                "Distance": 0.19200050145888195,
+                "Distance": 0.19219999999999998,
                 "Weight": 38.4,
                 "Bus Service": "Walking",
-                "Time": 44.474999999999994
+                "Time": 2.6209090909090906
             }
         ],
         "Pan Vista": [
             {
-                "Distance": 0.00022699969281730727,
+                "Distance": 0.0001,
                 "Weight": 0.0,
                 "Bus Service": "Walking",
-                "Time": 44.474999999999994
-            }
-        ],
-        "aft Jalan Permas 8/14": [
-            {
-                "Distance": 0.4097300007826517,
-                "Weight": 81.9,
-                "Bus Service": "Walking",
-                "Time": 44.474999999999994
+                "Time": 0.0013636363636363635
             }
         ]
     },
@@ -1006,14 +650,6 @@
                 "Weight": 38.7,
                 "Bus Service": "P106-loop",
                 "Time": 2.7285882352941173
-            }
-        ],
-        "Best Ku Motor": [
-            {
-                "Distance": 0.02813083142888287,
-                "Weight": 5.6,
-                "Bus Service": "Walking",
-                "Time": 10.542272727272726
             }
         ]
     },
@@ -1028,18 +664,18 @@
         ],
         "Giant Plentong": [
             {
-                "Distance": 0.19072272796554737,
-                "Weight": 38.1,
+                "Distance": 0.21459999999999999,
+                "Weight": 42.9,
                 "Bus Service": "Walking",
-                "Time": 8.929090909090908
+                "Time": 2.926363636363636
             }
         ],
         "Kia Motors": [
             {
-                "Distance": 0.05030204447633772,
-                "Weight": 10.1,
+                "Distance": 0.3698,
+                "Weight": 74.0,
                 "Bus Service": "Walking",
-                "Time": 8.929090909090908
+                "Time": 5.042727272727273
             }
         ]
     },
@@ -1052,16 +688,8 @@
                 "Time": 1.5981176470588236
             },
             {
-                "Distance": 0.3692005742714729,
-                "Weight": 73.8,
-                "Bus Service": "Walking",
-                "Time": 6.174545454545455
-            }
-        ],
-        "aft Jalan Masai Baru": [
-            {
-                "Distance": 0.04470800836010876,
-                "Weight": 8.9,
+                "Distance": 0.45280000000000004,
+                "Weight": 90.6,
                 "Bus Service": "Walking",
                 "Time": 6.174545454545455
             }
@@ -1074,20 +702,6 @@
                 "Weight": 99.1,
                 "Bus Service": "P106-loop",
                 "Time": 6.995647058823529
-            },
-            {
-                "Distance": 0.3979562698706786,
-                "Weight": 79.6,
-                "Bus Service": "Walking",
-                "Time": 27.02863636363636
-            }
-        ],
-        "bef Jalan Masai Baru": [
-            {
-                "Distance": 0.3692005742714729,
-                "Weight": 73.8,
-                "Bus Service": "Walking",
-                "Time": 27.02863636363636
             }
         ]
     },
@@ -1099,22 +713,6 @@
                 "Bus Service": "P106-loop",
                 "Time": 3.0416470588235294
             }
-        ],
-        "bef Jalan Masai Baru": [
-            {
-                "Distance": 0.04470800836010876,
-                "Weight": 8.9,
-                "Bus Service": "Walking",
-                "Time": 11.75181818181818
-            }
-        ],
-        "Lotus Plentong (Tesco Extra)": [
-            {
-                "Distance": 0.3979562698706786,
-                "Weight": 79.6,
-                "Bus Service": "Walking",
-                "Time": 11.75181818181818
-            }
         ]
     },
     "Giant Plentong": {
@@ -1124,28 +722,6 @@
                 "Weight": 26.3,
                 "Bus Service": "P106-loop",
                 "Time": 1.8571764705882354
-            },
-            {
-                "Distance": 0.38791125747822264,
-                "Weight": 77.6,
-                "Bus Service": "Walking",
-                "Time": 7.175454545454545
-            }
-        ],
-        "Opp Kia Motors": [
-            {
-                "Distance": 0.19072272796554737,
-                "Weight": 38.1,
-                "Bus Service": "Walking",
-                "Time": 7.175454545454545
-            }
-        ],
-        "Kia Motors": [
-            {
-                "Distance": 0.22711488625215806,
-                "Weight": 45.4,
-                "Bus Service": "Walking",
-                "Time": 7.175454545454545
             }
         ]
     },
@@ -1156,14 +732,6 @@
                 "Weight": 61.4,
                 "Bus Service": "P106-loop",
                 "Time": 4.3358823529411765
-            }
-        ],
-        "Giant Plentong": [
-            {
-                "Distance": 0.38791125747822264,
-                "Weight": 77.6,
-                "Bus Service": "Walking",
-                "Time": 16.752272727272725
             }
         ]
     },
@@ -1178,10 +746,10 @@
         ],
         "Opp Suntoyo Enterprise": [
             {
-                "Distance": 0.1762869645983463,
+                "Distance": 0.1764,
                 "Weight": 35.3,
                 "Bus Service": "Walking",
-                "Time": 10.610454545454544
+                "Time": 2.4054545454545453
             }
         ]
     },
@@ -1194,8 +762,8 @@
                 "Time": 0.6134117647058823
             },
             {
-                "Distance": 0.17360764312710858,
-                "Weight": 34.7,
+                "Distance": 0.1738,
+                "Weight": 34.8,
                 "Bus Service": "Walking",
                 "Time": 2.37
             }
@@ -1212,10 +780,10 @@
         ],
         "Jalan Seroja 54": [
             {
-                "Distance": 0.17360764312710858,
-                "Weight": 34.7,
+                "Distance": 0.1738,
+                "Weight": 34.8,
                 "Bus Service": "Walking",
-                "Time": 9.853636363636364
+                "Time": 2.37
             }
         ]
     },
@@ -1246,12 +814,6 @@
                 "Weight": 28.2,
                 "Bus Service": "P106-loop",
                 "Time": 1.992705882352941
-            },
-            {
-                "Distance": 0.4451414937957914,
-                "Weight": 89.0,
-                "Bus Service": "Walking",
-                "Time": 7.699090909090908
             }
         ]
     },
@@ -1262,14 +824,6 @@
                 "Weight": 184.5,
                 "Bus Service": "P106-loop",
                 "Time": 13.022470588235292
-            }
-        ],
-        "Hospital Sultan Ismail": [
-            {
-                "Distance": 0.4451414937957914,
-                "Weight": 89.0,
-                "Bus Service": "Walking",
-                "Time": 50.3140909090909
             }
         ]
     },
@@ -1284,10 +838,10 @@
         ],
         "Opp Jalan Keembong 43": [
             {
-                "Distance": 0.1762869645983463,
+                "Distance": 0.1764,
                 "Weight": 35.3,
                 "Bus Service": "Walking",
-                "Time": 30.590454545454545
+                "Time": 2.4054545454545453
             }
         ]
     },
@@ -1299,22 +853,6 @@
                 "Bus Service": "P106-loop",
                 "Time": 4.7964705882352945
             }
-        ],
-        "Opp Kia Motors": [
-            {
-                "Distance": 0.05030204447633772,
-                "Weight": 10.1,
-                "Bus Service": "Walking",
-                "Time": 18.53181818181818
-            }
-        ],
-        "Giant Plentong": [
-            {
-                "Distance": 0.22711488625215806,
-                "Weight": 45.4,
-                "Bus Service": "Walking",
-                "Time": 18.53181818181818
-            }
         ]
     },
     "Best Ku Motor": {
@@ -1324,14 +862,6 @@
                 "Weight": 75.2,
                 "Bus Service": "P106-loop",
                 "Time": 5.30470588235294
-            }
-        ],
-        "Opp Best Ku Motor": [
-            {
-                "Distance": 0.02813083142888287,
-                "Weight": 5.6,
-                "Bus Service": "Walking",
-                "Time": 20.495454545454542
             }
         ]
     },
@@ -1364,34 +894,18 @@
                 "Time": 0.6787058823529412
             },
             {
-                "Distance": 0.19214333967847988,
-                "Weight": 38.4,
-                "Bus Service": "Walking",
-                "Time": 2.6222727272727266
-            }
-        ],
-        "AEON Permas Jaya": [
-            {
-                "Distance": 0.46407685110776214,
-                "Weight": 92.8,
-                "Bus Service": "Walking",
-                "Time": 2.6222727272727266
-            }
-        ],
-        "Dewan Serbaguna Permas Jaya": [
-            {
-                "Distance": 0.4927658207384146,
-                "Weight": 98.6,
+                "Distance": 0.1923,
+                "Weight": 38.5,
                 "Bus Service": "Walking",
                 "Time": 2.6222727272727266
             }
         ],
         "Mon Glori Apartment": [
             {
-                "Distance": 0.19200050145888195,
+                "Distance": 0.19219999999999998,
                 "Weight": 38.4,
                 "Bus Service": "Walking",
-                "Time": 2.6222727272727266
+                "Time": 2.6209090909090906
             }
         ]
     },
@@ -1402,36 +916,22 @@
                 "Weight": 31.6,
                 "Bus Service": "P106-loop",
                 "Time": 2.2319999999999998
-            },
-            {
-                "Distance": 0.40959378134375535,
-                "Weight": 81.9,
-                "Bus Service": "Walking",
-                "Time": 8.623636363636361
-            }
-        ],
-        "Dewan Serbaguna Permas Jaya": [
-            {
-                "Distance": 0.34517710961965115,
-                "Weight": 69.0,
-                "Bus Service": "Walking",
-                "Time": 8.623636363636361
             }
         ],
         "Mon Glori Apartment": [
             {
-                "Distance": 0.00022699969281730727,
+                "Distance": 0.0001,
                 "Weight": 0.0,
                 "Bus Service": "Walking",
-                "Time": 8.623636363636361
+                "Time": 0.0013636363636363635
             }
         ],
         "Sekolah Kebangsaan Taman Permas Jaya 3": [
             {
-                "Distance": 0.19214333967847988,
-                "Weight": 38.4,
+                "Distance": 0.1923,
+                "Weight": 38.5,
                 "Bus Service": "Walking",
-                "Time": 8.623636363636361
+                "Time": 2.6222727272727266
             }
         ]
     },
@@ -1443,30 +943,6 @@
                 "Bus Service": "P106-loop",
                 "Time": 8.02235294117647
             }
-        ],
-        "Dewan Serbaguna Permas Jaya": [
-            {
-                "Distance": 0.3319153340037746,
-                "Weight": 66.4,
-                "Bus Service": "Walking",
-                "Time": 30.995454545454546
-            }
-        ],
-        "Mon Glori Apartment": [
-            {
-                "Distance": 0.4097300007826517,
-                "Weight": 81.9,
-                "Bus Service": "Walking",
-                "Time": 30.995454545454546
-            }
-        ],
-        "Pan Vista": [
-            {
-                "Distance": 0.40959378134375535,
-                "Weight": 81.9,
-                "Bus Service": "Walking",
-                "Time": 30.995454545454546
-            }
         ]
     },
     "Opp BHPetrol Kiosk @ Permas Jaya": {
@@ -1476,14 +952,6 @@
                 "Weight": 47.4,
                 "Bus Service": "P106-loop",
                 "Time": 3.3448235294117654
-            }
-        ],
-        "BHPetrol Kiosk @ Permas Jaya": [
-            {
-                "Distance": 0.04074299908248202,
-                "Weight": 8.1,
-                "Bus Service": "Walking",
-                "Time": 12.923181818181819
             }
         ]
     },
@@ -1506,42 +974,12 @@
                 "Time": 2.991529411764706
             }
         ],
-        "Sekolah Kebangsaan Taman Universiti 4": [
-            {
-                "Distance": 0.4955640745212086,
-                "Weight": 99.1,
-                "Bus Service": "Walking",
-                "Time": 11.558181818181819
-            }
-        ],
-        "Jalan Kebudayaan 27 / 24 Intersection": [
-            {
-                "Distance": 0.3258871290824024,
-                "Weight": 65.2,
-                "Bus Service": "Walking",
-                "Time": 11.558181818181819
-            }
-        ],
         "Aeon Taman Universiti": [
-            {
-                "Distance": 0.43232913566218817,
-                "Weight": 86.5,
-                "Bus Service": "Walking",
-                "Time": 11.558181818181819
-            },
             {
                 "Distance": 0.7763,
                 "Weight": 38.8,
                 "Bus Service": "P211-01",
                 "Time": 2.7398823529411764
-            }
-        ],
-        "Opp AEON Taman Universiti": [
-            {
-                "Distance": 0.3836896416908637,
-                "Weight": 76.7,
-                "Bus Service": "Walking",
-                "Time": 11.558181818181819
             }
         ]
     },
@@ -1556,18 +994,18 @@
         ],
         "Sekolah Kebangsaan Taman Universiti 4": [
             {
-                "Distance": 0.01726641341109142,
-                "Weight": 3.5,
+                "Distance": 0.0127,
+                "Weight": 2.5,
                 "Bus Service": "Walking",
-                "Time": 8.480454545454544
+                "Time": 0.17318181818181816
             }
         ],
         "Jalan Kebudayaan 27 / 24 Intersection": [
             {
-                "Distance": 0.197532959989857,
+                "Distance": 0.1976,
                 "Weight": 39.5,
                 "Bus Service": "Walking",
-                "Time": 8.480454545454544
+                "Time": 2.6945454545454544
             }
         ]
     },
@@ -1582,10 +1020,10 @@
         ],
         "Opp Surau As Syakirin": [
             {
-                "Distance": 0.03641914857903904,
-                "Weight": 7.3,
+                "Distance": 0.0879,
+                "Weight": 17.6,
                 "Bus Service": "Walking",
-                "Time": 12.317727272727272
+                "Time": 1.1986363636363635
             }
         ]
     },
@@ -1646,12 +1084,6 @@
                 "Weight": 25.4,
                 "Bus Service": "P202-loop",
                 "Time": 1.7932941176470587
-            },
-            {
-                "Distance": 0.312137112022047,
-                "Weight": 62.4,
-                "Bus Service": "Walking",
-                "Time": 6.928636363636363
             }
         ]
     },
@@ -1664,16 +1096,8 @@
                 "Time": 0.9864705882352942
             },
             {
-                "Distance": 0.2794627012311386,
+                "Distance": 0.2795,
                 "Weight": 55.9,
-                "Bus Service": "Walking",
-                "Time": 3.8113636363636365
-            }
-        ],
-        "Union Inn": [
-            {
-                "Distance": 0.312137112022047,
-                "Weight": 62.4,
                 "Bus Service": "Walking",
                 "Time": 3.8113636363636365
             }
@@ -1686,20 +1110,14 @@
                 "Weight": 40.2,
                 "Bus Service": "P202-loop",
                 "Time": 2.8351764705882347
-            },
-            {
-                "Distance": 0.41718239214827496,
-                "Weight": 83.4,
-                "Bus Service": "Walking",
-                "Time": 10.954090909090906
             }
         ],
         "Shophouses @ Jalan Nakhoda 2": [
             {
-                "Distance": 0.2794627012311386,
+                "Distance": 0.2795,
                 "Weight": 55.9,
                 "Bus Service": "Walking",
-                "Time": 10.954090909090906
+                "Time": 3.8113636363636365
             }
         ]
     },
@@ -1710,20 +1128,6 @@
                 "Weight": 30.0,
                 "Bus Service": "P202-loop",
                 "Time": 2.1158823529411763
-            },
-            {
-                "Distance": 0.2703699358489616,
-                "Weight": 54.1,
-                "Bus Service": "Walking",
-                "Time": 8.175
-            }
-        ],
-        "bef Terminal TUTA": [
-            {
-                "Distance": 0.41718239214827496,
-                "Weight": 83.4,
-                "Bus Service": "Walking",
-                "Time": 8.175
             }
         ]
     },
@@ -1734,20 +1138,14 @@
                 "Weight": 32.4,
                 "Bus Service": "P202-loop",
                 "Time": 2.2852941176470587
-            },
-            {
-                "Distance": 0.3645674075934652,
-                "Weight": 72.9,
-                "Bus Service": "Walking",
-                "Time": 8.829545454545453
             }
         ],
         "Polilkinik Yap": [
             {
-                "Distance": 0.2703699358489616,
+                "Distance": 0.2703,
                 "Weight": 54.1,
                 "Bus Service": "Walking",
-                "Time": 8.829545454545453
+                "Time": 3.68590909090909
             }
         ]
     },
@@ -1760,18 +1158,18 @@
                 "Time": 1.0461176470588236
             },
             {
-                "Distance": 0.2239913235846889,
-                "Weight": 44.8,
+                "Distance": 0.2964,
+                "Weight": 59.3,
                 "Bus Service": "Walking",
                 "Time": 4.041818181818182
             }
         ],
         "bef Jalan Tun Teja": [
             {
-                "Distance": 0.3645674075934652,
-                "Weight": 72.9,
+                "Distance": 0.44430000000000003,
+                "Weight": 88.9,
                 "Bus Service": "Walking",
-                "Time": 4.041818181818182
+                "Time": 6.058636363636364
             }
         ]
     },
@@ -1782,14 +1180,6 @@
                 "Weight": 45.4,
                 "Bus Service": "P202-loop",
                 "Time": 3.2022352941176466
-            }
-        ],
-        "Shophouses @ Jalan Perwira 9": [
-            {
-                "Distance": 0.2239913235846889,
-                "Weight": 44.8,
-                "Bus Service": "Walking",
-                "Time": 12.372272727272726
             }
         ]
     },
@@ -1802,8 +1192,8 @@
                 "Time": 0.7814117647058824
             },
             {
-                "Distance": 0.21922186994352413,
-                "Weight": 43.8,
+                "Distance": 0.2214,
+                "Weight": 44.3,
                 "Bus Service": "Walking",
                 "Time": 3.019090909090909
             },
@@ -1836,8 +1226,8 @@
                 "Time": 1.705764705882353
             },
             {
-                "Distance": 0.48274988344340125,
-                "Weight": 96.5,
+                "Distance": 0.4833,
+                "Weight": 96.7,
                 "Bus Service": "Walking",
                 "Time": 6.590454545454545
             },
@@ -1858,14 +1248,6 @@
                 "Weight": 24.2,
                 "Bus Service": "P403-loop",
                 "Time": 1.705764705882353
-            }
-        ],
-        "aft Jalan Patin": [
-            {
-                "Distance": 0.21922186994352413,
-                "Weight": 43.8,
-                "Bus Service": "Walking",
-                "Time": 6.590454545454545
             }
         ]
     },
@@ -1895,22 +1277,6 @@
                 "Bus Service": "P403-loop",
                 "Time": 2.563058823529412
             }
-        ],
-        "SJK(C) Pu Sze": [
-            {
-                "Distance": 0.48274988344340125,
-                "Weight": 96.5,
-                "Bus Service": "Walking",
-                "Time": 9.902727272727272
-            }
-        ],
-        "Skudai Parade": [
-            {
-                "Distance": 0.22814805783029557,
-                "Weight": 45.6,
-                "Bus Service": "Walking",
-                "Time": 9.902727272727272
-            }
         ]
     },
     "Shell Kiosk @ Taman Sri Putri": {
@@ -1920,22 +1286,6 @@
                 "Weight": 52.9,
                 "Bus Service": "P202-loop",
                 "Time": 3.7348235294117647
-            }
-        ],
-        "Opp Shell Kiosk @ Taman Sri Putri": [
-            {
-                "Distance": 0.06530419171082777,
-                "Weight": 13.1,
-                "Bus Service": "Walking",
-                "Time": 14.43
-            }
-        ],
-        "Skudai Parade": [
-            {
-                "Distance": 0.4511427995668758,
-                "Weight": 90.2,
-                "Bus Service": "Walking",
-                "Time": 14.43
             }
         ],
         "aft Jalan Sri Skudai": [
@@ -1970,7 +1320,7 @@
                 "Time": 1.0588235294117647
             },
             {
-                "Distance": 0.3000458467865382,
+                "Distance": 0.3,
                 "Weight": 60.0,
                 "Bus Service": "Walking",
                 "Time": 4.090909090909091
@@ -1988,18 +1338,10 @@
         ],
         "Masjid Abidin": [
             {
-                "Distance": 0.3000458467865382,
+                "Distance": 0.3,
                 "Weight": 60.0,
                 "Bus Service": "Walking",
-                "Time": 9.849545454545453
-            }
-        ],
-        "aft Jalan Sri Skudai": [
-            {
-                "Distance": 0.4588784553005271,
-                "Weight": 91.8,
-                "Bus Service": "Walking",
-                "Time": 9.849545454545453
+                "Time": 4.090909090909091
             }
         ]
     },
@@ -2010,14 +1352,6 @@
                 "Weight": 68.5,
                 "Bus Service": "P202-loop",
                 "Time": 4.834941176470589
-            }
-        ],
-        "aft Jalan Sri Skudai": [
-            {
-                "Distance": 0.27128973950059954,
-                "Weight": 54.3,
-                "Bus Service": "Walking",
-                "Time": 18.68045454545455
             }
         ],
         "UTM Fakulti Alam Bina": [
@@ -2038,8 +1372,8 @@
                 "Time": 1.7156470588235295
             },
             {
-                "Distance": 0.4808516291352545,
-                "Weight": 96.2,
+                "Distance": 0.48610000000000003,
+                "Weight": 97.2,
                 "Bus Service": "Walking",
                 "Time": 6.628636363636364
             }
@@ -2052,14 +1386,6 @@
                 "Weight": 97.4,
                 "Bus Service": "P202-loop",
                 "Time": 6.876705882352941
-            }
-        ],
-        "bef Jalan Hamoni 14": [
-            {
-                "Distance": 0.4808516291352545,
-                "Weight": 96.2,
-                "Bus Service": "Walking",
-                "Time": 26.56909090909091
             }
         ]
     },
@@ -2074,10 +1400,10 @@
         ],
         "Surau As Syakirin": [
             {
-                "Distance": 0.03641914857903904,
-                "Weight": 7.3,
+                "Distance": 0.3265,
+                "Weight": 65.3,
                 "Bus Service": "Walking",
-                "Time": 9.225
+                "Time": 4.452272727272727
             }
         ]
     },
@@ -2090,26 +1416,18 @@
                 "Time": 0.6532941176470588
             },
             {
-                "Distance": 0.18477525536970388,
+                "Distance": 0.1851,
                 "Weight": 37.0,
-                "Bus Service": "Walking",
-                "Time": 2.5240909090909085
-            }
-        ],
-        "Taman Universiti Terminal": [
-            {
-                "Distance": 0.4955640745212086,
-                "Weight": 99.1,
                 "Bus Service": "Walking",
                 "Time": 2.5240909090909085
             }
         ],
         "opp Sekolah Kebangsaan Taman Universiti 4": [
             {
-                "Distance": 0.01726641341109142,
-                "Weight": 3.5,
+                "Distance": 0.0127,
+                "Weight": 2.5,
                 "Bus Service": "Walking",
-                "Time": 2.5240909090909085
+                "Time": 0.17318181818181816
             }
         ]
     },
@@ -2122,26 +1440,26 @@
                 "Time": 1.572705882352941
             },
             {
-                "Distance": 0.3258871290824024,
-                "Weight": 65.2,
+                "Distance": 0.4456,
+                "Weight": 89.1,
                 "Bus Service": "Walking",
                 "Time": 6.076363636363636
             }
         ],
         "opp Sekolah Kebangsaan Taman Universiti 4": [
             {
-                "Distance": 0.197532959989857,
+                "Distance": 0.1976,
                 "Weight": 39.5,
                 "Bus Service": "Walking",
-                "Time": 6.076363636363636
+                "Time": 2.6945454545454544
             }
         ],
         "Sekolah Kebangsaan Taman Universiti 4": [
             {
-                "Distance": 0.18477525536970388,
+                "Distance": 0.1851,
                 "Weight": 37.0,
                 "Bus Service": "Walking",
-                "Time": 6.076363636363636
+                "Time": 2.5240909090909085
             }
         ]
     },
@@ -2152,22 +1470,6 @@
                 "Weight": 131.7,
                 "Bus Service": "P211-01",
                 "Time": 9.294
-            }
-        ],
-        "Taman Universiti Terminal": [
-            {
-                "Distance": 0.43232913566218817,
-                "Weight": 86.5,
-                "Bus Service": "Walking",
-                "Time": 35.90863636363636
-            }
-        ],
-        "Opp AEON Taman Universiti": [
-            {
-                "Distance": 0.051071171315836654,
-                "Weight": 10.2,
-                "Bus Service": "Walking",
-                "Time": 35.90863636363636
             }
         ]
     },
@@ -2180,8 +1482,8 @@
                 "Time": 1.3394117647058825
             },
             {
-                "Distance": 0.3729820752744627,
-                "Weight": 74.6,
+                "Distance": 0.3795,
+                "Weight": 75.9,
                 "Bus Service": "Walking",
                 "Time": 5.175
             },
@@ -2190,22 +1492,6 @@
                 "Weight": 19.0,
                 "Bus Service": "P211-02",
                 "Time": 1.3394117647058825
-            }
-        ],
-        "bef UTM Main Gate": [
-            {
-                "Distance": 0.4894816420922039,
-                "Weight": 97.9,
-                "Bus Service": "Walking",
-                "Time": 5.175
-            }
-        ],
-        "UTM Main Gate (Exit)": [
-            {
-                "Distance": 0.4425097642163932,
-                "Weight": 88.5,
-                "Bus Service": "Walking",
-                "Time": 5.175
             }
         ]
     },
@@ -2218,8 +1504,8 @@
                 "Time": 1.076470588235294
             },
             {
-                "Distance": 0.2999181284704286,
-                "Weight": 60.0,
+                "Distance": 0.305,
+                "Weight": 61.0,
                 "Bus Service": "Walking",
                 "Time": 4.159090909090908
             },
@@ -2228,14 +1514,6 @@
                 "Weight": 15.2,
                 "Bus Service": "P211-02",
                 "Time": 1.076470588235294
-            }
-        ],
-        "UTM Fakulti Alam Bina": [
-            {
-                "Distance": 0.3729820752744627,
-                "Weight": 74.6,
-                "Bus Service": "Walking",
-                "Time": 4.159090909090908
             }
         ]
     },
@@ -2248,8 +1526,8 @@
                 "Time": 1.4625882352941177
             },
             {
-                "Distance": 0.37337480954993196,
-                "Weight": 74.7,
+                "Distance": 0.4144,
+                "Weight": 82.9,
                 "Bus Service": "Walking",
                 "Time": 5.65090909090909
             },
@@ -2258,14 +1536,6 @@
                 "Weight": 20.7,
                 "Bus Service": "P211-02",
                 "Time": 1.4625882352941177
-            }
-        ],
-        "Opp Block D10": [
-            {
-                "Distance": 0.2999181284704286,
-                "Weight": 60.0,
-                "Bus Service": "Walking",
-                "Time": 5.65090909090909
             }
         ]
     },
@@ -2278,8 +1548,8 @@
                 "Time": 1.2511764705882353
             },
             {
-                "Distance": 0.2999436171970911,
-                "Weight": 60.0,
+                "Distance": 0.3545,
+                "Weight": 70.9,
                 "Bus Service": "Walking",
                 "Time": 4.834090909090908
             },
@@ -2288,14 +1558,6 @@
                 "Weight": 17.7,
                 "Bus Service": "P211-02",
                 "Time": 1.2511764705882353
-            }
-        ],
-        "Opp C.I.C.T.": [
-            {
-                "Distance": 0.37337480954993196,
-                "Weight": 74.7,
-                "Bus Service": "Walking",
-                "Time": 4.834090909090908
             }
         ]
     },
@@ -2306,28 +1568,14 @@
                 "Weight": 30.4,
                 "Bus Service": "P211-01",
                 "Time": 2.1476470588235292
-            },
-            {
-                "Distance": 0.32676727288907814,
-                "Weight": 65.4,
-                "Bus Service": "Walking",
-                "Time": 8.297727272727274
-            }
-        ],
-        "Block P07 - Fakulti Kejuruteraan Elektrik": [
-            {
-                "Distance": 0.2999436171970911,
-                "Weight": 60.0,
-                "Bus Service": "Walking",
-                "Time": 8.297727272727274
             }
         ],
         "bef UTM Main Gate": [
             {
-                "Distance": 0.28471710024829944,
-                "Weight": 56.9,
+                "Distance": 0.3015,
+                "Weight": 60.3,
                 "Bus Service": "Walking",
-                "Time": 8.297727272727274
+                "Time": 4.111363636363635
             },
             {
                 "Distance": 0.3015,
@@ -2338,10 +1586,10 @@
         ],
         "UTM Main Gate (Exit)": [
             {
-                "Distance": 0.35978310467278446,
-                "Weight": 72.0,
+                "Distance": 0.4134,
+                "Weight": 82.7,
                 "Bus Service": "Walking",
-                "Time": 8.297727272727274
+                "Time": 5.637272727272727
             }
         ]
     },
@@ -2354,34 +1602,18 @@
                 "Time": 1.1823529411764706
             },
             {
-                "Distance": 0.29465980876631853,
-                "Weight": 58.9,
-                "Bus Service": "Walking",
-                "Time": 4.568181818181818
-            }
-        ],
-        "aft Block P19A - Fakulti Kejuruteraan Elektrik": [
-            {
-                "Distance": 0.32676727288907814,
-                "Weight": 65.4,
+                "Distance": 0.335,
+                "Weight": 67.0,
                 "Bus Service": "Walking",
                 "Time": 4.568181818181818
             }
         ],
         "bef UTM Main Gate": [
             {
-                "Distance": 0.37409727241028956,
-                "Weight": 74.8,
+                "Distance": 0.44489999999999996,
+                "Weight": 89.0,
                 "Bus Service": "Walking",
-                "Time": 4.568181818181818
-            }
-        ],
-        "UTM Main Gate (Exit)": [
-            {
-                "Distance": 0.44252725854023905,
-                "Weight": 88.5,
-                "Bus Service": "Walking",
-                "Time": 4.568181818181818
+                "Time": 6.066818181818181
             }
         ]
     },
@@ -2396,10 +1628,10 @@
         ],
         "UTM Equine Park": [
             {
-                "Distance": 0.29465980876631853,
-                "Weight": 58.9,
+                "Distance": 0.335,
+                "Weight": 67.0,
                 "Bus Service": "Walking",
-                "Time": 38.66318181818181
+                "Time": 4.568181818181818
             }
         ]
     },
@@ -2412,8 +1644,8 @@
                 "Time": 1.4611764705882353
             },
             {
-                "Distance": 0.3933129993918278,
-                "Weight": 78.7,
+                "Distance": 0.414,
+                "Weight": 82.8,
                 "Bus Service": "Walking",
                 "Time": 5.645454545454545
             },
@@ -2428,14 +1660,6 @@
                 "Weight": 20.7,
                 "Bus Service": "P403-loop",
                 "Time": 1.4611764705882353
-            }
-        ],
-        "Shell Kiosk @ Taman Sri Putri": [
-            {
-                "Distance": 0.06530419171082777,
-                "Weight": 13.1,
-                "Bus Service": "Walking",
-                "Time": 5.645454545454545
             }
         ]
     },
@@ -2452,30 +1676,6 @@
                 "Weight": 105.7,
                 "Bus Service": "P411-01",
                 "Time": 7.462588235294119
-            }
-        ],
-        "aft Shell Kiosk - Skudai": [
-            {
-                "Distance": 0.22814805783029557,
-                "Weight": 45.6,
-                "Bus Service": "Walking",
-                "Time": 28.832727272727272
-            }
-        ],
-        "Shell Kiosk @ Taman Sri Putri": [
-            {
-                "Distance": 0.4511427995668758,
-                "Weight": 90.2,
-                "Bus Service": "Walking",
-                "Time": 28.832727272727272
-            }
-        ],
-        "Opp Shell Kiosk @ Taman Sri Putri": [
-            {
-                "Distance": 0.3933129993918278,
-                "Weight": 78.7,
-                "Bus Service": "Walking",
-                "Time": 28.832727272727272
             }
         ],
         "aft Jalan Patin": [
@@ -2501,14 +1701,6 @@
                 "Bus Service": "P411-01",
                 "Time": 5.749411764705883
             }
-        ],
-        "SJK (C) Kuo Kuang": [
-            {
-                "Distance": 0.059221113273843946,
-                "Weight": 11.8,
-                "Bus Service": "Walking",
-                "Time": 22.21363636363636
-            }
         ]
     },
     "bef Paradigm Mall": {
@@ -2525,14 +1717,6 @@
                 "Bus Service": "P411-01",
                 "Time": 2.155058823529412
             }
-        ],
-        "Opp Paradigm Mall": [
-            {
-                "Distance": 0.3676795526248131,
-                "Weight": 73.5,
-                "Bus Service": "Walking",
-                "Time": 8.326363636363636
-            }
         ]
     },
     "Paradigm Mall": {
@@ -2544,8 +1728,8 @@
                 "Time": 1.290352941176471
             },
             {
-                "Distance": 0.36029798036464095,
-                "Weight": 72.1,
+                "Distance": 0.36560000000000004,
+                "Weight": 73.1,
                 "Bus Service": "Walking",
                 "Time": 4.985454545454545
             },
@@ -2554,14 +1738,6 @@
                 "Weight": 18.3,
                 "Bus Service": "P411-01",
                 "Time": 1.290352941176471
-            }
-        ],
-        "Opp Paradigm Mall": [
-            {
-                "Distance": 0.24413917729736723,
-                "Weight": 48.8,
-                "Bus Service": "Walking",
-                "Time": 4.985454545454545
             }
         ]
     },
@@ -2574,8 +1750,8 @@
                 "Time": 1.5529411764705883
             },
             {
-                "Distance": 0.44053855693746524,
-                "Weight": 88.1,
+                "Distance": 0.44,
+                "Weight": 88.0,
                 "Bus Service": "Walking",
                 "Time": 5.999999999999999
             },
@@ -2584,22 +1760,6 @@
                 "Weight": 22.0,
                 "Bus Service": "P411-01",
                 "Time": 1.5529411764705883
-            }
-        ],
-        "Paradigm Mall": [
-            {
-                "Distance": 0.36029798036464095,
-                "Weight": 72.1,
-                "Bus Service": "Walking",
-                "Time": 5.999999999999999
-            }
-        ],
-        "bef KIP Mart": [
-            {
-                "Distance": 0.49452761347267715,
-                "Weight": 98.9,
-                "Bus Service": "Walking",
-                "Time": 5.999999999999999
             }
         ]
     },
@@ -2617,22 +1777,6 @@
                 "Bus Service": "P411-01",
                 "Time": 10.326352941176472
             }
-        ],
-        "Opp Saksama Otomobil": [
-            {
-                "Distance": 0.44053855693746524,
-                "Weight": 88.1,
-                "Bus Service": "Walking",
-                "Time": 39.89727272727273
-            }
-        ],
-        "bef KIP Mart": [
-            {
-                "Distance": 0.07293495548690862,
-                "Weight": 14.6,
-                "Bus Service": "Walking",
-                "Time": 39.89727272727273
-            }
         ]
     },
     "Kompleks Pekan Rabu Johor Bahru": {
@@ -2644,32 +1788,10 @@
                 "Time": 2.3308235294117643
             },
             {
-                "Distance": 0.3893854395897262,
-                "Weight": 77.9,
-                "Bus Service": "Walking",
-                "Time": 9.005454545454544
-            },
-            {
                 "Distance": 0.6604,
                 "Weight": 33.0,
                 "Bus Service": "P411-01",
                 "Time": 2.3308235294117643
-            }
-        ],
-        "SK Kampung Pasir": [
-            {
-                "Distance": 0.3090831733289616,
-                "Weight": 61.8,
-                "Bus Service": "Walking",
-                "Time": 9.005454545454544
-            }
-        ],
-        "Opp Pulai View Condo": [
-            {
-                "Distance": 0.07556416373199579,
-                "Weight": 15.1,
-                "Bus Service": "Walking",
-                "Time": 9.005454545454544
             }
         ]
     },
@@ -2682,8 +1804,8 @@
                 "Time": 1.5769411764705883
             },
             {
-                "Distance": 0.3917927695341205,
-                "Weight": 78.4,
+                "Distance": 0.44680000000000003,
+                "Weight": 89.4,
                 "Bus Service": "Walking",
                 "Time": 6.092727272727273
             },
@@ -2692,30 +1814,6 @@
                 "Weight": 22.3,
                 "Bus Service": "P411-01",
                 "Time": 1.5769411764705883
-            }
-        ],
-        "Kompleks Pekan Rabu Johor Bahru": [
-            {
-                "Distance": 0.3893854395897262,
-                "Weight": 77.9,
-                "Bus Service": "Walking",
-                "Time": 6.092727272727273
-            }
-        ],
-        "SK Kampung Pasir": [
-            {
-                "Distance": 0.09336112730323076,
-                "Weight": 18.7,
-                "Bus Service": "Walking",
-                "Time": 6.092727272727273
-            }
-        ],
-        "Opp Pulai View Condo": [
-            {
-                "Distance": 0.4547717042357803,
-                "Weight": 91.0,
-                "Bus Service": "Walking",
-                "Time": 6.092727272727273
             }
         ]
     },
@@ -2728,8 +1826,8 @@
                 "Time": 0.8947058823529412
             },
             {
-                "Distance": 0.23449249153003343,
-                "Weight": 46.9,
+                "Distance": 0.2535,
+                "Weight": 50.7,
                 "Bus Service": "Walking",
                 "Time": 3.4568181818181816
             },
@@ -2738,22 +1836,6 @@
                 "Weight": 12.7,
                 "Bus Service": "P411-01",
                 "Time": 0.8947058823529412
-            }
-        ],
-        "Giant Tampoi": [
-            {
-                "Distance": 0.3917927695341205,
-                "Weight": 78.4,
-                "Bus Service": "Walking",
-                "Time": 3.4568181818181816
-            }
-        ],
-        "SK Kampung Pasir": [
-            {
-                "Distance": 0.4777281330320208,
-                "Weight": 95.5,
-                "Bus Service": "Walking",
-                "Time": 3.4568181818181816
             }
         ]
     },
@@ -2766,7 +1848,7 @@
                 "Time": 1.0598823529411767
             },
             {
-                "Distance": 0.3004350085649866,
+                "Distance": 0.3003,
                 "Weight": 60.1,
                 "Bus Service": "Walking",
                 "Time": 4.095
@@ -2776,14 +1858,6 @@
                 "Weight": 15.0,
                 "Bus Service": "P411-01",
                 "Time": 1.0598823529411767
-            }
-        ],
-        "aft Lorong Betik": [
-            {
-                "Distance": 0.23449249153003343,
-                "Weight": 46.9,
-                "Bus Service": "Walking",
-                "Time": 4.095
             }
         ]
     },
@@ -2801,30 +1875,6 @@
                 "Bus Service": "P411-01",
                 "Time": 3.112941176470588
             }
-        ],
-        "Batu 5 Johor Street Market": [
-            {
-                "Distance": 0.3004350085649866,
-                "Weight": 60.1,
-                "Bus Service": "Walking",
-                "Time": 12.027272727272727
-            }
-        ],
-        "Klinik Kesihatan Tampoi": [
-            {
-                "Distance": 0.23592332613925307,
-                "Weight": 47.2,
-                "Bus Service": "Walking",
-                "Time": 12.027272727272727
-            }
-        ],
-        "bef Shell Kiosk @ Kampung Pasir": [
-            {
-                "Distance": 0.2345645013571923,
-                "Weight": 46.9,
-                "Bus Service": "Walking",
-                "Time": 12.027272727272727
-            }
         ]
     },
     "Klinik Utama @ Jalan Padi 1": {
@@ -2841,14 +1891,6 @@
                 "Bus Service": "P411-01",
                 "Time": 10.377882352941176
             }
-        ],
-        "CIMB Bank": [
-            {
-                "Distance": 0.0843889549879799,
-                "Weight": 16.9,
-                "Bus Service": "Walking",
-                "Time": 40.096363636363634
-            }
         ]
     },
     "Opp Amitabha Centre": {
@@ -2860,32 +1902,10 @@
                 "Time": 15.41929411764706
             },
             {
-                "Distance": 0.40633662609048804,
-                "Weight": 81.3,
-                "Bus Service": "Walking",
-                "Time": 59.57454545454545
-            },
-            {
                 "Distance": 4.3688,
                 "Weight": 218.4,
                 "Bus Service": "P411-01",
                 "Time": 15.41929411764706
-            }
-        ],
-        "aft Shell Kiosk @ Jalan Tun Abdul Razak": [
-            {
-                "Distance": 0.3890129801712512,
-                "Weight": 77.8,
-                "Bus Service": "Walking",
-                "Time": 59.57454545454545
-            }
-        ],
-        "Amitabha Centre": [
-            {
-                "Distance": 0.0386684986196442,
-                "Weight": 7.7,
-                "Bus Service": "Walking",
-                "Time": 59.57454545454545
             }
         ]
     },
@@ -2903,30 +1923,6 @@
                 "Bus Service": "P411-01",
                 "Time": 9.291882352941176
             }
-        ],
-        "Opp Amitabha Centre": [
-            {
-                "Distance": 0.40633662609048804,
-                "Weight": 81.3,
-                "Bus Service": "Walking",
-                "Time": 35.90045454545454
-            }
-        ],
-        "aft Shell Kiosk @ Jalan Tun Abdul Razak": [
-            {
-                "Distance": 0.031841070150387264,
-                "Weight": 6.4,
-                "Bus Service": "Walking",
-                "Time": 35.90045454545454
-            }
-        ],
-        "Amitabha Centre": [
-            {
-                "Distance": 0.4329772180661214,
-                "Weight": 86.6,
-                "Bus Service": "Walking",
-                "Time": 35.90045454545454
-            }
         ]
     },
     "aft Shell Kiosk @ Jalan Tun Abdul Razak": {
@@ -2938,8 +1934,8 @@
                 "Time": 1.4728235294117646
             },
             {
-                "Distance": 0.41381810611854275,
-                "Weight": 82.8,
+                "Distance": 0.4173,
+                "Weight": 83.5,
                 "Bus Service": "Walking",
                 "Time": 5.690454545454545
             },
@@ -2948,22 +1944,6 @@
                 "Weight": 20.9,
                 "Bus Service": "P411-02",
                 "Time": 1.4728235294117646
-            }
-        ],
-        "Opp Amitabha Centre": [
-            {
-                "Distance": 0.3890129801712512,
-                "Weight": 77.8,
-                "Bus Service": "Walking",
-                "Time": 5.690454545454545
-            }
-        ],
-        "Opp Shell Kiosk @ Jalan Tun Abdul Razak": [
-            {
-                "Distance": 0.031841070150387264,
-                "Weight": 6.4,
-                "Bus Service": "Walking",
-                "Time": 5.690454545454545
             }
         ]
     },
@@ -2981,30 +1961,6 @@
                 "Bus Service": "P411-02",
                 "Time": 10.235647058823531
             }
-        ],
-        "Opp Amitabha Centre": [
-            {
-                "Distance": 0.0386684986196442,
-                "Weight": 7.7,
-                "Bus Service": "Walking",
-                "Time": 39.546818181818175
-            }
-        ],
-        "Opp Shell Kiosk @ Jalan Tun Abdul Razak": [
-            {
-                "Distance": 0.4329772180661214,
-                "Weight": 86.6,
-                "Bus Service": "Walking",
-                "Time": 39.546818181818175
-            }
-        ],
-        "aft Shell Kiosk @ Jalan Tun Abdul Razak": [
-            {
-                "Distance": 0.41381810611854275,
-                "Weight": 82.8,
-                "Bus Service": "Walking",
-                "Time": 39.546818181818175
-            }
         ]
     },
     "CIMB Bank": {
@@ -3021,14 +1977,6 @@
                 "Bus Service": "P411-02",
                 "Time": 2.5408235294117647
             }
-        ],
-        "Klinik Utama @ Jalan Padi 1": [
-            {
-                "Distance": 0.0843889549879799,
-                "Weight": 16.9,
-                "Bus Service": "Walking",
-                "Time": 9.816818181818181
-            }
         ]
     },
     "Klinik Kesihatan Tampoi": {
@@ -3040,8 +1988,8 @@
                 "Time": 0.005999999999999999
             },
             {
-                "Distance": 0.001813556556694114,
-                "Weight": 0.4,
+                "Distance": 0.0017,
+                "Weight": 0.3,
                 "Bus Service": "Walking",
                 "Time": 0.02318181818181818
             },
@@ -3050,14 +1998,6 @@
                 "Weight": 0.1,
                 "Bus Service": "P411-02",
                 "Time": 0.005999999999999999
-            }
-        ],
-        "Plaza Angsana": [
-            {
-                "Distance": 0.23592332613925307,
-                "Weight": 47.2,
-                "Bus Service": "Walking",
-                "Time": 0.02318181818181818
             }
         ]
     },
@@ -3076,20 +2016,12 @@
                 "Time": 4.376823529411764
             }
         ],
-        "Plaza Angsana": [
-            {
-                "Distance": 0.2345645013571923,
-                "Weight": 46.9,
-                "Bus Service": "Walking",
-                "Time": 16.910454545454545
-            }
-        ],
         "Klinik Kesihatan Tampoi": [
             {
-                "Distance": 0.001813556556694114,
-                "Weight": 0.4,
+                "Distance": 0.4104,
+                "Weight": 82.1,
                 "Bus Service": "Walking",
-                "Time": 16.910454545454545
+                "Time": 5.596363636363636
             }
         ]
     },
@@ -3102,8 +2034,8 @@
                 "Time": 1.3072941176470585
             },
             {
-                "Distance": 0.36971803993883356,
-                "Weight": 73.9,
+                "Distance": 0.37039999999999995,
+                "Weight": 74.1,
                 "Bus Service": "Walking",
                 "Time": 5.05090909090909
             },
@@ -3112,30 +2044,6 @@
                 "Weight": 18.5,
                 "Bus Service": "P411-02",
                 "Time": 1.3072941176470585
-            }
-        ],
-        "Kompleks Pekan Rabu Johor Bahru": [
-            {
-                "Distance": 0.3090831733289616,
-                "Weight": 61.8,
-                "Bus Service": "Walking",
-                "Time": 5.05090909090909
-            }
-        ],
-        "Giant Tampoi": [
-            {
-                "Distance": 0.09336112730323076,
-                "Weight": 18.7,
-                "Bus Service": "Walking",
-                "Time": 5.05090909090909
-            }
-        ],
-        "aft Lorong Betik": [
-            {
-                "Distance": 0.4777281330320208,
-                "Weight": 95.5,
-                "Bus Service": "Walking",
-                "Time": 5.05090909090909
             }
         ]
     },
@@ -3153,30 +2061,6 @@
                 "Bus Service": "P411-02",
                 "Time": 4.296705882352942
             }
-        ],
-        "Kompleks Pekan Rabu Johor Bahru": [
-            {
-                "Distance": 0.07556416373199579,
-                "Weight": 15.1,
-                "Bus Service": "Walking",
-                "Time": 16.60090909090909
-            }
-        ],
-        "Giant Tampoi": [
-            {
-                "Distance": 0.4547717042357803,
-                "Weight": 91.0,
-                "Bus Service": "Walking",
-                "Time": 16.60090909090909
-            }
-        ],
-        "SK Kampung Pasir": [
-            {
-                "Distance": 0.36971803993883356,
-                "Weight": 73.9,
-                "Bus Service": "Walking",
-                "Time": 16.60090909090909
-            }
         ]
     },
     "bef KIP Mart": {
@@ -3193,22 +2077,6 @@
                 "Bus Service": "P411-02",
                 "Time": 3.9024705882352944
             }
-        ],
-        "Opp Saksama Otomobil": [
-            {
-                "Distance": 0.49452761347267715,
-                "Weight": 98.9,
-                "Bus Service": "Walking",
-                "Time": 15.077727272727273
-            }
-        ],
-        "Opp Petron Kiosk @ Taman Tampoi Indah": [
-            {
-                "Distance": 0.07293495548690862,
-                "Weight": 14.6,
-                "Bus Service": "Walking",
-                "Time": 15.077727272727273
-            }
         ]
     },
     "Opp Paradigm Mall": {
@@ -3224,22 +2092,6 @@
                 "Weight": 45.7,
                 "Bus Service": "P411-02",
                 "Time": 3.2227058823529413
-            }
-        ],
-        "bef Paradigm Mall": [
-            {
-                "Distance": 0.3676795526248131,
-                "Weight": 73.5,
-                "Bus Service": "Walking",
-                "Time": 12.451363636363634
-            }
-        ],
-        "Paradigm Mall": [
-            {
-                "Distance": 0.24413917729736723,
-                "Weight": 48.8,
-                "Bus Service": "Walking",
-                "Time": 12.451363636363634
             }
         ]
     },
@@ -3273,14 +2125,6 @@
                 "Bus Service": "P411-02",
                 "Time": 3.597176470588236
             }
-        ],
-        "Opp SJK (C) Kuo Kuang": [
-            {
-                "Distance": 0.059221113273843946,
-                "Weight": 11.8,
-                "Bus Service": "Walking",
-                "Time": 13.898181818181818
-            }
         ]
     },
     "aft Jalan Sri Skudai": {
@@ -3292,16 +2136,8 @@
                 "Time": 0.9829411764705884
             },
             {
-                "Distance": 0.27836605646728924,
+                "Distance": 0.2785,
                 "Weight": 55.7,
-                "Bus Service": "Walking",
-                "Time": 3.797727272727273
-            }
-        ],
-        "Shophouses along Jalan Tembaga Kuning 4": [
-            {
-                "Distance": 0.4588784553005271,
-                "Weight": 91.8,
                 "Bus Service": "Walking",
                 "Time": 3.797727272727273
             }
@@ -3316,32 +2152,8 @@
                 "Time": 0.39494117647058824
             },
             {
-                "Distance": 0.08013665312799645,
-                "Weight": 16.0,
-                "Bus Service": "Walking",
-                "Time": 1.5259090909090909
-            }
-        ],
-        "UTM Fakulti Alam Bina": [
-            {
-                "Distance": 0.4894816420922039,
-                "Weight": 97.9,
-                "Bus Service": "Walking",
-                "Time": 1.5259090909090909
-            }
-        ],
-        "aft Block P19A - Fakulti Kejuruteraan Elektrik": [
-            {
-                "Distance": 0.28471710024829944,
-                "Weight": 56.9,
-                "Bus Service": "Walking",
-                "Time": 1.5259090909090909
-            }
-        ],
-        "UTM Equine Park": [
-            {
-                "Distance": 0.37409727241028956,
-                "Weight": 74.8,
+                "Distance": 0.1119,
+                "Weight": 22.4,
                 "Bus Service": "Walking",
                 "Time": 1.5259090909090909
             }
@@ -3355,38 +2167,6 @@
                 "Bus Service": "P211-02",
                 "Time": 7.552941176470588
             }
-        ],
-        "UTM Fakulti Alam Bina": [
-            {
-                "Distance": 0.4425097642163932,
-                "Weight": 88.5,
-                "Bus Service": "Walking",
-                "Time": 29.18181818181818
-            }
-        ],
-        "aft Block P19A - Fakulti Kejuruteraan Elektrik": [
-            {
-                "Distance": 0.35978310467278446,
-                "Weight": 72.0,
-                "Bus Service": "Walking",
-                "Time": 29.18181818181818
-            }
-        ],
-        "UTM Equine Park": [
-            {
-                "Distance": 0.44252725854023905,
-                "Weight": 88.5,
-                "Bus Service": "Walking",
-                "Time": 29.18181818181818
-            }
-        ],
-        "bef UTM Main Gate": [
-            {
-                "Distance": 0.08013665312799645,
-                "Weight": 16.0,
-                "Bus Service": "Walking",
-                "Time": 29.18181818181818
-            }
         ]
     },
     "Opp AEON Taman Universiti": {
@@ -3396,20 +2176,14 @@
                 "Weight": 28.9,
                 "Bus Service": "P211-02",
                 "Time": 2.037529411764706
-            },
-            {
-                "Distance": 0.3836896416908637,
-                "Weight": 76.7,
-                "Bus Service": "Walking",
-                "Time": 7.872272727272726
             }
         ],
         "Aeon Taman Universiti": [
             {
-                "Distance": 0.051071171315836654,
-                "Weight": 10.2,
+                "Distance": 0.3707,
+                "Weight": 74.1,
                 "Bus Service": "Walking",
-                "Time": 7.872272727272726
+                "Time": 5.055
             }
         ]
     },
@@ -3434,10 +2208,10 @@
         ],
         "Opp Arked Kulai": [
             {
-                "Distance": 0.0757686219055393,
-                "Weight": 15.2,
+                "Distance": 0.4814,
+                "Weight": 96.3,
                 "Bus Service": "Walking",
-                "Time": 14.588181818181816
+                "Time": 6.5645454545454545
             }
         ]
     },
@@ -3450,26 +2224,18 @@
                 "Time": 1.5059999999999998
             },
             {
-                "Distance": 0.4111571298281438,
-                "Weight": 82.2,
-                "Bus Service": "Walking",
-                "Time": 5.818636363636363
-            }
-        ],
-        "Persatuan Hokkien Kulai": [
-            {
-                "Distance": 0.3333095017175621,
-                "Weight": 66.7,
+                "Distance": 0.42669999999999997,
+                "Weight": 85.3,
                 "Bus Service": "Walking",
                 "Time": 5.818636363636363
             }
         ],
         "SBS Enterprises (M) Sdn Bhd": [
             {
-                "Distance": 0.029103794667634346,
-                "Weight": 5.8,
+                "Distance": 0.4273,
+                "Weight": 85.5,
                 "Bus Service": "Walking",
-                "Time": 5.818636363636363
+                "Time": 5.826818181818181
             }
         ]
     },
@@ -3482,36 +2248,20 @@
                 "Time": 3.060705882352942
             }
         ],
-        "Opp SBS Enterprises (M) Sdn Bhd": [
-            {
-                "Distance": 0.4111571298281438,
-                "Weight": 82.2,
-                "Bus Service": "Walking",
-                "Time": 11.825454545454546
-            }
-        ],
         "aft Persiaran Indahpura 4": [
             {
-                "Distance": 0.43187847520544437,
-                "Weight": 86.4,
+                "Distance": 0.4392,
+                "Weight": 87.8,
                 "Bus Service": "Walking",
-                "Time": 11.825454545454546
+                "Time": 5.989090909090908
             }
         ],
         "Persatuan Hokkien Kulai": [
             {
-                "Distance": 0.08724714133788523,
-                "Weight": 17.4,
+                "Distance": 0.4506,
+                "Weight": 90.1,
                 "Bus Service": "Walking",
-                "Time": 11.825454545454546
-            }
-        ],
-        "SBS Enterprises (M) Sdn Bhd": [
-            {
-                "Distance": 0.43789780280774676,
-                "Weight": 87.6,
-                "Bus Service": "Walking",
-                "Time": 11.825454545454546
+                "Time": 6.144545454545454
             }
         ]
     },
@@ -3523,22 +2273,6 @@
                 "Bus Service": "P411-01",
                 "Time": 4.501058823529411
             }
-        ],
-        "SMK Kulai Besar": [
-            {
-                "Distance": 0.09370426096088737,
-                "Weight": 18.7,
-                "Bus Service": "Walking",
-                "Time": 17.390454545454542
-            }
-        ],
-        "aft Persiaran Indahpura 4": [
-            {
-                "Distance": 0.4186388100842542,
-                "Weight": 83.7,
-                "Bus Service": "Walking",
-                "Time": 17.390454545454542
-            }
         ]
     },
     "Opp Hospital Temenggong Seri Maharaja Tun Ibrahim Kulaijaya": {
@@ -3548,14 +2282,6 @@
                 "Weight": 37.5,
                 "Bus Service": "P411-01",
                 "Time": 2.6498823529411766
-            }
-        ],
-        "bef Hospital Temenggong Seri Maharaja Tun Ibrahim Kulaijaya": [
-            {
-                "Distance": 0.026088543393485,
-                "Weight": 5.2,
-                "Bus Service": "Walking",
-                "Time": 10.238181818181816
             }
         ]
     },
@@ -3568,20 +2294,12 @@
                 "Time": 1.8074117647058823
             }
         ],
-        "TJ Mart": [
-            {
-                "Distance": 0.3804554768886945,
-                "Weight": 76.1,
-                "Bus Service": "Walking",
-                "Time": 6.9831818181818175
-            }
-        ],
         "aft Jalan Cermai 7": [
             {
-                "Distance": 0.06944766743621836,
-                "Weight": 13.9,
+                "Distance": 0.2052,
+                "Weight": 41.0,
                 "Bus Service": "Walking",
-                "Time": 6.9831818181818175
+                "Time": 2.798181818181818
             }
         ]
     },
@@ -3596,26 +2314,18 @@
         ],
         "Stor JKR (D) Kulaijaya": [
             {
-                "Distance": 0.03996994904867402,
-                "Weight": 8.0,
+                "Distance": 0.325,
+                "Weight": 65.0,
                 "Bus Service": "Walking",
-                "Time": 9.583636363636362
+                "Time": 4.431818181818182
             }
         ],
         "TJ Mart": [
             {
-                "Distance": 0.13649316672894254,
-                "Weight": 27.3,
+                "Distance": 0.4744,
+                "Weight": 94.9,
                 "Bus Service": "Walking",
-                "Time": 9.583636363636362
-            }
-        ],
-        "aft Jalan Cermai 7": [
-            {
-                "Distance": 0.4625488987070783,
-                "Weight": 92.5,
-                "Bus Service": "Walking",
-                "Time": 9.583636363636362
+                "Time": 6.469090909090909
             }
         ]
     },
@@ -3627,14 +2337,6 @@
                 "Bus Service": "P411-01",
                 "Time": 4.536352941176471
             }
-        ],
-        "aft Jalan Kelah": [
-            {
-                "Distance": 0.16279740515840746,
-                "Weight": 32.6,
-                "Bus Service": "Walking",
-                "Time": 17.52681818181818
-            }
         ]
     },
     "Opp Pejabat Lembaga Lebuhraya Malaysia": {
@@ -3644,14 +2346,6 @@
                 "Weight": 111.3,
                 "Bus Service": "P411-01",
                 "Time": 7.855058823529411
-            }
-        ],
-        "Pejabat Lembaga Lebuhraya Malaysia": [
-            {
-                "Distance": 0.08358328869144158,
-                "Weight": 16.7,
-                "Bus Service": "Walking",
-                "Time": 30.34909090909091
             }
         ]
     },
@@ -3669,14 +2363,6 @@
                 "Bus Service": "P403-loop",
                 "Time": 1.9725882352941175
             }
-        ],
-        "Opp Medan Selera Senai": [
-            {
-                "Distance": 0.13952523718011142,
-                "Weight": 27.9,
-                "Bus Service": "Walking",
-                "Time": 7.621363636363635
-            }
         ]
     },
     "Opp Sekolah Kebangsaan Senai": {
@@ -3693,22 +2379,6 @@
                 "Bus Service": "P403-loop",
                 "Time": 2.457882352941177
             }
-        ],
-        "bef Sekolah Kebangsaan Senai": [
-            {
-                "Distance": 0.09931027739057734,
-                "Weight": 19.9,
-                "Bus Service": "Walking",
-                "Time": 9.496363636363636
-            }
-        ],
-        "Opp Medan Selera Senai": [
-            {
-                "Distance": 0.40456912714754234,
-                "Weight": 80.9,
-                "Bus Service": "Walking",
-                "Time": 9.496363636363636
-            }
         ]
     },
     "Opp BHPetrol Kiosk @ Taman Aman": {
@@ -3724,14 +2394,6 @@
                 "Weight": 138.1,
                 "Bus Service": "P403-loop",
                 "Time": 9.75
-            }
-        ],
-        "bef BHPetrol Kiosk @ Taman Aman": [
-            {
-                "Distance": 0.04670100639102394,
-                "Weight": 9.3,
-                "Bus Service": "Walking",
-                "Time": 37.67045454545455
             }
         ]
     },
@@ -3781,14 +2443,6 @@
                 "Bus Service": "P403-loop",
                 "Time": 2.2475294117647056
             }
-        ],
-        "Opp BHPetrol Kiosk @ Taman Aman": [
-            {
-                "Distance": 0.04670100639102394,
-                "Weight": 9.3,
-                "Bus Service": "Walking",
-                "Time": 8.683636363636362
-            }
         ]
     },
     "bef Sekolah Kebangsaan Senai": {
@@ -3800,24 +2454,10 @@
                 "Time": 1.8317647058823532
             },
             {
-                "Distance": 0.49286633013468883,
-                "Weight": 98.6,
-                "Bus Service": "Walking",
-                "Time": 7.077272727272727
-            },
-            {
                 "Distance": 0.519,
                 "Weight": 25.9,
                 "Bus Service": "P403-loop",
                 "Time": 1.8317647058823532
-            }
-        ],
-        "Opp Sekolah Kebangsaan Senai": [
-            {
-                "Distance": 0.09931027739057734,
-                "Weight": 19.9,
-                "Bus Service": "Walking",
-                "Time": 7.077272727272727
             }
         ]
     },
@@ -3828,30 +2468,6 @@
                 "Weight": 37.8,
                 "Bus Service": "P411-02",
                 "Time": 2.669294117647059
-            }
-        ],
-        "Medan Selera Senai": [
-            {
-                "Distance": 0.13952523718011142,
-                "Weight": 27.9,
-                "Bus Service": "Walking",
-                "Time": 10.313181818181818
-            }
-        ],
-        "Opp Sekolah Kebangsaan Senai": [
-            {
-                "Distance": 0.40456912714754234,
-                "Weight": 80.9,
-                "Bus Service": "Walking",
-                "Time": 10.313181818181818
-            }
-        ],
-        "bef Sekolah Kebangsaan Senai": [
-            {
-                "Distance": 0.49286633013468883,
-                "Weight": 98.6,
-                "Bus Service": "Walking",
-                "Time": 10.313181818181818
             }
         ],
         "bef Econsave @ Senai": [
@@ -3894,10 +2510,10 @@
         ],
         "Opp Pejabat Lembaga Lebuhraya Malaysia": [
             {
-                "Distance": 0.08358328869144158,
-                "Weight": 16.7,
+                "Distance": 0.0985,
+                "Weight": 19.7,
                 "Bus Service": "Walking",
-                "Time": 29.052272727272726
+                "Time": 1.343181818181818
             }
         ]
     },
@@ -3912,10 +2528,10 @@
         ],
         "Opp Wang Loo Motor Sdn Bhd": [
             {
-                "Distance": 0.16279740515840746,
+                "Distance": 0.1628,
                 "Weight": 32.6,
                 "Bus Service": "Walking",
-                "Time": 43.214999999999996
+                "Time": 2.2199999999999998
             }
         ]
     },
@@ -3928,26 +2544,18 @@
                 "Time": 0.5272941176470588
             },
             {
-                "Distance": 0.14947728771158098,
+                "Distance": 0.1494,
                 "Weight": 29.9,
-                "Bus Service": "Walking",
-                "Time": 2.037272727272727
-            }
-        ],
-        "Opp Stor JKR (D) Kulaijaya": [
-            {
-                "Distance": 0.03996994904867402,
-                "Weight": 8.0,
                 "Bus Service": "Walking",
                 "Time": 2.037272727272727
             }
         ],
         "aft Jalan Cermai 7": [
             {
-                "Distance": 0.4756059992106724,
-                "Weight": 95.1,
+                "Distance": 0.4764,
+                "Weight": 95.3,
                 "Bus Service": "Walking",
-                "Time": 2.037272727272727
+                "Time": 6.496363636363635
             }
         ]
     },
@@ -3960,32 +2568,8 @@
                 "Time": 1.1544705882352941
             },
             {
-                "Distance": 0.3269666096135023,
+                "Distance": 0.3271,
                 "Weight": 65.4,
-                "Bus Service": "Walking",
-                "Time": 4.460454545454545
-            }
-        ],
-        "Opp Jalan Cermai": [
-            {
-                "Distance": 0.3804554768886945,
-                "Weight": 76.1,
-                "Bus Service": "Walking",
-                "Time": 4.460454545454545
-            }
-        ],
-        "Opp Stor JKR (D) Kulaijaya": [
-            {
-                "Distance": 0.13649316672894254,
-                "Weight": 27.3,
-                "Bus Service": "Walking",
-                "Time": 4.460454545454545
-            }
-        ],
-        "Stor JKR (D) Kulaijaya": [
-            {
-                "Distance": 0.14947728771158098,
-                "Weight": 29.9,
                 "Bus Service": "Walking",
                 "Time": 4.460454545454545
             }
@@ -3998,38 +2582,6 @@
                 "Weight": 92.9,
                 "Bus Service": "P411-02",
                 "Time": 6.559764705882352
-            }
-        ],
-        "Opp Jalan Cermai": [
-            {
-                "Distance": 0.06944766743621836,
-                "Weight": 13.9,
-                "Bus Service": "Walking",
-                "Time": 25.34454545454545
-            }
-        ],
-        "Opp Stor JKR (D) Kulaijaya": [
-            {
-                "Distance": 0.4625488987070783,
-                "Weight": 92.5,
-                "Bus Service": "Walking",
-                "Time": 25.34454545454545
-            }
-        ],
-        "Stor JKR (D) Kulaijaya": [
-            {
-                "Distance": 0.4756059992106724,
-                "Weight": 95.1,
-                "Bus Service": "Walking",
-                "Time": 25.34454545454545
-            }
-        ],
-        "TJ Mart": [
-            {
-                "Distance": 0.3269666096135023,
-                "Weight": 65.4,
-                "Bus Service": "Walking",
-                "Time": 25.34454545454545
             }
         ]
     },
@@ -4044,10 +2596,10 @@
         ],
         "Opp Hospital Temenggong Seri Maharaja Tun Ibrahim Kulaijaya": [
             {
-                "Distance": 0.026088543393485,
-                "Weight": 5.2,
+                "Distance": 0.1611,
+                "Weight": 32.2,
                 "Bus Service": "Walking",
-                "Time": 47.43272727272727
+                "Time": 2.196818181818182
             }
         ]
     },
@@ -4058,20 +2610,14 @@
                 "Weight": 157.9,
                 "Bus Service": "P411-02",
                 "Time": 11.144470588235295
-            },
-            {
-                "Distance": 0.33001531959342717,
-                "Weight": 66.0,
-                "Bus Service": "Walking",
-                "Time": 43.05818181818181
             }
         ],
         "Opp Pertubuhan Peladang Kawasan Kulai": [
             {
-                "Distance": 0.09370426096088737,
-                "Weight": 18.7,
+                "Distance": 0.09570000000000001,
+                "Weight": 19.1,
                 "Bus Service": "Walking",
-                "Time": 43.05818181818181
+                "Time": 1.305
             }
         ]
     },
@@ -4084,28 +2630,20 @@
                 "Time": 9.453529411764707
             }
         ],
-        "Opp Public Bank @ Jalan Susur Kulai 2": [
-            {
-                "Distance": 0.43187847520544437,
-                "Weight": 86.4,
-                "Bus Service": "Walking",
-                "Time": 36.525
-            }
-        ],
         "Opp Pertubuhan Peladang Kawasan Kulai": [
             {
-                "Distance": 0.4186388100842542,
-                "Weight": 83.7,
+                "Distance": 0.4285,
+                "Weight": 85.7,
                 "Bus Service": "Walking",
-                "Time": 36.525
+                "Time": 5.843181818181818
             }
         ],
         "SMK Kulai Besar": [
             {
-                "Distance": 0.33001531959342717,
-                "Weight": 66.0,
+                "Distance": 0.3344,
+                "Weight": 66.9,
                 "Bus Service": "Walking",
-                "Time": 36.525
+                "Time": 4.559999999999999
             }
         ]
     },
@@ -4118,26 +2656,18 @@
                 "Time": 1.2790588235294116
             },
             {
-                "Distance": 0.3587772067626117,
-                "Weight": 71.8,
-                "Bus Service": "Walking",
-                "Time": 4.941818181818181
-            }
-        ],
-        "Opp SBS Enterprises (M) Sdn Bhd": [
-            {
-                "Distance": 0.3333095017175621,
-                "Weight": 66.7,
+                "Distance": 0.3624,
+                "Weight": 72.5,
                 "Bus Service": "Walking",
                 "Time": 4.941818181818181
             }
         ],
         "Opp Public Bank @ Jalan Susur Kulai 2": [
             {
-                "Distance": 0.08724714133788523,
-                "Weight": 17.4,
+                "Distance": 0.3892,
+                "Weight": 77.8,
                 "Bus Service": "Walking",
-                "Time": 4.941818181818181
+                "Time": 5.307272727272727
             }
         ]
     },
@@ -4149,30 +2679,6 @@
                 "Bus Service": "P411-02",
                 "Time": 3.4023529411764706
             }
-        ],
-        "Opp SBS Enterprises (M) Sdn Bhd": [
-            {
-                "Distance": 0.029103794667634346,
-                "Weight": 5.8,
-                "Bus Service": "Walking",
-                "Time": 13.145454545454543
-            }
-        ],
-        "Opp Public Bank @ Jalan Susur Kulai 2": [
-            {
-                "Distance": 0.43789780280774676,
-                "Weight": 87.6,
-                "Bus Service": "Walking",
-                "Time": 13.145454545454543
-            }
-        ],
-        "Persatuan Hokkien Kulai": [
-            {
-                "Distance": 0.3587772067626117,
-                "Weight": 71.8,
-                "Bus Service": "Walking",
-                "Time": 13.145454545454543
-            }
         ]
     },
     "Opp Arked Kulai": {
@@ -4182,14 +2688,6 @@
                 "Weight": 34.7,
                 "Bus Service": "P411-02",
                 "Time": 2.451529411764706
-            }
-        ],
-        "Kulai Centre Point": [
-            {
-                "Distance": 0.0757686219055393,
-                "Weight": 15.2,
-                "Bus Service": "Walking",
-                "Time": 9.47181818181818
             }
         ]
     },
@@ -4202,34 +2700,18 @@
                 "Time": 1.2988235294117647
             },
             {
-                "Distance": 0.2666024077920242,
-                "Weight": 53.3,
-                "Bus Service": "Walking",
-                "Time": 5.018181818181818
-            }
-        ],
-        "Opp Taman Bintang": [
-            {
-                "Distance": 0.4652702839890908,
-                "Weight": 93.1,
+                "Distance": 0.368,
+                "Weight": 73.6,
                 "Bus Service": "Walking",
                 "Time": 5.018181818181818
             }
         ],
         "Taman Mewah": [
             {
-                "Distance": 0.19429463808635725,
-                "Weight": 38.9,
+                "Distance": 0.3388,
+                "Weight": 67.8,
                 "Bus Service": "Walking",
-                "Time": 5.018181818181818
-            }
-        ],
-        "bef Econsave @ Senai": [
-            {
-                "Distance": 0.130980923522498,
-                "Weight": 26.2,
-                "Bus Service": "Walking",
-                "Time": 5.018181818181818
+                "Time": 4.619999999999999
             }
         ]
     },
@@ -4242,40 +2724,8 @@
                 "Time": 0.8241176470588235
             },
             {
-                "Distance": 0.2305220255651268,
-                "Weight": 46.1,
-                "Bus Service": "Walking",
-                "Time": 3.184090909090909
-            }
-        ],
-        "Econsave Senai": [
-            {
-                "Distance": 0.2666024077920242,
-                "Weight": 53.3,
-                "Bus Service": "Walking",
-                "Time": 3.184090909090909
-            }
-        ],
-        "Taman Bintang": [
-            {
-                "Distance": 0.349168644340892,
-                "Weight": 69.8,
-                "Bus Service": "Walking",
-                "Time": 3.184090909090909
-            }
-        ],
-        "Taman Mewah": [
-            {
-                "Distance": 0.3820274988751423,
-                "Weight": 76.4,
-                "Bus Service": "Walking",
-                "Time": 3.184090909090909
-            }
-        ],
-        "bef Econsave @ Senai": [
-            {
-                "Distance": 0.2795998036612838,
-                "Weight": 55.9,
+                "Distance": 0.2335,
+                "Weight": 46.7,
                 "Bus Service": "Walking",
                 "Time": 3.184090909090909
             }
@@ -4289,30 +2739,6 @@
                 "Bus Service": "P403-loop",
                 "Time": 4.6450588235294115
             }
-        ],
-        "Econsave Senai": [
-            {
-                "Distance": 0.4652702839890908,
-                "Weight": 93.1,
-                "Bus Service": "Walking",
-                "Time": 17.946818181818177
-            }
-        ],
-        "Opp Pusat Hemodialisis Rotary Kulai": [
-            {
-                "Distance": 0.2305220255651268,
-                "Weight": 46.1,
-                "Bus Service": "Walking",
-                "Time": 17.946818181818177
-            }
-        ],
-        "Taman Bintang": [
-            {
-                "Distance": 0.11909366140274934,
-                "Weight": 23.8,
-                "Bus Service": "Walking",
-                "Time": 17.946818181818177
-            }
         ]
     },
     "Kawasan Perindustrian Senai 3": {
@@ -4322,14 +2748,6 @@
                 "Weight": 96.6,
                 "Bus Service": "P403-loop",
                 "Time": 6.820588235294117
-            }
-        ],
-        "NSTP Senai": [
-            {
-                "Distance": 0.2598788305417638,
-                "Weight": 52.0,
-                "Bus Service": "Walking",
-                "Time": 26.352272727272727
             }
         ]
     },
@@ -4351,14 +2769,6 @@
                 "Bus Service": "P403-loop",
                 "Time": 5.1868235294117655
             }
-        ],
-        "Kawasan Perindustrian Senai 3": [
-            {
-                "Distance": 0.2598788305417638,
-                "Weight": 52.0,
-                "Bus Service": "Walking",
-                "Time": 20.04
-            }
         ]
     },
     "Taman Bintang": {
@@ -4369,22 +2779,6 @@
                 "Bus Service": "P403-loop",
                 "Time": 2.731411764705882
             }
-        ],
-        "Opp Pusat Hemodialisis Rotary Kulai": [
-            {
-                "Distance": 0.349168644340892,
-                "Weight": 69.8,
-                "Bus Service": "Walking",
-                "Time": 10.553181818181818
-            }
-        ],
-        "Opp Taman Bintang": [
-            {
-                "Distance": 0.11909366140274934,
-                "Weight": 23.8,
-                "Bus Service": "Walking",
-                "Time": 10.553181818181818
-            }
         ]
     },
     "Taman Mewah": {
@@ -4394,30 +2788,6 @@
                 "Weight": 85.0,
                 "Bus Service": "P403-loop",
                 "Time": 5.9971764705882356
-            }
-        ],
-        "Econsave Senai": [
-            {
-                "Distance": 0.19429463808635725,
-                "Weight": 38.9,
-                "Bus Service": "Walking",
-                "Time": 23.170909090909092
-            }
-        ],
-        "Opp Pusat Hemodialisis Rotary Kulai": [
-            {
-                "Distance": 0.3820274988751423,
-                "Weight": 76.4,
-                "Bus Service": "Walking",
-                "Time": 23.170909090909092
-            }
-        ],
-        "bef Econsave @ Senai": [
-            {
-                "Distance": 0.10251225366277066,
-                "Weight": 20.5,
-                "Bus Service": "Walking",
-                "Time": 23.170909090909092
             }
         ]
     },
@@ -4430,26 +2800,26 @@
                 "Time": 0.6885882352941177
             },
             {
-                "Distance": 0.130980923522498,
-                "Weight": 26.2,
+                "Distance": 0.1951,
+                "Weight": 39.0,
                 "Bus Service": "Walking",
                 "Time": 2.660454545454545
             }
         ],
         "Opp Pusat Hemodialisis Rotary Kulai": [
             {
-                "Distance": 0.2795998036612838,
-                "Weight": 55.9,
+                "Distance": 0.2838,
+                "Weight": 56.8,
                 "Bus Service": "Walking",
-                "Time": 2.660454545454545
+                "Time": 3.869999999999999
             }
         ],
         "Taman Mewah": [
             {
-                "Distance": 0.10251225366277066,
-                "Weight": 20.5,
+                "Distance": 0.2328,
+                "Weight": 46.6,
                 "Bus Service": "Walking",
-                "Time": 2.660454545454545
+                "Time": 3.1745454545454543
             }
         ]
     }
