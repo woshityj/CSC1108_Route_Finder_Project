@@ -98,7 +98,7 @@ def a_star(graph, start, goal, start_time):
     return None
 
 
-start = "Medan Selera Senai"
+start = "Kulai Terminal"
 goal = "Senai Airport Terminal"
 path = a_star(graph, start, goal, 0)
 pprint.pprint(path)
