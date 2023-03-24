@@ -10,7 +10,7 @@ import math
 from geopy.geocoders import Nominatim
 import geopy.distance
 from PyQt6 import QtWidgets, uic
-from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget
+from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget, QLineEdit, QCompleter
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 
 import gpt_generated_a_star
@@ -27,14 +27,21 @@ class MyApp(QWidget):
         uic.loadUi('MainGUI.ui', self)
 
         self.map = QWebEngineView()
-
+        bus_stops = json.loads(open('gpt_generated_graph.json').read()).keys()
+        wordList = list(bus_stops)
+        print(wordList)
         bus_services = self.getBusServices()
         for i in range(len(bus_services)):
             self.busServiceList.addItem(bus_services[i])
 
 
         self.getBusRoute.clicked.connect(lambda: self.getBusServiceRoute(self.busServiceList.currentItem().text()))
-        self.gridLayout.addWidget(self.map, 0, 0, 0, 0)
+        self.gridLayout1.addWidget(self.map, 0, 0, 0, 0)
+        self.gridLayout2.addWidget(self.map, 0, 0, 0, 0)
+        completer = QCompleter(wordList)
+        self.fromTextField.setCompleter(completer)
+        self.toTextField.setCompleter(completer)
+
 
         self.getRouteButton.clicked.connect(lambda: self.getRoute(self.fromTextField.text(), self.toTextField.text()))
 
@@ -145,8 +152,8 @@ class MyApp(QWidget):
             A list of the names of Bus Stops the user should travel via to reach to his destination
         """
 
-        graph = json.loads(open('gpt_generated_graph.json').read())
-        path = gpt_generated_a_star.a_star(graph, start_bus_stop, end_bus_stop)
+        graph = json.loads(open('test_graph.json').read())
+        path = gpt_generated_a_star.a_star(graph, start_bus_stop, end_bus_stop,0)
         return path
 
     def getCoordinates(self, bus_stop):
