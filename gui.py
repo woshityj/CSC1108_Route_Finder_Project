@@ -6,7 +6,6 @@ import numpy as np
 import pprint
 import openrouteservice as ors
 import osmnx as ox
-import networkx as nx
 import math
 from geopy.geocoders import Nominatim
 import geopy.distance

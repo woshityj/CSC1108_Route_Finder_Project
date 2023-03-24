@@ -7,7 +7,7 @@ import openrouteservice as ors
 import math
 
 # stop = {}
-# bus_routes = json.loads(open('bus_stops.json').read())
+bus_routes = json.loads(open('bus_stops.json').read())
 
 # Maps out a dictionary which consists of the list of Bus Stops that are adjacent to the current Bus Stop
 def generateGraph(bus_routes):
@@ -101,11 +101,11 @@ def generateGraphWithDistance(bus_routes):
                 graph[bus_stop][next_bus_stop]["Bus Service"].append(bus_service_index)
     return graph
 
-bus_routes = json.loads(open('bus_stops_cleaned.json').read())
-graph = generateGraphWithDistance(bus_routes)
-graph_json = json.dumps(graph, indent = 4)
-with open("graph.json", "w") as outfile:
-    outfile.write(graph_json)
+# bus_routes = json.loads(open('bus_stops_cleaned.json').read())
+# graph = generateGraphWithDistance(bus_routes)
+# graph_json = json.dumps(graph, indent = 4)
+# with open("graph.json", "w") as outfile:
+#     outfile.write(graph_json)
 
 ## Commands to generate a json file with distance to adjacent bus stops
 # graph_with_distance_json = json.dumps(generateGraphWithDistance(bus_routes), indent = 4)
@@ -137,8 +137,10 @@ def generateBusStopstoBusServices(bus_routes):
         for bus_stop in bus_routes[bus_service]["Bus stop"].values():
             if bus_stop not in service_routes_map:
                 service_routes_map[bus_stop] = []
-            service_routes_map[bus_stop] += [bus_service]
+            if bus_service not in service_routes_map[bus_stop]:
+                service_routes_map[bus_stop] += [bus_service]
     return service_routes_map
+
 
 # bus_stops = generateBusStopstoBusServices(bus_routes)
 # bus_stop_json = json.dumps(bus_stops, indent = 8)

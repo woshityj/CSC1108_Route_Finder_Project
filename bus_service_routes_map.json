@@ -1,7 +1,6 @@
 {
         "Larkin Terminal": [
                 "P101-loop",
-                "P101-loop",
                 "P211-01",
                 "P211-02",
                 "P411-01",
@@ -67,7 +66,6 @@
         "Hub PPR Sri Stulang": [
                 "P102-01",
                 "P102-02",
-                "P106-loop",
                 "P106-loop"
         ],
         "bef Jalan Sultanah Aminah": [
@@ -205,7 +203,6 @@
         ],
         "Taman Universiti Terminal": [
                 "P202-loop",
-                "P202-loop",
                 "P211-01",
                 "P211-02"
         ],
@@ -219,6 +216,12 @@
                 "P202-loop"
         ],
         "Opp Jalan Utama 34": [
+                "P202-loop"
+        ],
+        "KFC (Road side)": [
+                "P202-loop"
+        ],
+        "Tesco Lotus (Road side)": [
                 "P202-loop"
         ],
         "Opp Hutan Bandar MBIP": [
@@ -340,6 +343,10 @@
                 "P403-loop"
         ],
         "Opp SJK (C) Kuo Kuang": [
+                "P211-01",
+                "P411-01"
+        ],
+        "bef Jalan Kempas Lama": [
                 "P211-01",
                 "P411-01"
         ],
@@ -550,7 +557,6 @@
                 "P411-02"
         ],
         "Econsave Senai": [
-                "P403-loop",
                 "P403-loop"
         ],
         "Opp Pusat Hemodialisis Rotary Kulai": [
