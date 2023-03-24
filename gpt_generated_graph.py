@@ -108,3 +108,38 @@ output_json = generate_adjacent_stops(input_json)
 
 with open("new_gpt_generated_graph_with_time.json", "w") as outfile:     
     json.dump(output_json, outfile, indent=4)
+
+def KMPdoesItContain(busStopName, pattern): 
+        busStopName = busStopName.upper()
+        pattern = pattern.upper()
+        if pattern == "":
+            return False
+        # Will only ever have the same amount of states in the LPS array = to the length of the pattern to look for
+        lps = [0]*len(pattern) 
+        prevLPS = 0
+        i = 1
+        while i < len(pattern):
+            if pattern[i] == pattern[prevLPS]:
+                lps[i] = prevLPS + 1
+                prevLPS += 1
+                i += 1
+            elif prevLPS == 0:
+                lps[i] = 0
+                i += 1
+            else:
+                prevLPS = lps[prevLPS-1]
+        # Everything above this is setting up the LPS, longest prefix suffix array which tells us which 'state' index to go to
+        i = 0 # Pointer for text to search in
+        j = 0 # Pointer for pattern
+        while i < len(busStopName):
+            if busStopName[i] == pattern[j]:
+                i, j = i + 1, j+1 #iIf theres a match, increment both pointers
+            else:
+                if j == 0: # If first letter in pattern doesn't already match, go to the next letter of the busStopName, because j cannot be < 0
+                    i += 1
+                else:
+                    j = lps[j-1]
+            if j == len(pattern): # if j == length of the pattern to look for, it means that theres a string matching the busStopName of certain sections eg: 'Taman University' and pattern is 'Taman' (might have to toUpper() the inputs)
+                indexOfOccurence = i - len(pattern) # Change the code to return this if you need, otherwise no need
+                return True
+        return False # Result not found

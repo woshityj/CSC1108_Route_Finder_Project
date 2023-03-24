@@ -1,7 +1,9 @@
 import heapq
 import openrouteservice as ors
 import json
+import requests
 from math import radians, sin, cos, sqrt, atan2
+import pprint
 
 api_cache = {}
 
@@ -15,6 +17,38 @@ def haversine(lat1, lon1, lat2, lon2):
     distance = R * c
 
     return distance
+
+def get_route_between_points(coord1, coord2):
+    lat1, lon1 = map(float, coord1.split(','))
+    lat2, lon2 = map(float, coord2.split(','))
+    client = ors.Client(key = '5b3ce3597851110001cf62483b2035bb64ee4d0080a2aeb8bd28d07e')
+    coords = [[lon1, lat1], [lon2, lat2]]
+    route = client.directions(coords, profile = 'driving-car', format = 'geojson')
+    route = route["features"][0]["geometry"]["coordinates"]
+    return route
+
+def get_traffic_light_count_along_route(route):
+
+    overpass_url = "http://overpass-api.de/api/interpreter"
+
+    route_str = ' '.join(f"{lat} {lon}" for lon, lat in route)
+
+    overpass_query = f"""
+    [out:json];
+    way(poly:"{route_str}")["highway"];
+    node(w)["highway"="traffic_signals"];
+    out count;
+    """
+
+    response = requests.get(overpass_url, params={"data": overpass_query})
+
+    if response.status_code == 200:
+        data = response.json()
+        traffic_light_count = data["elements"][0]["tags"]["nodes"]
+        return int(traffic_light_count)
+    else:
+        return "problem"
+        # raise Exception(f"Error feteching traffic light data: {response.status_code}")
 
 def calculateDistance_api(start_lat, start_lon, end_lat, end_lon):
 
@@ -81,14 +115,15 @@ def generate_adjacent_stops(input_json):
             # Calculate the distance between the current and the next bus stops
             print("API CALL ROAD")
             distance = distance_between_coordinates_api(stop_gps, next_stop_gps)/1000
-
+            route = get_route_between_points(stop_gps, next_stop_gps)
+            traffic_lights = get_traffic_light_count_along_route(route)
             # Calculate the weight based on bus travel
             weight = distance * 1000 / 20
 
             time = (distance / 17) * 60
 
             # Create a connection dictionary and add it to the adjacency list
-            connection = {"Distance": distance, "Weight": round(weight, 1), "Bus Service": route_key, "Time": time}
+            connection = {"Distance": distance, "Weight": round(weight, 1), "Bus Service": route_key, "Time": time, "Traffic Lights Count": traffic_lights, "Road Route": route}
             if next_stop_name not in adjacent_stops:
                 adjacent_stops[next_stop_name] = [connection]
             else:
