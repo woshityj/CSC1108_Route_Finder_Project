@@ -69,7 +69,7 @@ class MyApp(QWidget):
         path = self.getUserRoute(startingBusStop, endingBusStop)
         
         coordinates = []
-        for id, (bus_stop, bus_service) in enumerate(path):
+        for id, (bus_stop, bus_service, time) in enumerate(path):
             coordinate = self.getCoordinates(bus_stop)
             coordinates.append(coordinate)
         print(coordinates)
@@ -145,8 +145,8 @@ class MyApp(QWidget):
             A list of the names of Bus Stops the user should travel via to reach to his destination
         """
 
-        graph = json.loads(open('gpt_generated_graph.json').read())
-        path = gpt_generated_a_star.a_star(graph, start_bus_stop, end_bus_stop)
+        graph = json.loads(open('test_graph.json').read())
+        path = gpt_generated_a_star.a_star(graph, start_bus_stop, end_bus_stop, 0)
         return path
 
     def getCoordinates(self, bus_stop):
