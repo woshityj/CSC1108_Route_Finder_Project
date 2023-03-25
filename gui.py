@@ -7,16 +7,38 @@ import pprint
 import openrouteservice as ors
 import osmnx as ox
 import math
+
+from PyQt6.QtGui import QColor, QPainter
 from geopy.geocoders import Nominatim
 import geopy.distance
 from PyQt6 import QtWidgets, uic
-from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget, QCompleter, QBoxLayout
+from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget, QCompleter, QBoxLayout, \
+    QPushButton, QTextBrowser
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtCore import Qt
 
 import gpt_generated_a_star
 
 client = ors.Client(key = '5b3ce3597851110001cf62483b2035bb64ee4d0080a2aeb8bd28d07e')
+
+class FloatingWindow(QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.directions = QTextBrowser(self)
+        self.directions.setGeometry(50, 50, 200, 300)
+
+        # Create a button to close the window
+        #close_button = QPushButton('Close', self)
+        #close_button.setGeometry(0,0,20,20)
+        #close_button.clicked.connect(self.close)
+
+        # Create a layout and add the widget to it
+        layout = QVBoxLayout(self)
+        #layout.addWidget(close_button)
+        layout.addWidget(self.directions)
+        # Set the window flags to make the window stay on top and not have a frame
+        self.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint)
 
 
 class MyApp(QWidget):
@@ -91,7 +113,18 @@ class MyApp(QWidget):
         startingBusStop = self.getNearestBusStopFromUser(fromLat, fromLon)
         endingBusStop = self.getNearestBusStopFromUser(toLat, toLon)
         path = self.getUserRoute(startingBusStop, endingBusStop)
-        
+        direction_text = ""
+        for idx, (location, bus_service, time) in enumerate(path):
+            if idx == 0:
+                direction_text += f"{location} (Start)\n\n"
+            elif idx == len(path) - 1:
+                direction_text += f"{location} (Goal)"
+            else:
+                direction_text += f"{location} \n(Bus Service: {bus_service})\n\n"
+
+        floatingWindow.directions.setText(direction_text)
+        floatingWindow.show()
+
         coordinates = []
         for id, (bus_stop, bus_service, time) in enumerate(path):
             coordinate = self.getCoordinates(bus_stop)
@@ -128,6 +161,8 @@ class MyApp(QWidget):
         folium_map.save(data, close_file = False)
         self.map.setHtml(data.getvalue().decode())
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
+
+
         # except:
         #     print("No such location")
     
@@ -282,13 +317,20 @@ class MyApp(QWidget):
             coordinates.append(current_stop_coords)
         return coordinates
 
+    def paintEvent(self, event):
+        painter = QPainter(self)
+        painter.fillRect(self.rect(), QColor('white'))
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-
-
-
     myApp = MyApp()
+    myApp.setWindowTitle("Bas Muafakat Johor")
     myApp.show()
+
+    floatingWindow = FloatingWindow()
+    floatingWindow.setGeometry(100, 100, 300, 200)
+    floatingWindow.setWindowTitle("Directions")
 
     try:
         sys.exit(app.exec())
