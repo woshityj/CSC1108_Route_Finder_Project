@@ -10,8 +10,9 @@ import math
 from geopy.geocoders import Nominatim
 import geopy.distance
 from PyQt6 import QtWidgets, uic
-from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget
+from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget, QCompleter, QBoxLayout
 from PyQt6.QtWebEngineWidgets import QWebEngineView
+from PyQt6.QtCore import Qt
 
 import gpt_generated_a_star
 
@@ -28,13 +29,17 @@ class MyApp(QWidget):
 
         self.map = QWebEngineView()
 
+        bus_stops=json.loads(open('gpt_generated_graph.json').read()).keys()
+        bus_stops = list(bus_stops)
+        autocompleter = QCompleter(bus_stops)
         bus_services = self.getBusServices()
         for i in range(len(bus_services)):
             self.busServiceList.addItem(bus_services[i])
 
-
+        self.fromTextField.setCompleter(autocompleter)
+        self.toTextField.setCompleter(autocompleter)
         self.getBusRoute.clicked.connect(lambda: self.getBusServiceRoute(self.busServiceList.currentItem().text()))
-        self.gridLayout.addWidget(self.map, 0, 0, 0, 0)
+        self.gridLayout1.addWidget(self.map, 0, 0, 0, 0)
 
         self.getRouteButton.clicked.connect(lambda: self.getRoute(self.fromTextField.text(), self.toTextField.text()))
 
@@ -60,8 +65,27 @@ class MyApp(QWidget):
         toLat, toLon = to_location.latitude, to_location.longitude
 
         folium_map = folium.Map(location = [fromLat, fromLon], tiles = 'cartodbpositron', zoom_start = 14)
-        folium.Marker([fromLat, fromLon]).add_to(folium_map)
-        folium.Marker([toLat, toLon]).add_to(folium_map)
+        start_marker = folium.Marker([fromLat, fromLon]).add_to(folium_map)
+        popup_html = """
+                                <div>
+                                    <h3>Marker clicked</h3>
+                                    <p>Hello, world!</p>
+                                </div>
+                                """
+        popup = folium.Popup(html=popup_html, max_width=200)
+        start_marker.add_child(popup)
+        start_marker.add_to(folium_map)
+        end_marker = folium.Marker([toLat, toLon]).add_to(folium_map)
+        popup_html = """
+                                       <div>
+                                           <h3>Marker clicked</h3>
+                                           <p>Hello, world!</p>
+                                       </div>
+                                       """
+        popup = folium.Popup(html=popup_html, max_width=200)
+        end_marker.add_child(popup)
+        end_marker.add_to(folium_map)
+
 
         # Gets the nearest bus stop from the starting point and ending point of where the user indicated
         startingBusStop = self.getNearestBusStopFromUser(fromLat, fromLon)
@@ -82,7 +106,16 @@ class MyApp(QWidget):
         # print(coordinates)
 
         for i in range(len(coordinates)):
-            folium.Marker([coordinates[i][0], coordinates[i][1]]).add_to(folium_map)
+            marker = folium.Marker([coordinates[i][0], coordinates[i][1]]).add_to(folium_map)
+            popup_html = """
+                        <div>
+                            <h3>Marker clicked</h3>
+                            <p>Hello, world!</p>
+                        </div>
+                        """
+            popup = folium.Popup(html=popup_html, max_width=200)
+            marker.add_child(popup)
+            marker.add_to(folium_map)
         
         # Add the User's start position and end position to the front and end of the list respectively
         coordinates.insert(0, [fromLat, fromLon])
@@ -94,6 +127,7 @@ class MyApp(QWidget):
         data = io.BytesIO()
         folium_map.save(data, close_file = False)
         self.map.setHtml(data.getvalue().decode())
+        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
         # except:
         #     print("No such location")
     
@@ -188,8 +222,16 @@ class MyApp(QWidget):
             reversed_coordinates.append([coordinates[i][1], coordinates[i][0]])
         folium_map = folium.Map(location = coordinates[0], tiles = 'cartodbpositron', zoom_start = 14)
         for i in range(len(coordinates)):
-            folium.Marker([coordinates[i][0], coordinates[i][1]]).add_to(folium_map)
-
+            marker = folium.Marker([coordinates[i][0], coordinates[i][1]])
+            popup_html = """
+            <div>
+                <h3>Marker clicked</h3>
+                <p>Hello, world!</p>
+            </div>
+            """
+            popup = folium.Popup(html=popup_html,max_width=200)
+            marker.add_child(popup)
+            marker.add_to(folium_map)
         ## Code for plotting route according to road but its laggy ;c 
         # G = ox.graph_from_point(coordinates[0], dist = 90000, network_type = 'drive')
 
@@ -202,7 +244,7 @@ class MyApp(QWidget):
         data = io.BytesIO()
         folium_map.save(data, close_file = False)
         self.map.setHtml(data.getvalue().decode())
-
+        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
     
     def getBusServices(self):
         """Get a list of Bus Services available
@@ -242,6 +284,8 @@ class MyApp(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+
+
 
     myApp = MyApp()
     myApp.show()
