@@ -19,7 +19,7 @@ def find_nearest_bus_stop(latitude, longitude):
     query_point = (latitude, longitude)
     distance, index = bus_stop_tree.query(query_point)
     nearest_bus_stop_name = bus_stop_names[index]
-    return nearest_bus_stop_name
+    return nearest_bus_stop_name, distance
 
 # starting_location = (1.50101, 103.74738)
 # nearest_bus_stop, distance = find_nearest_bus_stop(*starting_location)

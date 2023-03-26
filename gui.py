@@ -21,6 +21,9 @@ import a_star
 import kd_tree
 
 client = ors.Client(key = '5b3ce3597851110001cf62483b2035bb64ee4d0080a2aeb8bd28d07e')
+global walking_speed
+
+walking_speed = 4.4 #km/h
 
 class FloatingWindow(QWidget):
     def __init__(self):
@@ -87,39 +90,55 @@ class MyApp(QWidget):
             The name of the ending location that the user has entered via the User Interface
         """
 
-        try:
-            geolocator = Nominatim(user_agent = 'MyApp')
-            if self.checkIfUserInputIsBusStop(from_location):
-                from_coordinates = self.getBusCoordinates(from_location)
-                fromLat = from_coordinates[0]
-                fromLon = from_coordinates[1]
-            else:
-                from_location = geolocator.geocode(from_location + " Malaysia")
-                fromLat, fromLon = from_location.latitude, from_location.longitude
-            if self.checkIfUserInputIsBusStop(to_location):
-                to_coordinates = self.getBusCoordinates(to_location)
-                toLat = to_coordinates[0]
-                toLon = to_coordinates[1]
-            else:
-                to_location = geolocator.geocode(to_location + " Malaysia")
-                toLat, toLon = to_location.latitude, to_location.longitude
-            
-            folium_map = folium.Map(location = [fromLat, fromLon], tiles = 'cartodbpositron', zoom_start = 14)
+        # try:
+        direction_text = ""
+        total_time = 0
+        geolocator = Nominatim(user_agent = 'MyApp')
+        if self.checkIfUserInputIsBusStop(from_location):
+            from_coordinates = self.getBusCoordinates(from_location)
+            fromLat = from_coordinates[0]
+            fromLon = from_coordinates[1]
+            startingBusStop = from_location
+        else:
+            from_location = geolocator.geocode(from_location + " Malaysia")
+            fromLat, fromLon = from_location.latitude, from_location.longitude
+            # Gets the nearest bus stop from the starting point and ending point of where the user indicated
+            startingBusStop, distance = kd_tree.find_nearest_bus_stop(fromLat, fromLon)
+            start_walk_time = round((distance / walking_speed) * 60, 2)
+            total_time += start_walk_time
+            direction_text += f"Walk {distance}km to Nearest Bus Stop {startingBusStop} \n({start_walk_time} minutes)\n\n"
+        if self.checkIfUserInputIsBusStop(to_location):
+            to_coordinates = self.getBusCoordinates(to_location)
+            toLat = to_coordinates[0]
+            toLon = to_coordinates[1]
+            endingBusStop = to_location
+        else:
+            to_location = geolocator.geocode(to_location + " Malaysia")
+            toLat, toLon = to_location.latitude, to_location.longitude
+            endingBusStop, end_distance_from_destination = kd_tree.find_nearest_bus_stop(toLat, toLon)
+            end_walk_time = round((end_distance_from_destination / walking_speed) * 60, 2)
+            total_time += end_walk_time
+
+        
+        folium_map = folium.Map(location = [fromLat, fromLon], tiles = 'cartodbpositron', zoom_start = 14)
+        if self.checkIfUserInputIsBusStop(str(from_location)) == False:
             start_marker = folium.Marker([fromLat, fromLon]).add_to(folium_map)
-            popup_html = """
+            popup_html = f"""
                                     <div>
-                                        <h3>Marker clicked</h3>
-                                        <p>Hello, world!</p>
+                                        <h3>Walk</h3>
+                                        <p>{from_location}</p>
                                     </div>
                                     """
             popup = folium.Popup(html=popup_html, max_width=200)
             start_marker.add_child(popup)
             start_marker.add_to(folium_map)
+        
+        if self.checkIfUserInputIsBusStop(str(to_location)) == False:
             end_marker = folium.Marker([toLat, toLon]).add_to(folium_map)
-            popup_html = """
+            popup_html = f"""
                                         <div>
-                                            <h3>Marker clicked</h3>
-                                            <p>Hello, world!</p>
+                                            <h3>Walk</h3>
+                                            <p>{to_location}</p>
                                         </div>
                                         """
             popup = folium.Popup(html=popup_html, max_width=200)
@@ -127,58 +146,59 @@ class MyApp(QWidget):
             end_marker.add_to(folium_map)
 
 
-            # Gets the nearest bus stop from the starting point and ending point of where the user indicated
-            startingBusStop = kd_tree.find_nearest_bus_stop(fromLat, fromLon)
-            endingBusStop = kd_tree.find_nearest_bus_stop(toLat, toLon)
-            path = self.getUserRoute(startingBusStop, endingBusStop)
-            coordinates = []
-            direction_text = ""
-            for idx, (location, bus_service, time, route) in enumerate(path):
-                if idx == 0:
-                    direction_text += f"{location} (Start)\n\n"
-                elif idx == len(path) - 1:
-                    direction_text += f"{location} (Goal)"
-                else:
-                    direction_text += f"{location} \n(Bus Service: {bus_service})\n\n"
-                for i in range(len(route)):
-                    route[i].reverse()
-                coordinates += route
-                bus_stop_coordinate = self.getBusCoordinates(location)
-                marker = folium.Marker([bus_stop_coordinate[0], bus_stop_coordinate[1]]).add_to(folium_map)
-                popup_html = f"""
-                            <div>
-                                <h3>{bus_service}</h3>
-                                <p>{location}</p>
-                            </div>
-                            """
-                popup = folium.Popup(html=popup_html, max_width=200)
-                marker.add_child(popup)
-                marker.add_to(folium_map)
+        path = self.getUserRoute(startingBusStop, endingBusStop)
+        coordinates = []
+
+        for idx, (location, bus_service, time, route) in enumerate(path):
+            total_time += time
+            if idx == 0:
+                direction_text += f"{location} {path[idx + 1][1]}(Start)\n\n"
+            elif idx == len(path) - 1:
+                direction_text += f"{location} {path[idx - 1][1]}(Goal)\n\n"
+            else:
+                direction_text += f"{location} \n(Bus Service: {bus_service})\n(Estimated Travel Time: {round(time, 2)} minutes)\n\n"
+            for i in range(len(route)):
+                route[i].reverse()
+            coordinates += route
+            bus_stop_coordinate = self.getBusCoordinates(location)
+            marker = folium.Marker([bus_stop_coordinate[0], bus_stop_coordinate[1]]).add_to(folium_map)
+            popup_html = f"""
+                        <div>
+                            <h3>{bus_service}</h3>
+                            <p>{location}</p>
+                        </div>
+                        """
+            popup = folium.Popup(html=popup_html, max_width=200)
+            marker.add_child(popup)
+            marker.add_to(folium_map)
+
+        if self.checkIfUserInputIsBusStop(str(to_location)) == False:
+            direction_text += f"Walk to your destination {to_location} ({end_walk_time} minutes)"
+
+        direction_text = f"Total estimated travel time: {round(total_time, 2)} minutes\n\n" + direction_text
+        floatingWindow.directions.setText(direction_text)
+        floatingWindow.show()
+
+        # coordinates = []
+        # for id, (bus_stop, bus_service, time) in enumerate(path):
+        #     coordinate = self.getBusCoordinates(bus_stop)
+        #     coordinates.append(coordinate)
+        # print(coordinates)
+        
+        # Add the User's start position and end position to the front and end of the list respectively
+        coordinates.insert(0, [fromLat, fromLon])
+        coordinates.insert(len(coordinates), [toLat, toLon])
+        
+        folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
 
 
-            floatingWindow.directions.setText(direction_text)
-            floatingWindow.show()
+        data = io.BytesIO()
+        folium_map.save(data, close_file = False)
+        self.map.setHtml(data.getvalue().decode())
+        self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
 
-            # coordinates = []
-            # for id, (bus_stop, bus_service, time) in enumerate(path):
-            #     coordinate = self.getBusCoordinates(bus_stop)
-            #     coordinates.append(coordinate)
-            # print(coordinates)
-            
-            # Add the User's start position and end position to the front and end of the list respectively
-            coordinates.insert(0, [fromLat, fromLon])
-            coordinates.insert(len(coordinates), [toLat, toLon])
-            
-            folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
-
-
-            data = io.BytesIO()
-            folium_map.save(data, close_file = False)
-            self.map.setHtml(data.getvalue().decode())
-            self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
-
-        except:
-            print("No such location")
+        # except:
+        #     print("No such location")
     
     #Function to find the nearest bus stop based on the ending position of the user
     def getNearestBusStopFromUser(self, location_lat, location_lon):

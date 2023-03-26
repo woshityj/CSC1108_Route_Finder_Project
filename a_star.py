@@ -105,20 +105,21 @@ def a_star(graph, start, goal, start_time, option = "least transfer"):
     return None
 
 
-# start = "Union Inn"
-# goal = "R&F Mall"
-# path = a_star(graph, start, goal, 0)
-# pprint.pprint(path)
-# print(len(path))
+start = "Larkin Terminal"
+goal = "Hospital Sultanah Aminah"
+path = a_star(graph, start, goal, 0)
+pprint.pprint(path)
+print(len(path))
 
-# print("Path with bus services:")
-# for idx, (location, bus_service, time, route) in enumerate(path):
-#     if idx == 0:
-#         print(f"{location} (Start)")
-#     elif idx == len(path) - 1:
-#         print(f"{location} (Goal)")
-#     else:
-#         print(f"{location} (Bus Service: {bus_service})")
+print("Path with bus services:")
+for idx, (location, bus_service, time, route) in enumerate(path):
+    if idx == 0:
+        print(f"{location} {path[idx + 1][1]}(Start)")
+        break
+    elif idx == len(path) - 1:
+        print(f"{location} (Goal)")
+    else:
+        print(f"{location} (Bus Service: {bus_service})")
 
 # def a_star(graph, start, goal):
 #     open_set = []
