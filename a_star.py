@@ -99,6 +99,9 @@ def a_star(graph, start, goal, start_time, option = "least transfer"):
     if option == "fastest":
         pass
 
+    if option == "least walking":
+        pass
+
     return None
 
 

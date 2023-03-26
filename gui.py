@@ -18,6 +18,7 @@ from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtCore import Qt
 
 import a_star
+import kd_tree
 
 client = ors.Client(key = '5b3ce3597851110001cf62483b2035bb64ee4d0080a2aeb8bd28d07e')
 
@@ -127,8 +128,8 @@ class MyApp(QWidget):
 
 
             # Gets the nearest bus stop from the starting point and ending point of where the user indicated
-            startingBusStop = self.getNearestBusStopFromUser(fromLat, fromLon)
-            endingBusStop = self.getNearestBusStopFromUser(toLat, toLon)
+            startingBusStop = kd_tree.find_nearest_bus_stop(fromLat, fromLon)
+            endingBusStop = kd_tree.find_nearest_bus_stop(toLat, toLon)
             path = self.getUserRoute(startingBusStop, endingBusStop)
             coordinates = []
             direction_text = ""
@@ -279,13 +280,7 @@ class MyApp(QWidget):
             popup = folium.Popup(html=popup_html,max_width=200)
             marker.add_child(popup)
             marker.add_to(folium_map)
-        ## Code for plotting route according to road but its laggy ;c 
-        # G = ox.graph_from_point(coordinates[0], dist = 90000, network_type = 'drive')
 
-        # orig_node = ox.nearest_nodes(G, coordinates[0][1], coordinates[0][0])
-        # dest_node = ox.nearest_nodes(G, coordinates[5][1], coordinates[5][0])
-        # route = nx.shortest_path(G, orig_node, dest_node)
-        # ox.plot_route_folium(G, route, folium_map)
         folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
 
         data = io.BytesIO()
