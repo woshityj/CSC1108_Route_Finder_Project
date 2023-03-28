@@ -50,7 +50,7 @@ class MyApp(QWidget):
         global bus_routes, bus_stops_to_coordinates, graph
         bus_routes = json.loads(open('bus_stops_cleaned.json').read())
         bus_stops_to_coordinates = json.loads(open('bus_stops_to_coordinates.json').read())
-        graph = json.loads(open('new_test.json').read())
+        graph = json.loads(open('test.json').read())
 
         super().__init__()
         uic.loadUi('MainGUI.ui', self)
@@ -119,7 +119,6 @@ class MyApp(QWidget):
             end_walk_time = round((end_distance_from_destination / walking_speed) * 60, 2)
             total_time += end_walk_time
 
-        
         folium_map = folium.Map(location = [fromLat, fromLon], tiles = 'cartodbpositron', zoom_start = 14)
         if self.checkIfUserInputIsBusStop(str(from_location)) == False:
             start_marker = folium.Marker([fromLat, fromLon]).add_to(folium_map)
@@ -284,24 +283,24 @@ class MyApp(QWidget):
             A list of coordinates based on the route of a Bus Service
         """
 
-        coordinates = self.getBusRouteCoordinates(bus_service)
-        reversed_coordinates = []
-        for i in range(len(coordinates)):
-            reversed_coordinates.append([coordinates[i][1], coordinates[i][0]])
-        folium_map = folium.Map(location = coordinates[0], tiles = 'cartodbpositron', zoom_start = 14)
-        for i in range(len(coordinates)):
-            marker = folium.Marker([coordinates[i][0], coordinates[i][1]])
-            popup_html = """
+        route_coordinates, bus_stop_coordinates, path = self.getBusRouteCoordinatesAndStopCoordinates(bus_service)
+        reversed_route_coordinates = []
+        for i in range(len(route_coordinates)):
+            reversed_route_coordinates.append([route_coordinates[i][1], route_coordinates[i][0]])
+        folium_map = folium.Map(location = reversed_route_coordinates[0], tiles = 'cartodbpositron', zoom_start = 14)
+        for i in range(len(path)):
+            marker = folium.Marker([bus_stop_coordinates[i][0], bus_stop_coordinates[i][1]])
+            popup_html = f"""
             <div>
-                <h3>Marker clicked</h3>
-                <p>Hello, world!</p>
+                <h3>{path[i]}</h3>
+                <p>Bus Stop No: {i + 1}</p>
             </div>
             """
             popup = folium.Popup(html=popup_html,max_width=200)
             marker.add_child(popup)
             marker.add_to(folium_map)
 
-        folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
+        folium.PolyLine(locations = [list(coords) for coords in reversed_route_coordinates], weight = 3, color = 'blue').add_to(folium_map)
 
         data = io.BytesIO()
         folium_map.save(data, close_file = False)
@@ -320,7 +319,7 @@ class MyApp(QWidget):
         bus_services = list(bus_routes.keys())
         return bus_services
 
-    def getBusRouteCoordinates(self, bus_service):
+    def getBusRouteCoordinatesAndStopCoordinates(self, bus_service):
         """Get a list of Coordinates based on the route of a Bus Service
 
         Parameters
@@ -334,15 +333,24 @@ class MyApp(QWidget):
             A list of coordinates based on the route of a Bus Service
         """
 
-        coordinates = []
+        route_coordinates = []
+        path = []
+        bus_stop_coordinates = []
         bus_routes = json.loads(open('bus_stops_cleaned.json').read())
         number_of_bus_stops = len(bus_routes[bus_service]["Bus stop"].keys())
         for i in range(number_of_bus_stops):
+            path.append(bus_routes[bus_service]["Bus stop"][str(i)])
+        for i in range(len(path)):
             current_stop_coords = bus_routes[bus_service]['GPS Location'][str(i)]
             current_stop_coords = current_stop_coords.split(", ")
             current_stop_coords = [float(coord) for coord in current_stop_coords]
-            coordinates.append(current_stop_coords)
-        return coordinates
+            bus_stop_coordinates.append(current_stop_coords)
+        for i in range(len(path) - 1):
+            for key in graph[path[i]][path[i + 1]]:
+                if (key['Bus Service'] == bus_service and 'Road Route' in key):
+                    route_coordinates += key['Road Route']
+
+        return route_coordinates, bus_stop_coordinates, path
 
     def paintEvent(self, event):
         painter = QPainter(self)

@@ -7,7 +7,7 @@ import math
 from datetime import datetime, timedelta
 import datetime
 
-graph = json.loads(open('new_test.json').read())
+graph = json.loads(open('test.json').read())
 bus_service_routes = json.loads(open('bus_service_routes_map.json').read())
 bus_stops_coordinates = json.loads(open('bus_stops_to_coordinates.json').read())
 
@@ -105,8 +105,8 @@ def a_star(graph, start, goal, start_time, option = "least transfer"):
     return None
 
 
-start = "Larkin Terminal"
-goal = "Hospital Sultanah Aminah"
+start = "Kulai Terminal"
+goal = "Senai Airport Terminal"
 path = a_star(graph, start, goal, 0)
 pprint.pprint(path)
 print(len(path))
