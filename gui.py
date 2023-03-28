@@ -78,6 +78,22 @@ class MyApp(QWidget):
             return True
         else:
             return False
+    
+    def getWalkingPathToBusStop(self, from_location, to_location):
+        lat1 = from_location[0]
+        lon1 = from_location[1]
+
+        lat2 = to_location[0]
+        lon2 = to_location[1]
+        client = ors.Client(key = '5b3ce3597851110001cf6248bf0ad84e6c5043fe86802711166fdf40')
+        coords = [[lon1, lat1], [lon2, lat2]]
+        route = client.directions(coords, profile = 'foot-walking', format = 'geojson')
+        distance = route["features"][0]["properties"]["segments"][0]["distance"]
+        distance = distance / 1000
+        route = route["features"][0]["geometry"]["coordinates"]
+        for i in range(len(route)):
+            route[i].reverse()
+        return route, distance
 
     def getRoute(self, from_location, to_location):
         """Plots out the route the user should take on the User Interface
@@ -147,36 +163,33 @@ class MyApp(QWidget):
 
         path = self.getUserRoute(startingBusStop, endingBusStop)
         coordinates = []
+        try:
+            for idx, (location, bus_service, time, route) in enumerate(path):
+                if idx == 0:
+                    direction_text += f"{location} {path[idx + 1][1]} (Start)\n\n"
+                elif idx == len(path) - 1:
+                    direction_text += f"{location} {path[idx - 1][1]} (Estimated Arrival Time: {round(time, 2)}) (Goal) \n\n"
+                    total_time = time
+                else:
+                    direction_text += f"{location} \n(Bus Service: {bus_service})\n(Estimated Arrival Time: {round(time, 2)} minutes)\n\n"
+                for i in range(len(route)):
+                    route[i].reverse()
+                coordinates += route
+                bus_stop_coordinate = self.getBusCoordinates(location)
+                marker = folium.Marker([bus_stop_coordinate[0], bus_stop_coordinate[1]]).add_to(folium_map)
+                popup_html = f"""
+                            <div>
+                                <h3>{bus_service}</h3>
+                                <p>{location}</p>
+                            </div>
+                            """
+                popup = folium.Popup(html=popup_html, max_width=200)
+                marker.add_child(popup)
+                marker.add_to(folium_map)
+        except:
+            print("Error Getting Path from Algorithm")
+            marker = folium.Marker([fromLat, fromLon]).add_to(folium_map)
 
-        for idx, (location, bus_service, time, route) in enumerate(path):
-            total_time += time
-            if idx == 0:
-                direction_text += f"{location} {path[idx + 1][1]}(Start)\n\n"
-            elif idx == len(path) - 1:
-                direction_text += f"{location} {path[idx - 1][1]}(Goal)\n\n"
-            else:
-                direction_text += f"{location} \n(Bus Service: {bus_service})\n(Estimated Travel Time: {round(time, 2)} minutes)\n\n"
-            for i in range(len(route)):
-                route[i].reverse()
-            coordinates += route
-            bus_stop_coordinate = self.getBusCoordinates(location)
-            marker = folium.Marker([bus_stop_coordinate[0], bus_stop_coordinate[1]]).add_to(folium_map)
-            popup_html = f"""
-                        <div>
-                            <h3>{bus_service}</h3>
-                            <p>{location}</p>
-                        </div>
-                        """
-            popup = folium.Popup(html=popup_html, max_width=200)
-            marker.add_child(popup)
-            marker.add_to(folium_map)
-
-        if self.checkIfUserInputIsBusStop(str(to_location)) == False:
-            direction_text += f"Walk to your destination {to_location} ({end_walk_time} minutes)"
-
-        direction_text = f"Total estimated travel time: {round(total_time, 2)} minutes\n\n" + direction_text
-        floatingWindow.directions.setText(direction_text)
-        floatingWindow.show()
 
         # coordinates = []
         # for id, (bus_stop, bus_service, time) in enumerate(path):
@@ -185,8 +198,25 @@ class MyApp(QWidget):
         # print(coordinates)
         
         # Add the User's start position and end position to the front and end of the list respectively
-        coordinates.insert(0, [fromLat, fromLon])
-        coordinates.insert(len(coordinates), [toLat, toLon])
+        if self.checkIfUserInputIsBusStop(str(from_location)) == False:
+            starting_bus_stop_coordinates = self.getBusCoordinates(startingBusStop)
+            walking_route_coordinates, walking_distance = self.getWalkingPathToBusStop([fromLat, fromLon], starting_bus_stop_coordinates)
+            direction_text = direction_text + f"Walk to the nearest bus stop {startingBusStop} Distance: {walking_distance} ({round((walking_distance / walking_speed) * 60, 2)})"
+            for i in range(len(walking_route_coordinates)):
+                coordinates.insert(0 + i, [walking_route_coordinates[i][0], walking_route_coordinates[i][1]])
+        
+        if self.checkIfUserInputIsBusStop(str(to_location)) == False:
+            ending_bus_stop_coordinates = self.getBusCoordinates(endingBusStop)
+            walking_route_coordinates, walking_distance = self.getWalkingPathToBusStop([toLat, toLon], ending_bus_stop_coordinates)
+            direction_text += f"Walk to your destination {to_location} Distance: {walking_distance} ({round((walking_distance / walking_speed) * 60, 2)})"
+            pprint.pprint(walking_route_coordinates)
+            coordinates += walking_route_coordinates
+            # for i in range(len(walking_route_coordinates)):
+            #     coordinates.insert((len(coordinates) - 1) + i, [walking_route_coordinates[i][1], walking_route_coordinates[i][0]])
+
+        direction_text = f"Total estimated travel time: {round(total_time, 2)} minutes\n\n" + direction_text
+        floatingWindow.directions.setText(direction_text)
+        floatingWindow.show()
         
         folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
 

@@ -105,7 +105,7 @@ def a_star(graph, start, goal, start_time, option = "least transfer"):
     return None
 
 
-start = "Kulai Terminal"
+start = "Larkin Terminal"
 goal = "Senai Airport Terminal"
 path = a_star(graph, start, goal, 0)
 pprint.pprint(path)
