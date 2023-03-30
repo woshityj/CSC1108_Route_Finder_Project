@@ -167,18 +167,18 @@ def a_star(graph, start, goal, start_time, option):
                         if current_bus_service is not None and current_bus_service != edge["Bus Service"] and current_bus_service != "walking":
                             bus_change_penalty = 10
                         else:
-                            bus_change_penalty = 10
+                            bus_change_penalty = 0
                         new_time = current_time + edge["Time"] + bus_change_penalty + (edge["Traffic Lights Count"] * traffic_light_time)
                         open_set.append((f_cost, neighbor, new_path, edge["Bus Service"], new_time))
 
     return None
 
 
-start = "Majlis Bandaraya Johor Bahru"
-goal = "AEON Tebrau City"
+start = "Paradigm Mall"
+goal = "Larkin Terminal"
 path = a_star(graph, start, goal, 0, "least transfer")
-pprint.pprint(path)
-print(len(path))
+# pprint.pprint(path)
+# print(len(path))
 
 print("Path with bus services:")
 for idx, (location, bus_service, time, route) in enumerate(path):
