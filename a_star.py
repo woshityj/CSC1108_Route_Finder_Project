@@ -12,7 +12,7 @@ bus_service_routes = json.loads(open('bus_service_routes_map.json').read())
 bus_stops_coordinates = json.loads(open('bus_stops_to_coordinates.json').read())
 
 global bus_speed, walk_speed
-bus_speed = 17 # km/h
+bus_speed = 40 # km/h
 walk_speed = 4.4 #km/h
 
 def haversine(lat1, lon1, lat2, lon2):
@@ -37,28 +37,58 @@ def haversine(lat1, lon1, lat2, lon2):
     distance = R * c
     return distance
 
-def euclidean_distance(start, end):
+def haversine_distance(start, end):
     start_coordinates = bus_stops_coordinates[start].split(", ")
     end_coordinates = bus_stops_coordinates[end].split(", ")
     distance = haversine(start_coordinates[0], start_coordinates[1], end_coordinates[0], end_coordinates[1])
     return distance
 
-def heuristic(node, goal, current_bus_service, current_time):
+def heuristic_least_transfer(node, goal, current_bus_service, current_time):
     min_cost = float('inf')
-    ## Euclidean Distance
-    distance = euclidean_distance(node, goal)
+    ## Haversine Distance
+    distance = haversine_distance(node, goal)
     cost = distance
+    for edges in graph[node].keys():
+        for i in graph[node][edges]:
+            if current_bus_service is not None and i["Bus Service"] != current_bus_service:
+                penalty = 10
+                cost += penalty
 
-    for bus_service in bus_service_routes[node]:
-        if current_bus_service is not None and bus_service != current_bus_service:
-            penalty = 10
-            cost += penalty
+            time_cost = get_time_cost(distance, i["Bus Service"])
+            time_cost += current_time
 
-        time_cost = get_time_cost(distance, bus_service)
-        time_cost += current_time
-        if bus_service == "Walking":
-            print("Yes")
-        min_cost = min(min_cost, cost + time_cost)
+            min_cost = min(min_cost, cost + time_cost)
+    return min_cost
+
+def heuristic_shortest_distance(node, goal, current_time):
+    min_cost = float('inf')
+    distance = haversine_distance(node, goal)
+    cost = distance
+    for edges in graph[node].keys():
+        for i in graph[node][edges]:
+            time_cost = get_time_cost(distance, i["Bus Service"])
+            time_cost += current_time
+
+            min_cost = min(min_cost, cost + time_cost)
+
+    return min_cost
+
+def heuristic_least_walking(node, goal, current_time, current_bus_service):
+    min_cost = float('inf')
+    distance = haversine_distance(node, goal)
+    cost = distance
+    for edges in graph[node].keys():
+        for i in graph[node][edges]:
+            if current_bus_service is not None and i["Bus Service"] != current_bus_service:
+                penalty = 10
+                cost += penalty
+            
+            if i["Bus Service"] == "Walking":
+                cost += 100
+            time_cost = get_time_cost(distance, i["Bus Service"])
+            time_cost += current_time
+
+            min_cost = min(min_cost, cost + time_cost)
     return min_cost
 
 def get_time_cost(distance, bus_service):
@@ -66,12 +96,10 @@ def get_time_cost(distance, bus_service):
         speed = walk_speed
     else:
         speed = bus_speed
-    time_cost = distance / speed
-    if bus_service == "Walking":
-        print(time_cost)
+    time_cost = (distance / speed) * 60
     return time_cost
 
-def a_star(graph, start, goal, start_time, option = "least transfer"):
+def a_star(graph, start, goal, start_time, option):
     open_set = [(0, start, [], None, start_time)]
 
     closed_set = set()
@@ -88,38 +116,78 @@ def a_star(graph, start, goal, start_time, option = "least transfer"):
                 closed_set.add(current)
                 for neighbor, edges in graph[current].items():
                     for edge in edges:
-                        g_cost = edge["Distance"] + (edge["Traffic Lights Count"]if "Traffic Lights Count" in edge else 0) * traffic_light_penalty
-                        h_cost = heuristic(neighbor, goal, edge["Bus Service"], current_time)
+                        g_cost = edge["Distance"] + (edge["Traffic Lights Count"] * traffic_light_penalty)
+                        h_cost = heuristic_least_transfer(neighbor, goal, edge["Bus Service"], current_time)
                         f_cost = g_cost + h_cost
-                        new_path = path + [(current, current_bus_service, current_time, edge["Road Route"] if "Road Route" in edge else [])]
-                        bus_change_penalty = 10 if current_bus_service is not None and current_bus_service != edge["Bus Service"] and current_bus_service != "Walking" else 0
-                        new_time = current_time + edge["Time"] + bus_change_penalty + (edge["Traffic Lights Count"] if "Traffic Lights Count" in edge else 0) * traffic_light_time
+                        new_path = path + [(current, current_bus_service, current_time, edge["Road Route"])]
+                        if current_bus_service is not None and current_bus_service != edge["Bus Service"] and current_bus_service != "walking":
+                            bus_change_penalty = 10
+                        else:
+                            bus_change_penalty = 0
+                        new_time = current_time + edge["Time"] + bus_change_penalty + (edge["Traffic Lights Count"] * traffic_light_time)
                         open_set.append((f_cost, neighbor, new_path, edge["Bus Service"], new_time))
     
-    if option == "fastest":
-        pass
-
     if option == "least walking":
-        pass
+        while open_set:
+            open_set.sort(key=lambda x: x[0])
+            _, current, path, current_bus_service, current_time = open_set.pop(0)
+            if current == goal:
+                return path + [(current, current_bus_service, current_time, [])]
+
+            if current not in closed_set:
+                closed_set.add(current)
+                for neighbor, edges in graph[current].items():
+                    for edge in edges:
+                        g_cost = edge["Distance"] + (edge["Traffic Lights Count"] * traffic_light_penalty) + edge["Time"]
+                        h_cost = heuristic_least_walking(neighbor, goal, current_time, edge["Bus Service"])
+                        f_cost = g_cost + h_cost
+                        new_path = path + [(current, current_bus_service, current_time, edge["Road Route"])]
+                        if current_bus_service is not None and current_bus_service != edge["Bus Service"] and current_bus_service != "walking":
+                            bus_change_penalty = 10
+                        else:
+                            bus_change_penalty = 0
+                        new_time = current_time + edge["Time"] + bus_change_penalty + (edge["Traffic Lights Count"] * traffic_light_time)
+                        open_set.append((f_cost, neighbor, new_path, edge["Bus Service"], new_time))
+
+    if option == "shortest distance":
+        while open_set:
+            open_set.sort(key=lambda x: x[0])
+            _, current, path, current_bus_service, current_time = open_set.pop(0)
+            if current == goal:
+                return path + [(current, current_bus_service, current_time, [])]
+
+            if current not in closed_set:
+                closed_set.add(current)
+                for neighbor, edges in graph[current].items():
+                    for edge in edges:
+                        g_cost = edge["Distance"] + (edge["Traffic Lights Count"] * traffic_light_penalty) + edge["Time"]
+                        h_cost = heuristic_shortest_distance(neighbor, goal, current_time)
+                        f_cost = g_cost + h_cost
+                        new_path = path + [(current, current_bus_service, current_time, edge["Road Route"])]
+                        if current_bus_service is not None and current_bus_service != edge["Bus Service"] and current_bus_service != "walking":
+                            bus_change_penalty = 10
+                        else:
+                            bus_change_penalty = 10
+                        new_time = current_time + edge["Time"] + bus_change_penalty + (edge["Traffic Lights Count"] * traffic_light_time)
+                        open_set.append((f_cost, neighbor, new_path, edge["Bus Service"], new_time))
 
     return None
 
 
-start = "Larkin Terminal"
-goal = "Senai Airport Terminal"
-path = a_star(graph, start, goal, 0)
+start = "Majlis Bandaraya Johor Bahru"
+goal = "AEON Tebrau City"
+path = a_star(graph, start, goal, 0, "least transfer")
 pprint.pprint(path)
 print(len(path))
 
 print("Path with bus services:")
 for idx, (location, bus_service, time, route) in enumerate(path):
     if idx == 0:
-        print(f"{location} {path[idx + 1][1]}(Start)")
-        break
+        print(f"{location} {path[idx + 1][1]}(Start) {time}")
     elif idx == len(path) - 1:
-        print(f"{location} (Goal)")
+        print(f"{location} (Goal) {time}")
     else:
-        print(f"{location} (Bus Service: {bus_service})")
+        print(f"{location} (Bus Service: {bus_service}) {time}")
 
 # def a_star(graph, start, goal):
 #     open_set = []

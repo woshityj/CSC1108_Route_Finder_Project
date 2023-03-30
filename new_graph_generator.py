@@ -19,7 +19,7 @@ def haversine(lat1, lon1, lat2, lon2):
 def get_route_between_points(coord1, coord2):
     lat1, lon1 = map(float, coord1.split(','))
     lat2, lon2 = map(float, coord2.split(','))
-    client = ors.Client(key = '5b3ce3597851110001cf6248bf0ad84e6c5043fe86802711166fdf40')
+    client = ors.Client(key = '5b3ce3597851110001cf6248879e3b378ae54ee4b018db203ab99e9b')
     coords = [[lon1, lat1], [lon2, lat2]]
     route = client.directions(coords, profile = 'driving-car', format = 'geojson')
     route = route["features"][0]["geometry"]["coordinates"]
@@ -28,7 +28,7 @@ def get_route_between_points(coord1, coord2):
 def get_walking_route_between_points(coord1, coord2):
     lat1, lon1 = map(float, coord1.split(','))
     lat2, lon2 = map(float, coord2.split(','))
-    client = ors.Client(key = '5b3ce3597851110001cf6248bf0ad84e6c5043fe86802711166fdf40')
+    client = ors.Client(key = '5b3ce3597851110001cf6248879e3b378ae54ee4b018db203ab99e9b')
     coords = [[lon1, lat1], [lon2, lat2]]
     route = client.directions(coords, profile = 'foot-walking', format = 'geojson')
     route = route["features"][0]["geometry"]["coordinates"]
@@ -58,7 +58,7 @@ def get_traffic_light_count_along_route(route):
     
 def calculateDistance_api(start_lat, start_lon, end_lat, end_lon):
 
-    client = ors.Client(key = '5b3ce3597851110001cf6248bf0ad84e6c5043fe86802711166fdf40')
+    client = ors.Client(key = '5b3ce3597851110001cf6248879e3b378ae54ee4b018db203ab99e9b')
     coords = [[start_lon, start_lat], [end_lon, end_lat]]
     route = client.directions(coords, profile = 'driving-car', format = 'geojson')
     distance = route['features'][0]['properties']['segments'][0]['distance']
@@ -117,7 +117,7 @@ def generate_graph(input_json):
             distance_between_stops = distance_between_coordinates_api(current_stop_gps,next_stop_gps)/1000
             route_between_stops = get_route_between_points(current_stop_gps, next_stop_gps)
             trafficlight_between_stops = get_traffic_light_count_along_route(route_between_stops)
-            timetaken_between_stops = (distance_between_stops / 17) * 60
+            timetaken_between_stops = (distance_between_stops / 40) * 60
             connection = {"Distance": distance_between_stops, "Bus Service": bus_service, "Time": timetaken_between_stops, "Traffic Lights Count": trafficlight_between_stops, "Road Route": route_between_stops}
             if next_stop_name not in adjacent_stops:
                 adjacent_stops[next_stop_name] = [connection]

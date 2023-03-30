@@ -7,6 +7,7 @@ import pprint
 import openrouteservice as ors
 import osmnx as ox
 import math
+import branca
 
 from PyQt6.QtGui import QColor, QPainter
 from geopy.geocoders import Nominatim
@@ -52,10 +53,12 @@ class MyApp(QWidget):
         bus_stops_to_coordinates = json.loads(open('bus_stops_to_coordinates.json').read())
         graph = json.loads(open('test.json').read())
 
+
         super().__init__()
         uic.loadUi('MainGUI.ui', self)
 
         self.map = QWebEngineView()
+        self.map2 = QWebEngineView()
 
         bus_stops=json.loads(open('graph.json').read()).keys()
         bus_stops = list(bus_stops)
@@ -68,10 +71,16 @@ class MyApp(QWidget):
         self.toTextField.setCompleter(autocompleter)
         self.getBusRoute.clicked.connect(lambda: self.getBusServiceRoute(self.busServiceList.currentItem().text()))
         self.gridLayout1.addWidget(self.map, 0, 0, 0, 0)
+        self.gridLayout2.addWidget(self.map2, 0, 0, 0, 0)
+        self.getRouteButton.clicked.connect(lambda: self.getRoute(self.fromTextField.text(), self.toTextField.text(), self.mapTabWidget.currentIndex()))
 
-        self.getRouteButton.clicked.connect(lambda: self.getRoute(self.fromTextField.text(), self.toTextField.text()))
+        m = folium.Map(location=[45.523, -122.675], zoom_start=13)
 
+        data = io.BytesIO()
+        m.save(data, close_file = False)
         self.show()
+        self.map.setHtml(data.getvalue().decode())
+
 
     def checkIfUserInputIsBusStop(self, input):
         if input in bus_stops_to_coordinates:
@@ -95,7 +104,7 @@ class MyApp(QWidget):
             route[i].reverse()
         return route, distance
 
-    def getRoute(self, from_location, to_location):
+    def getRoute(self, from_location, to_location, current_index):
         """Plots out the route the user should take on the User Interface
 
         Parameters
@@ -105,10 +114,15 @@ class MyApp(QWidget):
         to_location: str
             The name of the ending location that the user has entered via the User Interface
         """
-
+        if from_location == '' or to_location == '':
+            raise Exception("No location is inserted")
+        
+        print(current_index)
         # try:
         direction_text = ""
         total_time = 0
+        coordinates = None
+        pprint.pprint(coordinates)
         geolocator = Nominatim(user_agent = 'MyApp')
         if self.checkIfUserInputIsBusStop(from_location):
             from_coordinates = self.getBusCoordinates(from_location)
@@ -161,34 +175,33 @@ class MyApp(QWidget):
             end_marker.add_to(folium_map)
 
 
-        path = self.getUserRoute(startingBusStop, endingBusStop)
+        path = self.getUserRoute(startingBusStop, endingBusStop, current_index)
         coordinates = []
-        try:
-            for idx, (location, bus_service, time, route) in enumerate(path):
-                if idx == 0:
-                    direction_text += f"{location} {path[idx + 1][1]} (Start)\n\n"
-                elif idx == len(path) - 1:
-                    direction_text += f"{location} {path[idx - 1][1]} (Estimated Arrival Time: {round(time, 2)}) (Goal) \n\n"
-                    total_time = time
-                else:
-                    direction_text += f"{location} \n(Bus Service: {bus_service})\n(Estimated Arrival Time: {round(time, 2)} minutes)\n\n"
-                for i in range(len(route)):
-                    route[i].reverse()
-                coordinates += route
-                bus_stop_coordinate = self.getBusCoordinates(location)
-                marker = folium.Marker([bus_stop_coordinate[0], bus_stop_coordinate[1]]).add_to(folium_map)
-                popup_html = f"""
-                            <div>
-                                <h3>{bus_service}</h3>
-                                <p>{location}</p>
-                            </div>
-                            """
-                popup = folium.Popup(html=popup_html, max_width=200)
-                marker.add_child(popup)
-                marker.add_to(folium_map)
-        except:
-            print("Error Getting Path from Algorithm")
-            marker = folium.Marker([fromLat, fromLon]).add_to(folium_map)
+        # try:
+        for idx, (location, bus_service, time, route) in enumerate(path):
+            if idx == 0:
+                direction_text += f"{location} {path[idx + 1][1]} (Start)\n\n"
+            elif idx == len(path) - 1:
+                direction_text += f"{location} {path[idx - 1][1]} (Estimated Arrival Time: {round(time, 2)}) (Goal) \n\n"
+                total_time = time
+            else:
+                direction_text += f"{location} \n(Bus Service: {bus_service})\n(Estimated Arrival Time: {round(time, 2)} minutes)\n\n"
+
+            coordinates += route
+            bus_stop_coordinate = self.getBusCoordinates(location)
+            marker = folium.Marker([bus_stop_coordinate[0], bus_stop_coordinate[1]]).add_to(folium_map)
+            popup_html = f"""
+                        <div>
+                            <h3>{bus_service}</h3>
+                            <p>{location}</p>
+                        </div>
+                        """
+            popup = folium.Popup(html=popup_html, max_width=200)
+            marker.add_child(popup)
+            marker.add_to(folium_map)
+        # except:
+        #     print("Error Getting Path from Algorithm")
+        #     marker = folium.Marker([fromLat, fromLon]).add_to(folium_map)
 
 
         # coordinates = []
@@ -217,13 +230,15 @@ class MyApp(QWidget):
         direction_text = f"Total estimated travel time: {round(total_time, 2)} minutes\n\n" + direction_text
         floatingWindow.directions.setText(direction_text)
         floatingWindow.show()
-        
-        folium.PolyLine(locations = [list(coords) for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
+        folium.PolyLine(locations = [[coords[1], coords[0]] for coords in coordinates], weight = 3, color = 'blue').add_to(folium_map)
 
 
         data = io.BytesIO()
         folium_map.save(data, close_file = False)
-        self.map.setHtml(data.getvalue().decode())
+        if current_index == 0:
+            self.map.setHtml(data.getvalue().decode())
+        elif current_index == 1:
+            self.map2.setHtml(data.getvalue().decode())
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
 
         # except:
@@ -260,7 +275,7 @@ class MyApp(QWidget):
         
         return bus_stop
     
-    def getUserRoute(self, start_bus_stop, end_bus_stop):
+    def getUserRoute(self, start_bus_stop, end_bus_stop, option):
         """Makes use of Dijkstra's Algorithm to return a list of Bus Stops the user should travel in
            sequential order to reach his destination
            
@@ -276,8 +291,12 @@ class MyApp(QWidget):
         list
             A list of the names of Bus Stops the user should travel via to reach to his destination
         """
-
-        path = a_star.a_star(graph, start_bus_stop, end_bus_stop, 0)
+        if option == 0:
+            path = a_star.a_star(graph, start_bus_stop, end_bus_stop, 0, "least transfer")
+        elif option == 1:
+            path = a_star.a_star(graph, start_bus_stop, end_bus_stop, 0, "shortest distance")
+        elif option == 2:
+            path = a_star.a_star(graph, start_bus_stop, end_bus_stop, 0, "least walking")
         return path
 
     def getBusCoordinates(self, bus_stop):

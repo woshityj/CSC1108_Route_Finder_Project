@@ -4,7 +4,7 @@
             {
                 "Distance": 0.9642999999999999,
                 "Bus Service": "P101-loop",
-                "Time": 3.403411764705882,
+                "Time": 1.4464499999999998,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -184,7 +184,7 @@
             {
                 "Distance": 0.9787,
                 "Bus Service": "P211-02",
-                "Time": 3.454235294117647,
+                "Time": 1.46805,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -364,7 +364,7 @@
             {
                 "Distance": 0.9787,
                 "Bus Service": "P411-02",
-                "Time": 3.454235294117647,
+                "Time": 1.46805,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -548,7 +548,7 @@
             {
                 "Distance": 1.4252,
                 "Bus Service": "P101-loop",
-                "Time": 5.030117647058824,
+                "Time": 2.1378,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -714,7 +714,7 @@
             {
                 "Distance": 2.2902,
                 "Bus Service": "P211-02",
-                "Time": 8.083058823529411,
+                "Time": 3.4353,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -950,7 +950,7 @@
             {
                 "Distance": 2.2902,
                 "Bus Service": "P411-02",
-                "Time": 8.083058823529411,
+                "Time": 3.4353,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -1190,7 +1190,7 @@
             {
                 "Distance": 1.2603,
                 "Bus Service": "P101-loop",
-                "Time": 4.448117647058824,
+                "Time": 1.89045,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -1342,7 +1342,7 @@
             {
                 "Distance": 0.1605,
                 "Bus Service": "P101-loop",
-                "Time": 0.5664705882352942,
+                "Time": 0.24075000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -1394,7 +1394,7 @@
             {
                 "Distance": 0.7038,
                 "Bus Service": "P101-loop",
-                "Time": 2.484,
+                "Time": 1.0556999999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -1528,7 +1528,7 @@
             {
                 "Distance": 1.6533,
                 "Bus Service": "P101-loop",
-                "Time": 5.835176470588235,
+                "Time": 2.47995,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -1720,7 +1720,7 @@
             {
                 "Distance": 0.7507,
                 "Bus Service": "P101-loop",
-                "Time": 2.6495294117647057,
+                "Time": 1.12605,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -2008,7 +2008,7 @@
             {
                 "Distance": 2.2318000000000002,
                 "Bus Service": "P101-loop",
-                "Time": 7.87694117647059,
+                "Time": 3.3477,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -2334,7 +2334,7 @@
             {
                 "Distance": 1.0196,
                 "Bus Service": "P101-loop",
-                "Time": 3.598588235294118,
+                "Time": 1.5294,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -2764,7 +2764,7 @@
             {
                 "Distance": 1.0735,
                 "Bus Service": "P101-loop",
-                "Time": 3.788823529411764,
+                "Time": 1.6102499999999997,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -3074,7 +3074,7 @@
             {
                 "Distance": 1.3402,
                 "Bus Service": "P101-loop",
-                "Time": 4.730117647058823,
+                "Time": 2.0103,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -3262,7 +3262,7 @@
             {
                 "Distance": 1.3402,
                 "Bus Service": "P102-02",
-                "Time": 4.730117647058823,
+                "Time": 2.0103,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -3576,7 +3576,7 @@
             {
                 "Distance": 1.6957,
                 "Bus Service": "P101-loop",
-                "Time": 5.984823529411765,
+                "Time": 2.5435499999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -3832,7 +3832,7 @@
             {
                 "Distance": 1.6957,
                 "Bus Service": "P102-02",
-                "Time": 5.984823529411765,
+                "Time": 2.5435499999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -4092,7 +4092,7 @@
             {
                 "Distance": 3.7821,
                 "Bus Service": "P101-loop",
-                "Time": 13.348588235294116,
+                "Time": 5.67315,
                 "Traffic Lights Count": 14,
                 "Road Route": [
                     [
@@ -4536,7 +4536,7 @@
             {
                 "Distance": 1.1144,
                 "Bus Service": "P102-02",
-                "Time": 3.9331764705882355,
+                "Time": 1.6716000000000002,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -4684,7 +4684,7 @@
             {
                 "Distance": 0.29760000000000003,
                 "Bus Service": "P101-loop",
-                "Time": 1.0503529411764707,
+                "Time": 0.4464,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -4760,7 +4760,7 @@
             {
                 "Distance": 0.7719,
                 "Bus Service": "P101-loop",
-                "Time": 2.7243529411764706,
+                "Time": 1.15785,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -4990,7 +4990,7 @@
             {
                 "Distance": 0.5945,
                 "Bus Service": "P101-loop",
-                "Time": 2.0982352941176474,
+                "Time": 0.89175,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -5224,7 +5224,7 @@
             {
                 "Distance": 0.4651,
                 "Bus Service": "P101-loop",
-                "Time": 1.641529411764706,
+                "Time": 0.69765,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -5434,7 +5434,7 @@
             {
                 "Distance": 2.7959,
                 "Bus Service": "P101-loop",
-                "Time": 9.867882352941177,
+                "Time": 4.19385,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -5860,7 +5860,7 @@
             {
                 "Distance": 0.7092999999999999,
                 "Bus Service": "P102-01",
-                "Time": 2.503411764705882,
+                "Time": 1.06395,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -6122,7 +6122,7 @@
             {
                 "Distance": 4.6789,
                 "Bus Service": "P106-loop",
-                "Time": 16.513764705882352,
+                "Time": 7.01835,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -7144,7 +7144,7 @@
             {
                 "Distance": 0.157,
                 "Bus Service": "P102-01",
-                "Time": 0.5541176470588235,
+                "Time": 0.2355,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -7448,7 +7448,7 @@
             {
                 "Distance": 2.3099000000000003,
                 "Bus Service": "P102-01",
-                "Time": 8.15258823529412,
+                "Time": 3.46485,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -7742,7 +7742,7 @@
             {
                 "Distance": 0.31360000000000005,
                 "Bus Service": "P102-01",
-                "Time": 1.1068235294117648,
+                "Time": 0.4704000000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -8134,7 +8134,7 @@
             {
                 "Distance": 0.2732,
                 "Bus Service": "P102-01",
-                "Time": 0.9642352941176471,
+                "Time": 0.4098,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -8484,7 +8484,7 @@
             {
                 "Distance": 0.4044,
                 "Bus Service": "P102-01",
-                "Time": 1.4272941176470586,
+                "Time": 0.6065999999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -8892,7 +8892,7 @@
             {
                 "Distance": 1.3232000000000002,
                 "Bus Service": "P102-01",
-                "Time": 4.670117647058825,
+                "Time": 1.9848000000000003,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -9234,7 +9234,7 @@
             {
                 "Distance": 1.6439000000000001,
                 "Bus Service": "P102-01",
-                "Time": 5.8020000000000005,
+                "Time": 2.46585,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -9568,7 +9568,7 @@
             {
                 "Distance": 0.3748,
                 "Bus Service": "P102-02",
-                "Time": 1.3228235294117647,
+                "Time": 0.5622,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -9922,7 +9922,7 @@
             {
                 "Distance": 1.28,
                 "Bus Service": "P102-02",
-                "Time": 4.51764705882353,
+                "Time": 1.92,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -10524,7 +10524,7 @@
             {
                 "Distance": 3.7671,
                 "Bus Service": "P102-02",
-                "Time": 13.29564705882353,
+                "Time": 5.65065,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -10800,7 +10800,7 @@
             {
                 "Distance": 5.6453999999999995,
                 "Bus Service": "P102-02",
-                "Time": 19.924941176470586,
+                "Time": 8.4681,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -11256,7 +11256,7 @@
             {
                 "Distance": 0.7152999999999999,
                 "Bus Service": "P102-02",
-                "Time": 2.5245882352941176,
+                "Time": 1.0729499999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -11352,7 +11352,7 @@
             {
                 "Distance": 0.7152999999999999,
                 "Bus Service": "P106-loop",
-                "Time": 2.5245882352941176,
+                "Time": 1.0729499999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -11696,7 +11696,7 @@
             {
                 "Distance": 1.5615999999999999,
                 "Bus Service": "P102-02",
-                "Time": 5.511529411764705,
+                "Time": 2.3424,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -12578,7 +12578,7 @@
             {
                 "Distance": 3.0049,
                 "Bus Service": "P106-loop",
-                "Time": 10.605529411764707,
+                "Time": 4.507350000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -12818,7 +12818,7 @@
             {
                 "Distance": 0.732,
                 "Bus Service": "P102-02",
-                "Time": 2.5835294117647054,
+                "Time": 1.098,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -13274,7 +13274,7 @@
             {
                 "Distance": 0.732,
                 "Bus Service": "P106-loop",
-                "Time": 2.5835294117647054,
+                "Time": 1.098,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -13618,7 +13618,7 @@
             {
                 "Distance": 1.9984000000000002,
                 "Bus Service": "P102-02",
-                "Time": 7.053176470588236,
+                "Time": 2.9976000000000003,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -14090,7 +14090,7 @@
             {
                 "Distance": 1.9984000000000002,
                 "Bus Service": "P106-loop",
-                "Time": 7.053176470588236,
+                "Time": 2.9976000000000003,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -15118,7 +15118,7 @@
             {
                 "Distance": 1.0024,
                 "Bus Service": "P106-loop",
-                "Time": 3.5378823529411765,
+                "Time": 1.5036,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -15264,7 +15264,7 @@
             {
                 "Distance": 0.6604,
                 "Bus Service": "P106-loop",
-                "Time": 2.3308235294117643,
+                "Time": 0.9906,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -15358,7 +15358,7 @@
             {
                 "Distance": 0.5892000000000001,
                 "Bus Service": "P106-loop",
-                "Time": 2.0795294117647063,
+                "Time": 0.8838000000000001,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -15764,7 +15764,7 @@
             {
                 "Distance": 3.2615,
                 "Bus Service": "P106-loop",
-                "Time": 11.511176470588236,
+                "Time": 4.89225,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -16284,7 +16284,7 @@
             {
                 "Distance": 0.7731,
                 "Bus Service": "P106-loop",
-                "Time": 2.7285882352941173,
+                "Time": 1.15965,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -16478,7 +16478,7 @@
             {
                 "Distance": 0.6547999999999999,
                 "Bus Service": "P106-loop",
-                "Time": 2.3110588235294114,
+                "Time": 0.9822,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -16742,7 +16742,7 @@
             {
                 "Distance": 0.45280000000000004,
                 "Bus Service": "P106-loop",
-                "Time": 1.5981176470588236,
+                "Time": 0.6792,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -16948,7 +16948,7 @@
             {
                 "Distance": 1.9821,
                 "Bus Service": "P106-loop",
-                "Time": 6.995647058823529,
+                "Time": 2.97315,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -17334,7 +17334,7 @@
             {
                 "Distance": 0.8617999999999999,
                 "Bus Service": "P106-loop",
-                "Time": 3.0416470588235294,
+                "Time": 1.2927,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -17610,7 +17610,7 @@
             {
                 "Distance": 0.5262,
                 "Bus Service": "P106-loop",
-                "Time": 1.8571764705882354,
+                "Time": 0.7893,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -17954,7 +17954,7 @@
             {
                 "Distance": 1.2285,
                 "Bus Service": "P106-loop",
-                "Time": 4.3358823529411765,
+                "Time": 1.8427499999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -18188,7 +18188,7 @@
             {
                 "Distance": 0.7781,
                 "Bus Service": "P106-loop",
-                "Time": 2.746235294117647,
+                "Time": 1.1671500000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -18306,7 +18306,7 @@
             {
                 "Distance": 0.1738,
                 "Bus Service": "P106-loop",
-                "Time": 0.6134117647058823,
+                "Time": 0.2607,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -18358,7 +18358,7 @@
             {
                 "Distance": 0.7226,
                 "Bus Service": "P106-loop",
-                "Time": 2.5503529411764707,
+                "Time": 1.0839,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -18472,7 +18472,7 @@
             {
                 "Distance": 1.1189,
                 "Bus Service": "P106-loop",
-                "Time": 3.949058823529412,
+                "Time": 1.67835,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -18596,7 +18596,7 @@
             {
                 "Distance": 0.9106000000000001,
                 "Bus Service": "P106-loop",
-                "Time": 3.2138823529411766,
+                "Time": 1.3659000000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -18720,7 +18720,7 @@
             {
                 "Distance": 0.5646,
                 "Bus Service": "P106-loop",
-                "Time": 1.992705882352941,
+                "Time": 0.8469,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -18904,7 +18904,7 @@
             {
                 "Distance": 3.6896999999999998,
                 "Bus Service": "P106-loop",
-                "Time": 13.022470588235292,
+                "Time": 5.534549999999999,
                 "Traffic Lights Count": 5,
                 "Road Route": [
                     [
@@ -19354,7 +19354,7 @@
             {
                 "Distance": 2.2433,
                 "Bus Service": "P106-loop",
-                "Time": 7.917529411764706,
+                "Time": 3.36495,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -19688,7 +19688,7 @@
             {
                 "Distance": 1.359,
                 "Bus Service": "P106-loop",
-                "Time": 4.7964705882352945,
+                "Time": 2.0385,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -20100,7 +20100,7 @@
             {
                 "Distance": 1.503,
                 "Bus Service": "P106-loop",
-                "Time": 5.30470588235294,
+                "Time": 2.2544999999999997,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -20374,7 +20374,7 @@
             {
                 "Distance": 1.2563,
                 "Bus Service": "P106-loop",
-                "Time": 4.433999999999999,
+                "Time": 1.88445,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -20486,7 +20486,7 @@
             {
                 "Distance": 0.8842000000000001,
                 "Bus Service": "P106-loop",
-                "Time": 3.120705882352942,
+                "Time": 1.3263000000000003,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -20562,7 +20562,7 @@
             {
                 "Distance": 0.1923,
                 "Bus Service": "P106-loop",
-                "Time": 0.6787058823529412,
+                "Time": 0.28845,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -20764,7 +20764,7 @@
             {
                 "Distance": 0.6324,
                 "Bus Service": "P106-loop",
-                "Time": 2.2319999999999998,
+                "Time": 0.9485999999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -21030,7 +21030,7 @@
             {
                 "Distance": 2.273,
                 "Bus Service": "P106-loop",
-                "Time": 8.02235294117647,
+                "Time": 3.4095,
                 "Traffic Lights Count": 5,
                 "Road Route": [
                     [
@@ -21504,7 +21504,7 @@
             {
                 "Distance": 0.9477000000000001,
                 "Bus Service": "P106-loop",
-                "Time": 3.3448235294117654,
+                "Time": 1.42155,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -21610,7 +21610,7 @@
             {
                 "Distance": 1.8611,
                 "Bus Service": "P106-loop",
-                "Time": 6.568588235294117,
+                "Time": 2.7916499999999997,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -21754,7 +21754,7 @@
             {
                 "Distance": 0.8476,
                 "Bus Service": "P202-loop",
-                "Time": 2.991529411764706,
+                "Time": 1.2714,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -22132,7 +22132,7 @@
             {
                 "Distance": 0.7763,
                 "Bus Service": "P211-01",
-                "Time": 2.7398823529411764,
+                "Time": 1.16445,
                 "Traffic Lights Count": 5,
                 "Road Route": [
                     [
@@ -22334,7 +22334,7 @@
             {
                 "Distance": 0.6219,
                 "Bus Service": "P202-loop",
-                "Time": 2.194941176470588,
+                "Time": 0.9328500000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -22462,7 +22462,7 @@
             {
                 "Distance": 0.9033,
                 "Bus Service": "P202-loop",
-                "Time": 3.1881176470588235,
+                "Time": 1.3549499999999999,
                 "Traffic Lights Count": 7,
                 "Road Route": [
                     [
@@ -22568,7 +22568,7 @@
             {
                 "Distance": 0.6226,
                 "Bus Service": "P202-loop",
-                "Time": 2.1974117647058824,
+                "Time": 0.9339000000000001,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -22636,7 +22636,7 @@
             {
                 "Distance": 1.4,
                 "Bus Service": "P202-loop",
-                "Time": 4.9411764705882355,
+                "Time": 2.0999999999999996,
                 "Traffic Lights Count": 9,
                 "Road Route": [
                     [
@@ -22784,7 +22784,7 @@
             {
                 "Distance": 2.0407,
                 "Bus Service": "P202-loop",
-                "Time": 7.202470588235295,
+                "Time": 3.0610500000000003,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -22964,7 +22964,7 @@
             {
                 "Distance": 1.1307,
                 "Bus Service": "P202-loop",
-                "Time": 3.990705882352941,
+                "Time": 1.69605,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -23040,7 +23040,7 @@
             {
                 "Distance": 1.2427000000000001,
                 "Bus Service": "P202-loop",
-                "Time": 4.386000000000001,
+                "Time": 1.8640500000000002,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -23160,7 +23160,7 @@
             {
                 "Distance": 0.5081,
                 "Bus Service": "P202-loop",
-                "Time": 1.7932941176470587,
+                "Time": 0.76215,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -23244,7 +23244,7 @@
             {
                 "Distance": 0.2795,
                 "Bus Service": "P202-loop",
-                "Time": 0.9864705882352942,
+                "Time": 0.41925,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -23338,7 +23338,7 @@
             {
                 "Distance": 0.8032999999999999,
                 "Bus Service": "P202-loop",
-                "Time": 2.8351764705882347,
+                "Time": 1.2049499999999997,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -23524,7 +23524,7 @@
             {
                 "Distance": 0.5995,
                 "Bus Service": "P202-loop",
-                "Time": 2.1158823529411763,
+                "Time": 0.8992500000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -23698,7 +23698,7 @@
             {
                 "Distance": 0.6475,
                 "Bus Service": "P202-loop",
-                "Time": 2.2852941176470587,
+                "Time": 0.9712500000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -23896,7 +23896,7 @@
             {
                 "Distance": 0.2964,
                 "Bus Service": "P202-loop",
-                "Time": 1.0461176470588236,
+                "Time": 0.4446,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24106,7 +24106,7 @@
             {
                 "Distance": 0.9073,
                 "Bus Service": "P202-loop",
-                "Time": 3.2022352941176466,
+                "Time": 1.36095,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24320,7 +24320,7 @@
             {
                 "Distance": 0.2214,
                 "Bus Service": "P202-loop",
-                "Time": 0.7814117647058824,
+                "Time": 0.3321,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24384,7 +24384,7 @@
             {
                 "Distance": 0.2214,
                 "Bus Service": "P211-02",
-                "Time": 0.7814117647058824,
+                "Time": 0.3321,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24412,7 +24412,7 @@
             {
                 "Distance": 0.2214,
                 "Bus Service": "P411-02",
-                "Time": 0.7814117647058824,
+                "Time": 0.3321,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24440,7 +24440,7 @@
             {
                 "Distance": 0.2214,
                 "Bus Service": "P403-loop",
-                "Time": 0.7814117647058824,
+                "Time": 0.3321,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24472,7 +24472,7 @@
             {
                 "Distance": 0.4833,
                 "Bus Service": "P202-loop",
-                "Time": 1.705764705882353,
+                "Time": 0.72495,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24720,7 +24720,7 @@
             {
                 "Distance": 0.4833,
                 "Bus Service": "P211-02",
-                "Time": 1.705764705882353,
+                "Time": 0.72495,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24784,7 +24784,7 @@
             {
                 "Distance": 0.4833,
                 "Bus Service": "P411-02",
-                "Time": 1.705764705882353,
+                "Time": 0.72495,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24848,7 +24848,7 @@
             {
                 "Distance": 0.4833,
                 "Bus Service": "P403-loop",
-                "Time": 1.705764705882353,
+                "Time": 0.72495,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -24954,7 +24954,7 @@
             {
                 "Distance": 0.7262000000000001,
                 "Bus Service": "P202-loop",
-                "Time": 2.563058823529412,
+                "Time": 1.0893000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -25034,7 +25034,7 @@
             {
                 "Distance": 0.7262000000000001,
                 "Bus Service": "P211-02",
-                "Time": 2.563058823529412,
+                "Time": 1.0893000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -25114,7 +25114,7 @@
             {
                 "Distance": 0.7262000000000001,
                 "Bus Service": "P411-02",
-                "Time": 2.563058823529412,
+                "Time": 1.0893000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -25194,7 +25194,7 @@
             {
                 "Distance": 0.7262000000000001,
                 "Bus Service": "P403-loop",
-                "Time": 2.563058823529412,
+                "Time": 1.0893000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -25538,7 +25538,7 @@
             {
                 "Distance": 1.0582,
                 "Bus Service": "P202-loop",
-                "Time": 3.7348235294117647,
+                "Time": 1.5873,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -25928,7 +25928,7 @@
             {
                 "Distance": 2.9537,
                 "Bus Service": "P211-02",
-                "Time": 10.424823529411766,
+                "Time": 4.43055,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -26226,7 +26226,7 @@
             {
                 "Distance": 1.0517999999999998,
                 "Bus Service": "P411-02",
-                "Time": 3.7122352941176464,
+                "Time": 1.5776999999999997,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -26318,7 +26318,7 @@
             {
                 "Distance": 1.0517999999999998,
                 "Bus Service": "P403-loop",
-                "Time": 3.7122352941176464,
+                "Time": 1.5776999999999997,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -26414,7 +26414,7 @@
             {
                 "Distance": 0.3,
                 "Bus Service": "P202-loop",
-                "Time": 1.0588235294117647,
+                "Time": 0.44999999999999996,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -26482,7 +26482,7 @@
             {
                 "Distance": 0.7222999999999999,
                 "Bus Service": "P202-loop",
-                "Time": 2.549294117647059,
+                "Time": 1.0834499999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -26754,7 +26754,7 @@
             {
                 "Distance": 1.3699000000000001,
                 "Bus Service": "P202-loop",
-                "Time": 4.834941176470589,
+                "Time": 2.05485,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -26938,7 +26938,7 @@
             {
                 "Distance": 3.7685,
                 "Bus Service": "P211-02",
-                "Time": 13.300588235294116,
+                "Time": 5.65275,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -27354,7 +27354,7 @@
             {
                 "Distance": 0.48610000000000003,
                 "Bus Service": "P202-loop",
-                "Time": 1.7156470588235295,
+                "Time": 0.72915,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -27502,7 +27502,7 @@
             {
                 "Distance": 1.9484000000000001,
                 "Bus Service": "P202-loop",
-                "Time": 6.876705882352941,
+                "Time": 2.9226,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -27736,7 +27736,7 @@
             {
                 "Distance": 0.6765,
                 "Bus Service": "P202-loop",
-                "Time": 2.387647058823529,
+                "Time": 1.01475,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -27830,7 +27830,7 @@
             {
                 "Distance": 0.1851,
                 "Bus Service": "P202-loop",
-                "Time": 0.6532941176470588,
+                "Time": 0.27764999999999995,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -28050,7 +28050,7 @@
             {
                 "Distance": 0.4456,
                 "Bus Service": "P202-loop",
-                "Time": 1.572705882352941,
+                "Time": 0.6684,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -28218,7 +28218,7 @@
             {
                 "Distance": 2.6333,
                 "Bus Service": "P211-01",
-                "Time": 9.294,
+                "Time": 3.9499500000000003,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -28706,7 +28706,7 @@
             {
                 "Distance": 0.3795,
                 "Bus Service": "P211-01",
-                "Time": 1.3394117647058825,
+                "Time": 0.5692499999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -28814,7 +28814,7 @@
             {
                 "Distance": 0.3795,
                 "Bus Service": "P211-02",
-                "Time": 1.3394117647058825,
+                "Time": 0.5692499999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -29026,7 +29026,7 @@
             {
                 "Distance": 0.305,
                 "Bus Service": "P211-01",
-                "Time": 1.076470588235294,
+                "Time": 0.4575,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -29166,7 +29166,7 @@
             {
                 "Distance": 0.305,
                 "Bus Service": "P211-02",
-                "Time": 1.076470588235294,
+                "Time": 0.4575,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -29304,7 +29304,7 @@
             {
                 "Distance": 0.4144,
                 "Bus Service": "P211-01",
-                "Time": 1.4625882352941177,
+                "Time": 0.6215999999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -29484,7 +29484,7 @@
             {
                 "Distance": 0.4144,
                 "Bus Service": "P211-02",
-                "Time": 1.4625882352941177,
+                "Time": 0.6215999999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -29630,7 +29630,7 @@
             {
                 "Distance": 0.3545,
                 "Bus Service": "P211-01",
-                "Time": 1.2511764705882353,
+                "Time": 0.53175,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -29770,7 +29770,7 @@
             {
                 "Distance": 0.3545,
                 "Bus Service": "P211-02",
-                "Time": 1.2511764705882353,
+                "Time": 0.53175,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -29948,7 +29948,7 @@
             {
                 "Distance": 0.6085,
                 "Bus Service": "P211-01",
-                "Time": 2.1476470588235292,
+                "Time": 0.9127500000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -30268,7 +30268,7 @@
             {
                 "Distance": 0.3015,
                 "Bus Service": "P211-02",
-                "Time": 1.0641176470588234,
+                "Time": 0.45225,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -30374,7 +30374,7 @@
             {
                 "Distance": 0.335,
                 "Bus Service": "P211-01",
-                "Time": 1.1823529411764706,
+                "Time": 0.5025000000000001,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -30852,7 +30852,7 @@
             {
                 "Distance": 2.8353,
                 "Bus Service": "P211-01",
-                "Time": 10.00694117647059,
+                "Time": 4.25295,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -31234,7 +31234,7 @@
             {
                 "Distance": 0.414,
                 "Bus Service": "P211-01",
-                "Time": 1.4611764705882353,
+                "Time": 0.621,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -31402,7 +31402,7 @@
             {
                 "Distance": 0.414,
                 "Bus Service": "P411-01",
-                "Time": 1.4611764705882353,
+                "Time": 0.621,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -31486,7 +31486,7 @@
             {
                 "Distance": 0.414,
                 "Bus Service": "P403-loop",
-                "Time": 1.4611764705882353,
+                "Time": 0.621,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -31676,7 +31676,7 @@
             {
                 "Distance": 2.1144000000000003,
                 "Bus Service": "P211-01",
-                "Time": 7.462588235294119,
+                "Time": 3.1716,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -31904,7 +31904,7 @@
             {
                 "Distance": 2.1144000000000003,
                 "Bus Service": "P411-01",
-                "Time": 7.462588235294119,
+                "Time": 3.1716,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -32428,7 +32428,7 @@
             {
                 "Distance": 2.0427,
                 "Bus Service": "P403-loop",
-                "Time": 7.209529411764706,
+                "Time": 3.06405,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -32660,7 +32660,7 @@
             {
                 "Distance": 1.629,
                 "Bus Service": "P211-01",
-                "Time": 5.749411764705883,
+                "Time": 2.4435,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -32764,7 +32764,7 @@
             {
                 "Distance": 1.629,
                 "Bus Service": "P411-01",
-                "Time": 5.749411764705883,
+                "Time": 2.4435,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -32902,7 +32902,7 @@
             {
                 "Distance": 0.6106,
                 "Bus Service": "P211-01",
-                "Time": 2.155058823529412,
+                "Time": 0.9159,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -32966,7 +32966,7 @@
             {
                 "Distance": 0.6106,
                 "Bus Service": "P411-01",
-                "Time": 2.155058823529412,
+                "Time": 0.9159,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -33160,7 +33160,7 @@
             {
                 "Distance": 0.36560000000000004,
                 "Bus Service": "P211-01",
-                "Time": 1.290352941176471,
+                "Time": 0.5484,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -33340,7 +33340,7 @@
             {
                 "Distance": 0.36560000000000004,
                 "Bus Service": "P411-01",
-                "Time": 1.290352941176471,
+                "Time": 0.5484,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -33518,7 +33518,7 @@
             {
                 "Distance": 0.44,
                 "Bus Service": "P211-01",
-                "Time": 1.5529411764705883,
+                "Time": 0.6599999999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -33586,7 +33586,7 @@
             {
                 "Distance": 0.44,
                 "Bus Service": "P411-01",
-                "Time": 1.5529411764705883,
+                "Time": 0.6599999999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -33790,7 +33790,7 @@
             {
                 "Distance": 2.9258,
                 "Bus Service": "P211-01",
-                "Time": 10.326352941176472,
+                "Time": 4.3887,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -34006,7 +34006,7 @@
             {
                 "Distance": 2.9258,
                 "Bus Service": "P411-01",
-                "Time": 10.326352941176472,
+                "Time": 4.3887,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -34306,7 +34306,7 @@
             {
                 "Distance": 0.6604,
                 "Bus Service": "P211-01",
-                "Time": 2.3308235294117643,
+                "Time": 0.9906,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -34482,7 +34482,7 @@
             {
                 "Distance": 0.6604,
                 "Bus Service": "P411-01",
-                "Time": 2.3308235294117643,
+                "Time": 0.9906,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -34694,7 +34694,7 @@
             {
                 "Distance": 0.44680000000000003,
                 "Bus Service": "P211-01",
-                "Time": 1.5769411764705883,
+                "Time": 0.6702,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -34858,7 +34858,7 @@
             {
                 "Distance": 0.44680000000000003,
                 "Bus Service": "P411-01",
-                "Time": 1.5769411764705883,
+                "Time": 0.6702,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -35308,7 +35308,7 @@
             {
                 "Distance": 0.2535,
                 "Bus Service": "P211-01",
-                "Time": 0.8947058823529412,
+                "Time": 0.38025000000000003,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -35372,7 +35372,7 @@
             {
                 "Distance": 0.2535,
                 "Bus Service": "P411-01",
-                "Time": 0.8947058823529412,
+                "Time": 0.38025000000000003,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -35620,7 +35620,7 @@
             {
                 "Distance": 0.3003,
                 "Bus Service": "P211-01",
-                "Time": 1.0598823529411767,
+                "Time": 0.45045,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -35668,7 +35668,7 @@
             {
                 "Distance": 0.3003,
                 "Bus Service": "P411-01",
-                "Time": 1.0598823529411767,
+                "Time": 0.45045,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -35730,7 +35730,7 @@
             {
                 "Distance": 0.882,
                 "Bus Service": "P211-01",
-                "Time": 3.112941176470588,
+                "Time": 1.323,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -35802,7 +35802,7 @@
             {
                 "Distance": 0.882,
                 "Bus Service": "P411-01",
-                "Time": 3.112941176470588,
+                "Time": 1.323,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -36172,7 +36172,7 @@
             {
                 "Distance": 2.9404,
                 "Bus Service": "P211-01",
-                "Time": 10.377882352941176,
+                "Time": 4.4106,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -36464,7 +36464,7 @@
             {
                 "Distance": 2.9404,
                 "Bus Service": "P411-01",
-                "Time": 10.377882352941176,
+                "Time": 4.4106,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -36838,7 +36838,7 @@
             {
                 "Distance": 4.3688,
                 "Bus Service": "P211-01",
-                "Time": 15.41929411764706,
+                "Time": 6.5532,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -37402,7 +37402,7 @@
             {
                 "Distance": 4.3688,
                 "Bus Service": "P411-01",
-                "Time": 15.41929411764706,
+                "Time": 6.5532,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -38150,7 +38150,7 @@
             {
                 "Distance": 2.6327,
                 "Bus Service": "P211-01",
-                "Time": 9.291882352941176,
+                "Time": 3.94905,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -38474,7 +38474,7 @@
             {
                 "Distance": 2.6327,
                 "Bus Service": "P411-01",
-                "Time": 9.291882352941176,
+                "Time": 3.94905,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -39024,7 +39024,7 @@
             {
                 "Distance": 0.4173,
                 "Bus Service": "P211-02",
-                "Time": 1.4728235294117646,
+                "Time": 0.62595,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -39196,7 +39196,7 @@
             {
                 "Distance": 0.4173,
                 "Bus Service": "P411-02",
-                "Time": 1.4728235294117646,
+                "Time": 0.62595,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -39396,7 +39396,7 @@
             {
                 "Distance": 2.9001,
                 "Bus Service": "P211-02",
-                "Time": 10.235647058823531,
+                "Time": 4.35015,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -39724,7 +39724,7 @@
             {
                 "Distance": 2.9001,
                 "Bus Service": "P411-02",
-                "Time": 10.235647058823531,
+                "Time": 4.35015,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -40434,7 +40434,7 @@
             {
                 "Distance": 0.7199,
                 "Bus Service": "P211-02",
-                "Time": 2.5408235294117647,
+                "Time": 1.07985,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -40506,7 +40506,7 @@
             {
                 "Distance": 0.7199,
                 "Bus Service": "P411-02",
-                "Time": 2.5408235294117647,
+                "Time": 1.07985,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -40660,7 +40660,7 @@
             {
                 "Distance": 0.0017,
                 "Bus Service": "P211-02",
-                "Time": 0.005999999999999999,
+                "Time": 0.0025499999999999997,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -40692,7 +40692,7 @@
             {
                 "Distance": 0.0017,
                 "Bus Service": "P411-02",
-                "Time": 0.005999999999999999,
+                "Time": 0.0025499999999999997,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -40846,7 +40846,7 @@
             {
                 "Distance": 1.2401,
                 "Bus Service": "P211-02",
-                "Time": 4.376823529411764,
+                "Time": 1.86015,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -40950,7 +40950,7 @@
             {
                 "Distance": 1.2401,
                 "Bus Service": "P411-02",
-                "Time": 4.376823529411764,
+                "Time": 1.86015,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -41210,7 +41210,7 @@
             {
                 "Distance": 0.37039999999999995,
                 "Bus Service": "P211-02",
-                "Time": 1.3072941176470585,
+                "Time": 0.5556,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -41298,7 +41298,7 @@
             {
                 "Distance": 0.37039999999999995,
                 "Bus Service": "P411-02",
-                "Time": 1.3072941176470585,
+                "Time": 0.5556,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -41696,7 +41696,7 @@
             {
                 "Distance": 1.2174,
                 "Bus Service": "P211-02",
-                "Time": 4.296705882352942,
+                "Time": 1.8261,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -41876,7 +41876,7 @@
             {
                 "Distance": 1.2174,
                 "Bus Service": "P411-02",
-                "Time": 4.296705882352942,
+                "Time": 1.8261,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -42278,7 +42278,7 @@
             {
                 "Distance": 1.1057000000000001,
                 "Bus Service": "P211-02",
-                "Time": 3.9024705882352944,
+                "Time": 1.6585500000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -42374,7 +42374,7 @@
             {
                 "Distance": 1.1057000000000001,
                 "Bus Service": "P411-02",
-                "Time": 3.9024705882352944,
+                "Time": 1.6585500000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -42574,7 +42574,7 @@
             {
                 "Distance": 0.9131,
                 "Bus Service": "P211-02",
-                "Time": 3.2227058823529413,
+                "Time": 1.36965,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -42622,7 +42622,7 @@
             {
                 "Distance": 0.9131,
                 "Bus Service": "P411-02",
-                "Time": 3.2227058823529413,
+                "Time": 1.36965,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -42902,7 +42902,7 @@
             {
                 "Distance": 1.1185,
                 "Bus Service": "P211-02",
-                "Time": 3.9476470588235295,
+                "Time": 1.67775,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -43010,7 +43010,7 @@
             {
                 "Distance": 1.1185,
                 "Bus Service": "P411-02",
-                "Time": 3.9476470588235295,
+                "Time": 1.67775,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -43122,7 +43122,7 @@
             {
                 "Distance": 1.0192,
                 "Bus Service": "P211-02",
-                "Time": 3.597176470588236,
+                "Time": 1.5288000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -43242,7 +43242,7 @@
             {
                 "Distance": 1.0192,
                 "Bus Service": "P411-02",
-                "Time": 3.597176470588236,
+                "Time": 1.5288000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -43396,7 +43396,7 @@
             {
                 "Distance": 0.2785,
                 "Bus Service": "P211-02",
-                "Time": 0.9829411764705884,
+                "Time": 0.41775000000000007,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -43590,7 +43590,7 @@
             {
                 "Distance": 0.1119,
                 "Bus Service": "P211-02",
-                "Time": 0.39494117647058824,
+                "Time": 0.16785,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -43904,7 +43904,7 @@
             {
                 "Distance": 2.14,
                 "Bus Service": "P211-02",
-                "Time": 7.552941176470588,
+                "Time": 3.2100000000000004,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -44416,7 +44416,7 @@
             {
                 "Distance": 0.5772999999999999,
                 "Bus Service": "P211-02",
-                "Time": 2.037529411764706,
+                "Time": 0.8659499999999999,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -44658,7 +44658,7 @@
             {
                 "Distance": 0.6069,
                 "Bus Service": "P411-01",
-                "Time": 2.1420000000000003,
+                "Time": 0.91035,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -44734,7 +44734,7 @@
             {
                 "Distance": 1.0697999999999999,
                 "Bus Service": "P411-01",
-                "Time": 3.7757647058823522,
+                "Time": 1.6046999999999998,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -44864,7 +44864,7 @@
             {
                 "Distance": 0.42669999999999997,
                 "Bus Service": "P411-01",
-                "Time": 1.5059999999999998,
+                "Time": 0.64005,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -45084,7 +45084,7 @@
             {
                 "Distance": 0.8672000000000001,
                 "Bus Service": "P411-01",
-                "Time": 3.060705882352942,
+                "Time": 1.3008000000000002,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -45360,7 +45360,7 @@
             {
                 "Distance": 1.2752999999999999,
                 "Bus Service": "P411-01",
-                "Time": 4.501058823529411,
+                "Time": 1.9129499999999997,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -45472,7 +45472,7 @@
             {
                 "Distance": 0.7507999999999999,
                 "Bus Service": "P411-01",
-                "Time": 2.6498823529411766,
+                "Time": 1.1261999999999999,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -45614,7 +45614,7 @@
             {
                 "Distance": 0.5121,
                 "Bus Service": "P411-01",
-                "Time": 1.8074117647058823,
+                "Time": 0.76815,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -45714,7 +45714,7 @@
             {
                 "Distance": 0.7028,
                 "Bus Service": "P411-01",
-                "Time": 2.480470588235294,
+                "Time": 1.0542,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -45880,7 +45880,7 @@
             {
                 "Distance": 1.2852999999999999,
                 "Bus Service": "P411-01",
-                "Time": 4.536352941176471,
+                "Time": 1.9279499999999996,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -45950,7 +45950,7 @@
             {
                 "Distance": 2.2256,
                 "Bus Service": "P411-01",
-                "Time": 7.855058823529411,
+                "Time": 3.3384,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -46156,7 +46156,7 @@
             {
                 "Distance": 0.5589,
                 "Bus Service": "P411-01",
-                "Time": 1.9725882352941175,
+                "Time": 0.8383499999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -46244,7 +46244,7 @@
             {
                 "Distance": 0.5589,
                 "Bus Service": "P403-loop",
-                "Time": 1.9725882352941175,
+                "Time": 0.8383499999999999,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -46406,7 +46406,7 @@
             {
                 "Distance": 0.6964,
                 "Bus Service": "P411-01",
-                "Time": 2.457882352941177,
+                "Time": 1.0446000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -46486,7 +46486,7 @@
             {
                 "Distance": 0.6964,
                 "Bus Service": "P403-loop",
-                "Time": 2.457882352941177,
+                "Time": 1.0446000000000002,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -46742,7 +46742,7 @@
             {
                 "Distance": 2.7625,
                 "Bus Service": "P411-01",
-                "Time": 9.75,
+                "Time": 4.14375,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -46934,7 +46934,7 @@
             {
                 "Distance": 2.7625,
                 "Bus Service": "P403-loop",
-                "Time": 9.75,
+                "Time": 4.14375,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -47196,7 +47196,7 @@
             {
                 "Distance": 3.2989,
                 "Bus Service": "P411-01",
-                "Time": 11.643176470588235,
+                "Time": 4.9483500000000005,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -47396,7 +47396,7 @@
             {
                 "Distance": 3.2989,
                 "Bus Service": "P403-loop",
-                "Time": 11.643176470588235,
+                "Time": 4.9483500000000005,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -47600,7 +47600,7 @@
             {
                 "Distance": 4.6395,
                 "Bus Service": "P411-02",
-                "Time": 16.37470588235294,
+                "Time": 6.95925,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -47868,7 +47868,7 @@
             {
                 "Distance": 4.6395,
                 "Bus Service": "P403-loop",
-                "Time": 16.37470588235294,
+                "Time": 6.95925,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -48140,7 +48140,7 @@
             {
                 "Distance": 0.6367999999999999,
                 "Bus Service": "P411-02",
-                "Time": 2.2475294117647056,
+                "Time": 0.9551999999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -48192,7 +48192,7 @@
             {
                 "Distance": 0.6367999999999999,
                 "Bus Service": "P403-loop",
-                "Time": 2.2475294117647056,
+                "Time": 0.9551999999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -48314,7 +48314,7 @@
             {
                 "Distance": 0.519,
                 "Bus Service": "P411-02",
-                "Time": 1.8317647058823532,
+                "Time": 0.7785,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -48522,7 +48522,7 @@
             {
                 "Distance": 0.519,
                 "Bus Service": "P403-loop",
-                "Time": 1.8317647058823532,
+                "Time": 0.7785,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -48668,7 +48668,7 @@
             {
                 "Distance": 0.7563,
                 "Bus Service": "P411-02",
-                "Time": 2.669294117647059,
+                "Time": 1.13445,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -49116,7 +49116,7 @@
             {
                 "Distance": 1.9587,
                 "Bus Service": "P403-loop",
-                "Time": 6.913058823529412,
+                "Time": 2.93805,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -49328,7 +49328,7 @@
             {
                 "Distance": 0.8108,
                 "Bus Service": "P411-02",
-                "Time": 2.8616470588235297,
+                "Time": 1.2162,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -49392,7 +49392,7 @@
             {
                 "Distance": 0.8694,
                 "Bus Service": "P411-02",
-                "Time": 3.068470588235294,
+                "Time": 1.3040999999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -49472,7 +49472,7 @@
             {
                 "Distance": 2.1305,
                 "Bus Service": "P411-02",
-                "Time": 7.519411764705883,
+                "Time": 3.1957500000000003,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -49626,7 +49626,7 @@
             {
                 "Distance": 3.1691,
                 "Bus Service": "P411-02",
-                "Time": 11.185058823529411,
+                "Time": 4.7536499999999995,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -49784,7 +49784,7 @@
             {
                 "Distance": 0.1494,
                 "Bus Service": "P411-02",
-                "Time": 0.5272941176470588,
+                "Time": 0.2241,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -49944,7 +49944,7 @@
             {
                 "Distance": 0.3271,
                 "Bus Service": "P411-02",
-                "Time": 1.1544705882352941,
+                "Time": 0.49065000000000003,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -50142,7 +50142,7 @@
             {
                 "Distance": 1.8585999999999998,
                 "Bus Service": "P411-02",
-                "Time": 6.559764705882352,
+                "Time": 2.7878999999999996,
                 "Traffic Lights Count": 8,
                 "Road Route": [
                     [
@@ -50450,7 +50450,7 @@
             {
                 "Distance": 3.4784,
                 "Bus Service": "P411-02",
-                "Time": 12.27670588235294,
+                "Time": 5.217600000000001,
                 "Traffic Lights Count": 7,
                 "Road Route": [
                     [
@@ -50716,7 +50716,7 @@
             {
                 "Distance": 3.1576,
                 "Bus Service": "P411-02",
-                "Time": 11.144470588235295,
+                "Time": 4.7364,
                 "Traffic Lights Count": 8,
                 "Road Route": [
                     [
@@ -50974,7 +50974,7 @@
             {
                 "Distance": 2.6785,
                 "Bus Service": "P411-02",
-                "Time": 9.453529411764707,
+                "Time": 4.01775,
                 "Traffic Lights Count": 7,
                 "Road Route": [
                     [
@@ -51256,7 +51256,7 @@
             {
                 "Distance": 0.3624,
                 "Bus Service": "P411-02",
-                "Time": 1.2790588235294116,
+                "Time": 0.5436,
                 "Traffic Lights Count": 3,
                 "Road Route": [
                     [
@@ -51464,7 +51464,7 @@
             {
                 "Distance": 0.964,
                 "Bus Service": "P411-02",
-                "Time": 3.4023529411764706,
+                "Time": 1.446,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -51774,7 +51774,7 @@
             {
                 "Distance": 0.6946,
                 "Bus Service": "P411-02",
-                "Time": 2.451529411764706,
+                "Time": 1.0418999999999998,
                 "Traffic Lights Count": 5,
                 "Road Route": [
                     [
@@ -51896,7 +51896,7 @@
             {
                 "Distance": 0.368,
                 "Bus Service": "P403-loop",
-                "Time": 1.2988235294117647,
+                "Time": 0.552,
                 "Traffic Lights Count": 1,
                 "Road Route": [
                     [
@@ -52242,7 +52242,7 @@
             {
                 "Distance": 0.2335,
                 "Bus Service": "P403-loop",
-                "Time": 0.8241176470588235,
+                "Time": 0.35025000000000006,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -52578,7 +52578,7 @@
             {
                 "Distance": 1.3160999999999998,
                 "Bus Service": "P403-loop",
-                "Time": 4.6450588235294115,
+                "Time": 1.9741499999999996,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -52868,7 +52868,7 @@
             {
                 "Distance": 1.9325,
                 "Bus Service": "P403-loop",
-                "Time": 6.820588235294117,
+                "Time": 2.89875,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -53474,7 +53474,7 @@
             {
                 "Distance": 1.4363,
                 "Bus Service": "P403-loop",
-                "Time": 5.0692941176470585,
+                "Time": 2.1544499999999998,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -53694,7 +53694,7 @@
             {
                 "Distance": 1.4696,
                 "Bus Service": "P403-loop",
-                "Time": 5.1868235294117655,
+                "Time": 2.2044,
                 "Traffic Lights Count": 2,
                 "Road Route": [
                     [
@@ -54104,7 +54104,7 @@
             {
                 "Distance": 0.7739,
                 "Bus Service": "P403-loop",
-                "Time": 2.731411764705882,
+                "Time": 1.16085,
                 "Traffic Lights Count": 4,
                 "Road Route": [
                     [
@@ -54332,7 +54332,7 @@
             {
                 "Distance": 1.6992,
                 "Bus Service": "P403-loop",
-                "Time": 5.9971764705882356,
+                "Time": 2.5488000000000004,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
@@ -54694,7 +54694,7 @@
             {
                 "Distance": 0.1951,
                 "Bus Service": "P403-loop",
-                "Time": 0.6885882352941177,
+                "Time": 0.29264999999999997,
                 "Traffic Lights Count": 0,
                 "Road Route": [
                     [
