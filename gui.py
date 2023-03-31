@@ -14,7 +14,7 @@ from geopy.geocoders import Nominatim
 import geopy.distance
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget, QCompleter, QBoxLayout, \
-    QPushButton, QTextBrowser, QLabel, QTextEdit
+    QPushButton, QTextBrowser, QLabel, QTextEdit, QLineEdit, QListWidget, QListWidgetItem
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtCore import Qt
 
@@ -406,99 +406,98 @@ class MyApp(QWidget):
         painter.fillRect(self.rect(), QColor('white'))
 
 
-class KMP(QMainWindow):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+class AutoCompleteLineEdit(QLineEdit):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.suggestions = []
+        self.suggestion_list = QListWidget()
+        self.suggestion_list.setWindowFlag(Qt.WindowType.Popup)
 
-        # Create UI
-        self.setWindowTitle("KMP Text Prediction")
-        self.setGeometry(100, 100, 500, 500)
+        self.editingFinished.connect(self.update_suggestions)
+        self.suggestion_list.itemClicked.connect(self.complete_text)
 
-        self.text_label = QLabel("Enter text:")
-        self.text_edit = QTextEdit()
-        self.predict_button = QPushButton("Predict")
-        self.predict_button.clicked.connect(self.predict)
-
-        # Create layout
-        input_layout = QHBoxLayout()
-        input_layout.addWidget(self.text_label)
-        input_layout.addWidget(self.text_edit)
-
-        button_layout = QHBoxLayout()
-        button_layout.addWidget(self.predict_button)
-
-        main_layout = QVBoxLayout()
-        main_layout.addLayout(input_layout)
-        main_layout.addLayout(button_layout)
-
-        # Create widget and set layout
-        widget = QWidget()
-        widget.setLayout(main_layout)
-
-        # Set central widget
-        self.setCentralWidget(widget)
-
-        # Set candidate strings
-        bus_stops = json.loads(open('graph.json').read()).keys()
-        self.candidates = list(bus_stops)
-
-    def predict(self):
-        # Get user input
-        user_input = self.text_edit.toPlainText()
-
-        # Find longest common prefix between user input and candidates
-        longest_prefix = ""
-        for candidate in self.candidates:
-            prefix = self.kmp(user_input, candidate)
-            if prefix and len(prefix) > len(longest_prefix):
-                longest_prefix = prefix
-
-        # Predict next character(s) based on longest prefix
-        if longest_prefix:
-            prediction = longest_prefix[len(user_input):]
+    def update_suggestions(self):
+        text = self.text()
+        self.suggestion_list.clear()
+        self.suggestions = []
+        if len(text) > 0:
+            for suggestion in self.get_suggestions(text):
+                item = QListWidgetItem(suggestion)
+                self.suggestion_list.addItem(item)
+                self.suggestions.append(suggestion)
+            self.show_suggestion_list()
         else:
-            prediction = ""
+            self.hide_suggestion_list()
 
-        # Display prediction
-        prediction_label = QLabel(f"Prediction: {prediction}")
-        prediction_label.setWordWrap(True)
-        prediction_layout = QHBoxLayout()
-        prediction_layout.addWidget(prediction_label)
-        main_layout = self.centralWidget().layout()
-        main_layout.addLayout(prediction_layout)
+    def get_suggestions(self, text):
+        # Implement the KMP algorithm to search for suggestions
+        suggestions = []
+        for suggestion in self.all_suggestions:
+            if self.kmp_match(text, suggestion):
+                suggestions.append(suggestion)
+        return suggestions
 
-    def kmp(self, text, pattern):
-        n = len(text)
+    def kmp_match(self, pattern, text):
+        # KMP algorithm implementation
         m = len(pattern)
-
-        # Compute prefix function
-        prefix = [0] * m
-        i, j = 0, 1
-        while j < m:
-            if pattern[i] == pattern[j]:
-                i += 1
-                prefix[j] = i
-                j += 1
-            elif i > 0:
-                i = prefix[i-1]
-            else:
-                prefix[j] = 0
-                j += 1
-
-        # Search for pattern in text
-        i, j = 0, 0
+        n = len(text)
+        if m == 0:
+            return True
+        if n == 0:
+            return False
+        lps = self.compute_lps(pattern)
+        i = 0
+        j = 0
         while i < n:
-            if text[i] == pattern[j]:
+            if pattern[j] == text[i]:
                 i += 1
                 j += 1
-                if j == m:
-                    return pattern[:j]
-            elif j > 0:
-                j = prefix[j-1]
-            else:
-                i += 1
+            if j == m:
+                return True
+            elif i < n and pattern[j] != text[i]:
+                if j != 0:
+                    j = lps[j-1]
+                else:
+                    i += 1
+        return False
 
-        return ""
+    def compute_lps(self, pattern):
+        # Compute the Longest Prefix Suffix (LPS) array for the pattern
+        m = len(pattern)
+        lps = [0] * m
+        i = 1
+        j = 0
+        while i < m:
+            if pattern[i] == pattern[j]:
+                j += 1
+                lps[i] = j
+                i += 1
+            elif j != 0:
+                j = lps[j-1]
+            else:
+                lps[i] = 0
+                i += 1
+        return lps
+
+    def complete_text(self, item):
+        self.setText(item.text())
+        self.hide_suggestion_list()
+
+    def show_suggestion_list(self):
+        self.suggestion_list.setGeometry(self.geometry().x(), self.geometry().y() + self.geometry().height(), self.geometry().width(), self.suggestion_list.sizeHintForRow(0) * self.suggestion_list.count())
+        self.suggestion_list.show()
+
+    def hide_suggestion_list(self):
+        self.suggestion_list.hide()
+
+
+class Window(QWidget):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        layout = QVBoxLayout(self)
+        self.line_edit = AutoCompleteLineEdit()
+        self.line_edit.all_suggestions = list(json.loads(open('graph.json').read()).keys())
+        layout.addWidget(self.line_edit)
 
 
 if __name__ == '__main__':
@@ -510,6 +509,9 @@ if __name__ == '__main__':
     floatingWindow = FloatingWindow()
     floatingWindow.setGeometry(100, 100, 300, 200)
     floatingWindow.setWindowTitle("Directions")
+
+    searchbus = Window()
+    searchbus.show()
 
     try:
         sys.exit(app.exec())
