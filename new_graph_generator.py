@@ -143,8 +143,8 @@ def generate_graph(input_json):
 
     return output
 
-input_json = json.loads(open('bus_stops_cleaned.json').read())
+input_json = json.loads(open('bus_stops_cleaned_revised.json').read())
 output_json = generate_graph(input_json)
 
-with open("test.json", "w") as outfile:     
+with open("test_revised.json", "w") as outfile:     
     json.dump(output_json, outfile, indent=4)

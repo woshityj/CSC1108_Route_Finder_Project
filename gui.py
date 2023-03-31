@@ -51,7 +51,7 @@ class MyApp(QWidget):
         global bus_routes, bus_stops_to_coordinates, graph
         bus_routes = json.loads(open('bus_stops_cleaned.json').read())
         bus_stops_to_coordinates = json.loads(open('bus_stops_to_coordinates.json').read())
-        graph = json.loads(open('test.json').read())
+        graph = json.loads(open('test_revised.json').read())
 
 
         super().__init__()
@@ -385,7 +385,7 @@ class MyApp(QWidget):
         route_coordinates = []
         path = []
         bus_stop_coordinates = []
-        bus_routes = json.loads(open('bus_stops_cleaned.json').read())
+        bus_routes = json.loads(open('bus_stops_cleaned_revised.json').read())
         number_of_bus_stops = len(bus_routes[bus_service]["Bus stop"].keys())
         for i in range(number_of_bus_stops):
             path.append(bus_routes[bus_service]["Bus stop"][str(i)])

@@ -176,7 +176,7 @@ def a_star(graph, start, goal, start_time, option):
 
 start = "Paradigm Mall"
 goal = "Larkin Terminal"
-path = a_star(graph, start, goal, 0, "least transfer")
+path = a_star(graph, start, goal, 0, "shortest distance")
 # pprint.pprint(path)
 # print(len(path))
 
