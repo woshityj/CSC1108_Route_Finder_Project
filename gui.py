@@ -47,29 +47,43 @@ class FloatingWindow(QWidget):
 
 
 class MyApp(QWidget):
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        uic.loadUi('MainGUI.ui', self)
         global bus_routes, bus_stops_to_coordinates, graph
         bus_routes = json.loads(open('bus_stops_cleaned.json').read())
         bus_stops_to_coordinates = json.loads(open('bus_stops_to_coordinates.json').read())
         graph = json.loads(open('test_revised.json').read())
 
 
-        super().__init__()
-        uic.loadUi('MainGUI.ui', self)
+        self.fromTextField = AutoCompleteLineEdit()
+        self.fromTextField.all_suggestions = list(json.loads(open('graph.json').read()).keys())
+        self.fromLayout.addWidget(self.fromTextField)
+
+        self.toTextField = AutoCompleteLineEdit()
+        self.toTextField.all_suggestions = list(json.loads(open('graph.json').read()).keys())
+        self.toLayout.addWidget(self.toTextField)
+
+        #super().__init__()
+
 
         self.map = QWebEngineView()
         self.map2 = QWebEngineView()
         self.map3 = QWebEngineView()
 
-        bus_stops=json.loads(open('graph.json').read()).keys()
-        bus_stops = list(bus_stops)
-        autocompleter = QCompleter(bus_stops)
+        #bus_stops=json.loads(open('graph.json').read()).keys()
+        #bus_stops = list(bus_stops)
+        #autocompleter = QCompleter(bus_stops)
         bus_services = self.getBusServices()
         for i in range(len(bus_services)):
             self.busServiceList.addItem(bus_services[i])
 
-        self.fromTextField.setCompleter(autocompleter)
-        self.toTextField.setCompleter(autocompleter)
+        #self.fromTextField.setCompleter(autocompleter)
+        #self.toTextField.setCompleter(autocompleter)
+
+        #self.fromTextField = AutoCompleteLineEdit()
+        #self.fromTextField.all_suggestions = list(json.loads(open('graph.json').read()).keys())
+
         self.getBusRoute.clicked.connect(lambda: self.getBusServiceRoute(self.busServiceList.currentItem().text()))
         self.gridLayout1.addWidget(self.map, 0, 0, 0, 0)
         self.gridLayout2.addWidget(self.map2, 0, 0, 0, 0)
@@ -514,8 +528,8 @@ if __name__ == '__main__':
     floatingWindow.setGeometry(100, 100, 300, 200)
     floatingWindow.setWindowTitle("Directions")
 
-    searchbus = Window()
-    searchbus.show()
+    #searchbus = Window()
+    #searchbus.show()
 
     try:
         sys.exit(app.exec())

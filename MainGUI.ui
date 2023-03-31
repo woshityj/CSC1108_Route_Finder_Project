@@ -42,16 +42,6 @@
     <string>Search</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="fromTextField">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>10</y>
-     <width>201</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QPushButton" name="getRouteButton">
    <property name="geometry">
     <rect>
@@ -91,16 +81,6 @@
     <string>To:</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="toTextField">
-   <property name="geometry">
-    <rect>
-     <x>590</x>
-     <y>10</y>
-     <width>201</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
@@ -137,7 +117,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="tab0">
     <attribute name="title">
@@ -187,6 +167,28 @@
      <layout class="QGridLayout" name="gridLayout3"/>
     </widget>
    </widget>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>10</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="fromLayout"/>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>10</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="toLayout"/>
   </widget>
  </widget>
  <resources/>
