@@ -56,12 +56,10 @@ class MyApp(QWidget):
         graph = json.loads(open('test_revised.json').read())
 
 
-        self.fromTextField = AutoCompleteLineEdit()
-        self.fromTextField.all_suggestions = list(json.loads(open('graph.json').read()).keys())
+        self.fromTextField = QLineEdit()
         self.fromLayout.addWidget(self.fromTextField)
 
-        self.toTextField = AutoCompleteLineEdit()
-        self.toTextField.all_suggestions = list(json.loads(open('graph.json').read()).keys())
+        self.toTextField = QLineEdit()
         self.toLayout.addWidget(self.toTextField)
 
         #super().__init__()
@@ -71,18 +69,15 @@ class MyApp(QWidget):
         self.map2 = QWebEngineView()
         self.map3 = QWebEngineView()
 
-        #bus_stops=json.loads(open('graph.json').read()).keys()
-        #bus_stops = list(bus_stops)
-        #autocompleter = QCompleter(bus_stops)
+        bus_stops=json.loads(open('graph.json').read()).keys()
+        bus_stops = list(bus_stops)
+        autocompleter = QCompleter(bus_stops)
         bus_services = self.getBusServices()
         for i in range(len(bus_services)):
             self.busServiceList.addItem(bus_services[i])
 
-        #self.fromTextField.setCompleter(autocompleter)
-        #self.toTextField.setCompleter(autocompleter)
-
-        #self.fromTextField = AutoCompleteLineEdit()
-        #self.fromTextField.all_suggestions = list(json.loads(open('graph.json').read()).keys())
+        self.fromTextField.setCompleter(autocompleter)
+        self.toTextField.setCompleter(autocompleter)
 
         self.getBusRoute.clicked.connect(lambda: self.getBusServiceRoute(self.busServiceList.currentItem().text()))
         self.gridLayout1.addWidget(self.map, 0, 0, 0, 0)
@@ -502,20 +497,12 @@ class AutoCompleteLineEdit(QLineEdit):
         self.hide_suggestion_list()
 
     def show_suggestion_list(self):
-        self.suggestion_list.setGeometry(self.geometry().x(), self.geometry().y() + self.geometry().height(), self.geometry().width(), self.suggestion_list.sizeHintForRow(0) * self.suggestion_list.count())
+        #self.suggestion_list.setGeometry(self.geometry().x(), self.geometry().y() + self.geometry().height(), self.geometry().width(), self.suggestion_list.sizeHintForRow(0) * self.suggestion_list.count())
+        self.suggestion_list.setGeometry(400,400,300, self.suggestion_list.sizeHintForRow(0) * self.suggestion_list.count())
         self.suggestion_list.show()
 
     def hide_suggestion_list(self):
         self.suggestion_list.hide()
-
-
-class Window(QWidget):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        layout = QVBoxLayout(self)
-        self.line_edit = AutoCompleteLineEdit()
-        self.line_edit.all_suggestions = list(json.loads(open('graph.json').read()).keys())
-        layout.addWidget(self.line_edit)
 
 
 if __name__ == '__main__':
@@ -528,8 +515,6 @@ if __name__ == '__main__':
     floatingWindow.setGeometry(100, 100, 300, 200)
     floatingWindow.setWindowTitle("Directions")
 
-    #searchbus = Window()
-    #searchbus.show()
 
     try:
         sys.exit(app.exec())
