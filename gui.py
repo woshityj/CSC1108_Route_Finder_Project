@@ -51,7 +51,7 @@ class MyApp(QWidget):
         super().__init__(*args, **kwargs)
         uic.loadUi('MainGUI.ui', self)
         global bus_routes, bus_stops_to_coordinates, graph
-        bus_routes = json.loads(open('bus_stops_cleaned.json').read())
+        bus_routes = json.loads(open('bus_stops_cleaned_revised.json').read())
         bus_stops_to_coordinates = json.loads(open('bus_stops_to_coordinates.json').read())
         graph = json.loads(open('test_revised.json').read())
 
