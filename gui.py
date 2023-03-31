@@ -14,7 +14,7 @@ from geopy.geocoders import Nominatim
 import geopy.distance
 from PyQt6 import QtWidgets, uic
 from PyQt6.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout, QWidget, QCompleter, QBoxLayout, \
-    QPushButton, QTextBrowser
+    QPushButton, QTextBrowser, QLabel, QTextEdit
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 from PyQt6.QtCore import Qt
 
@@ -404,6 +404,100 @@ class MyApp(QWidget):
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.fillRect(self.rect(), QColor('white'))
+
+
+class KMP(QMainWindow):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+
+        # Create UI
+        self.setWindowTitle("KMP Text Prediction")
+        self.setGeometry(100, 100, 500, 500)
+
+        self.text_label = QLabel("Enter text:")
+        self.text_edit = QTextEdit()
+        self.predict_button = QPushButton("Predict")
+        self.predict_button.clicked.connect(self.predict)
+
+        # Create layout
+        input_layout = QHBoxLayout()
+        input_layout.addWidget(self.text_label)
+        input_layout.addWidget(self.text_edit)
+
+        button_layout = QHBoxLayout()
+        button_layout.addWidget(self.predict_button)
+
+        main_layout = QVBoxLayout()
+        main_layout.addLayout(input_layout)
+        main_layout.addLayout(button_layout)
+
+        # Create widget and set layout
+        widget = QWidget()
+        widget.setLayout(main_layout)
+
+        # Set central widget
+        self.setCentralWidget(widget)
+
+        # Set candidate strings
+        self.candidates = ["apple", "banana", "cherry", "grape", "kiwi", "lemon", "orange", "peach", "pear", "pineapple"]
+
+    def predict(self):
+        # Get user input
+        user_input = self.text_edit.toPlainText()
+
+        # Find longest common prefix between user input and candidates
+        longest_prefix = ""
+        for candidate in self.candidates:
+            prefix = self.kmp(user_input, candidate)
+            if prefix and len(prefix) > len(longest_prefix):
+                longest_prefix = prefix
+
+        # Predict next character(s) based on longest prefix
+        if longest_prefix:
+            prediction = longest_prefix[len(user_input):]
+        else:
+            prediction = ""
+
+        # Display prediction
+        prediction_label = QLabel(f"Prediction: {prediction}")
+        prediction_label.setWordWrap(True)
+        prediction_layout = QHBoxLayout()
+        prediction_layout.addWidget(prediction_label)
+        main_layout = self.centralWidget().layout()
+        main_layout.addLayout(prediction_layout)
+
+    def kmp(self, text, pattern):
+        n = len(text)
+        m = len(pattern)
+
+        # Compute prefix function
+        prefix = [0] * m
+        i, j = 0, 1
+        while j < m:
+            if pattern[i] == pattern[j]:
+                i += 1
+                prefix[j] = i
+                j += 1
+            elif i > 0:
+                i = prefix[i-1]
+            else:
+                prefix[j] = 0
+                j += 1
+
+        # Search for pattern in text
+        i, j = 0, 0
+        while i < n:
+            if text[i] == pattern[j]:
+                i += 1
+                j += 1
+                if j == m:
+                    return pattern[:j]
+            elif j > 0:
+                j = prefix[j-1]
+            else:
+                i += 1
+
+        return ""
 
 
 if __name__ == '__main__':
