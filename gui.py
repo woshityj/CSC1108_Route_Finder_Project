@@ -59,6 +59,7 @@ class MyApp(QWidget):
 
         self.map = QWebEngineView()
         self.map2 = QWebEngineView()
+        self.map3 = QWebEngineView()
 
         bus_stops=json.loads(open('graph.json').read()).keys()
         bus_stops = list(bus_stops)
@@ -72,9 +73,10 @@ class MyApp(QWidget):
         self.getBusRoute.clicked.connect(lambda: self.getBusServiceRoute(self.busServiceList.currentItem().text()))
         self.gridLayout1.addWidget(self.map, 0, 0, 0, 0)
         self.gridLayout2.addWidget(self.map2, 0, 0, 0, 0)
+        self.gridLayout3.addWidget(self.map3, 0, 0, 0, 0)
         self.getRouteButton.clicked.connect(lambda: self.getRoute(self.fromTextField.text(), self.toTextField.text(), self.mapTabWidget.currentIndex()))
 
-        m = folium.Map(location=[45.523, -122.675], zoom_start=13)
+        m = folium.Map(location=[1.49523932121696,103.743347921416], tiles = 'cartodbpositron', zoom_start=13)
 
         data = io.BytesIO()
         m.save(data, close_file = False)
@@ -239,6 +241,8 @@ class MyApp(QWidget):
             self.map.setHtml(data.getvalue().decode())
         elif current_index == 1:
             self.map2.setHtml(data.getvalue().decode())
+        elif current_index == 2:
+            self.map3.setHtml(data.getvalue().decode())
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground)
 
         # except:
