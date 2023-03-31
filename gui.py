@@ -439,7 +439,8 @@ class KMP(QMainWindow):
         self.setCentralWidget(widget)
 
         # Set candidate strings
-        self.candidates = ["apple", "banana", "cherry", "grape", "kiwi", "lemon", "orange", "peach", "pear", "pineapple"]
+        bus_stops = json.loads(open('graph.json').read()).keys()
+        self.candidates = list(bus_stops)
 
     def predict(self):
         # Get user input
