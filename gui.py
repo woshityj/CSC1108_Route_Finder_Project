@@ -85,7 +85,7 @@ class MyApp(QWidget):
         self.gridLayout3.addWidget(self.map3, 0, 0, 0, 0)
         self.getRouteButton.clicked.connect(lambda: self.getRoute(self.fromTextField.text(), self.toTextField.text(), self.mapTabWidget.currentIndex()))
 
-        m = folium.Map(location=[1.49523932121696,103.743347921416], tiles = 'cartodbpositron', zoom_start=13)
+        m = folium.Map(location=[1.49523932121696, 103.743347921416], tiles = 'cartodbpositron', zoom_start=13)
 
         data = io.BytesIO()
         m.save(data, close_file = False)
@@ -404,7 +404,7 @@ class MyApp(QWidget):
             path.append(bus_routes[bus_service]["Bus stop"][str(i)])
         for i in range(len(path)):
             current_stop_coords = bus_routes[bus_service]['GPS Location'][str(i)]
-            current_stop_coords = current_stop_coords.split(", ")
+            current_stop_coords = current_stop_coords.split(",")
             current_stop_coords = [float(coord) for coord in current_stop_coords]
             bus_stop_coordinates.append(current_stop_coords)
         for i in range(len(path) - 1):
