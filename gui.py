@@ -429,7 +429,7 @@ class AutoCompleteLineEdit(QLineEdit):
         super().__init__(*args, **kwargs)
         self.suggestions = []
         self.suggestion_list = QListWidget()
-        self.suggestion_list.setWindowFlag(Qt.WindowType.Popup)
+        self.suggestion_list.setWindowFlag(Qt.WindowType.WindowStaysOnTopHint)
 
         self.editingFinished.connect(self.update_suggestions)
         self.suggestion_list.itemClicked.connect(self.complete_text)
